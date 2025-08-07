@@ -2,6 +2,7 @@ import reflex as rx
 from .about import about_page
 from .projects import projects_page
 from .components import project_card, navbar, global_footer
+from .projects_data import all_projects
 
 class HeroState(rx.State):
     name: str = "Novin"
@@ -17,33 +18,22 @@ class HeroState(rx.State):
     ]
     profile_image: str = "/profile.jpg"
 
+
 class FeaturedProjectsState(rx.State):
-    projects: list[dict] = [
-        {
-            "title": "Fetch",
-            "description": "A compliance and buying SAAS for veterinary groups and their practices that I’ve helped co-found.",
-            "image_url": "/fetch.jpg",
-            "border": False
-        },
-        {
-            "title": "TACM",
-            "description": "A construction management SAAS for pharmaceutical turnover & commissioning that I’ve helped co-found.",
-            "image_url": "/tacm.jpg",
-            "border": True
-        },
-        {
-            "title": "Event Fan Cam",
-            "description": "A stand-alone brand activation that I’ve built, letting attendees at live events take-over the big-screen.",
-            "image_url": "/event_fan_cam.jpg",
-            "border": True
-        },
-        {
-            "title": "Backstage Experiential",
-            "description": "With Backstage I help experiential marketing agencies wow their clients with cutting edge event-tech and digital brand activations.",
-            "image_url": "/backstage.jpg",
-            "border": False
-        },
-    ]
+    @rx.var
+    def projects(self) -> list:
+        # Take the first 4 from the shared data
+        featured = all_projects[:4]
+
+        # Fill remaining slots with "Coming Soon" placeholders
+        while len(featured) < 4:
+            featured.append({
+                "title": "Coming Soon",
+                "description": "Coming soon",
+                "image_url": "/coming_soon.jpg",
+                "border": True
+            })
+        return featured
 
 def hero_section():
     return rx.flex(
@@ -173,6 +163,18 @@ def footer() -> rx.Component:
     )
 
 def featured_projects() -> rx.Component:
+    # Slice first 4 real projects
+    featured = all_projects[:4]
+
+    # Fill with placeholders
+    while len(featured) < 4:
+        featured.append({
+            "title": "Coming Soon",
+            "description": "Coming soon",
+            "image_url": "/coming_soon.jpg",
+            "border": True
+        })
+
     return rx.vstack(
         rx.heading(
             "Featured Projects",
@@ -183,12 +185,12 @@ def featured_projects() -> rx.Component:
         ),
         rx.grid(
             rx.foreach(
-                FeaturedProjectsState.projects,
+                featured,  # ✅ just a plain list now
                 lambda project: project_card(
-                    project.title,
-                    project.description,
-                    project.image_url,
-                    border=project.border
+                    project["title"],
+                    project["description"],
+                    project["image_url"],
+                    border=project["border"]
                 )
             ),
             columns={"base": "1", "md": "1", "lg": "2"},

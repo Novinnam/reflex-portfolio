@@ -8,7 +8,7 @@ import { jsx } from "@emotion/react"
 
 
 
-function Text_138661135738884472973866110525338532485 () {
+function Text_101293345110516020862261840462185915770 () {
   
   const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
 
@@ -287,7 +287,7 @@ RadixThemesBox,
 jsx(
 RadixThemesFlex,
 {align:"center",css:({ ["height"] : "100%" }),direction:"row",justify:"center",gap:"4"},
-jsx(Text_138661135738884472973866110525338532485,{},)
+jsx(Text_101293345110516020862261840462185915770,{},)
 ,jsx(RadixThemesFlex,{css:({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch" })},)
 ,jsx(
 RadixThemesLink,
