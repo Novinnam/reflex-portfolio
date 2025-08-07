@@ -64,7 +64,7 @@ def global_footer() -> rx.Component:
             ),
             # Column 2: Page Links
             rx.box(
-                rx.text("PAGES", color="red", font_size="16px", letter_spacing="wide"),
+                rx.text("PAGES", color="red", font_size="16px"),
                 rx.vstack(
                     rx.link("Home", href="/"),
                     rx.link("Projects", href="/projects"),
@@ -75,7 +75,7 @@ def global_footer() -> rx.Component:
             ),
             # Column 3: Contact Links
             rx.box(
-                rx.text("GET IN TOUCH", color="red", font_size="16px", letter_spacing="wide"),
+                rx.text("GET IN TOUCH", color="red", font_size="16px"),
                 rx.vstack(
                     rx.link("Email", href="mailto:mohammadhassan.novin.001@student.uni.lu"),
                     rx.link("LinkedIn", href="https://www.linkedin.com/in/novinnnam/"),
@@ -83,12 +83,11 @@ def global_footer() -> rx.Component:
                     align_items="start",
                 )
             ),
-            columns={"base": "1", "md": "3"},
+            columns="3",
             spacing="6",
-            width="100%",
             padding_x={"base": "1em", "md": "2em"},
             margin_x='auto',
-            max_width='1280px'
+            max_width='1366px'
         ),
 
         # Bottom black bar with hover effect

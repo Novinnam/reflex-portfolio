@@ -8,7 +8,7 @@ import { jsx } from "@emotion/react"
 
 
 
-function Text_101293345110516020862261840462185915770 () {
+function Text_138661135738884472973866110525338532485 () {
   
   const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
 
@@ -200,7 +200,7 @@ RadixThemesFlex,
 jsx(RadixThemesSeparator,{css:({ ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1280px" }),size:"4"},)
 ,jsx(
 RadixThemesGrid,
-{columns:({ ["base"] : "1", ["md"] : "3" }),css:({ ["width"] : "100%", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1280px" }),gap:"6"},
+{columns:"3",css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1366px" }),gap:"6"},
 jsx(
 RadixThemesBox,
 {},
@@ -217,7 +217,7 @@ RadixThemesBox,
 {},
 jsx(
 RadixThemesText,
-{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px", ["letterSpacing"] : "wide" })},
+{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px" })},
 "PAGES"
 ,),jsx(
 RadixThemesFlex,
@@ -255,7 +255,7 @@ RadixThemesBox,
 {},
 jsx(
 RadixThemesText,
-{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px", ["letterSpacing"] : "wide" })},
+{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px" })},
 "GET IN TOUCH"
 ,),jsx(
 RadixThemesFlex,
@@ -287,7 +287,7 @@ RadixThemesBox,
 jsx(
 RadixThemesFlex,
 {align:"center",css:({ ["height"] : "100%" }),direction:"row",justify:"center",gap:"4"},
-jsx(Text_101293345110516020862261840462185915770,{},)
+jsx(Text_138661135738884472973866110525338532485,{},)
 ,jsx(RadixThemesFlex,{css:({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch" })},)
 ,jsx(
 RadixThemesLink,

@@ -10,57 +10,7 @@ import { jsx } from "@emotion/react"
 
 
 
-function Text_99633831357110369685866192190511901652 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
-reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
-,)
-  )
-}
-
-function Grid_29884419286892216221658959008603702739 () {
-  
-  const reflex___state____state__my_resume___my_resume____featured_projects_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____featured_projects_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesGrid,
-{columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
-reflex___state____state__my_resume___my_resume____featured_projects_state.projects_rx_state_.map((project_rx_state_,index_2ddd4a5aa10ce4a5)=>(jsx(
-RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_2ddd4a5aa10ce4a5},
-jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"column",gap:"3"},
-jsx("img",{css:({ ["filter"] : "grayscale(100%)", ["transition"] : "filter 0.5s ease-in-out", ["width"] : "100%", ["&:hover"] : ({ ["filter"] : "grayscale(0%)" }), ["border"] : (isTrue(project_rx_state_["border"]) ? "1px solid red" : "none") }),src:project_rx_state_["image_url"]},)
-,jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontWeight"] : "bold", ["fontSize"] : "1.1em" })},
-project_rx_state_["title"]
-,),jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
-project_rx_state_["description"]
-,),),))),)
-  )
-}
-
-function Flex_274458392877270375329160319754559664422 () {
+function Flex_51804744579926959345057816250942351028 () {
   
   const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
 
@@ -73,9 +23,9 @@ function Flex_274458392877270375329160319754559664422 () {
     jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
-reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_81177bd6a025571f)=>(jsx(
+reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_31c14622474a6078)=>(jsx(
 RadixThemesLink,
-{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_81177bd6a025571f},
+{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_31c14622474a6078},
 jsx(
 ReactRouterLink,
 {to:link_rx_state_["url"]},
@@ -84,22 +34,7 @@ jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
   )
 }
 
-function Img_313426746455881500796697668050988396767 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
-
-  )
-}
-
-function Text_17037081057075227923768297436447827437 () {
+function Text_125881020908006325847710864802793956367 () {
   
   const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
 
@@ -117,7 +52,7 @@ reflex___state____state__my_resume___my_resume____hero_state.bio_rx_state_
   )
 }
 
-function Text_101293345110516020862261840462185915770 () {
+function Text_138661135738884472973866110525338532485 () {
   
   const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
 
@@ -132,6 +67,71 @@ RadixThemesText,
 {as:"p",css:({ ["fontFamily"] : "monospace", ["--default-font-family"] : "monospace", ["fontSize"] : "0.8em", ["color"] : "white" })},
 ("Version "+reflex___state____state__my_resume___components____footer_state.version_rx_state_+" \u2013 Date: "+reflex___state____state__my_resume___components____footer_state.today_rx_state_)
 ,)
+  )
+}
+
+function Grid_45291402166960877956959558949234823483 () {
+  
+  const reflex___state____state__my_resume___my_resume____featured_projects_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____featured_projects_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesGrid,
+{columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
+reflex___state____state__my_resume___my_resume____featured_projects_state.projects_rx_state_.map((project_rx_state_,index_3fd88a77158237b4)=>(jsx(
+RadixThemesBox,
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_3fd88a77158237b4},
+jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"column",gap:"3"},
+jsx("img",{css:({ ["filter"] : "grayscale(100%)", ["transition"] : "filter 0.5s ease-in-out", ["width"] : "100%", ["&:hover"] : ({ ["filter"] : "grayscale(0%)" }), ["border"] : (isTrue(project_rx_state_["border"]) ? "1px solid red" : "none") }),src:project_rx_state_["image_url"]},)
+,jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontWeight"] : "bold", ["fontSize"] : "1.1em" })},
+project_rx_state_["title"]
+,),jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
+project_rx_state_["description"]
+,),),))),)
+  )
+}
+
+function Text_149873311447041206734584823012363415439 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
+reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
+,)
+  )
+}
+
+function Img_302282887257328031966313806048484390216 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
+
   )
 }
 
@@ -196,16 +196,16 @@ RadixThemesFlex,
 jsx(
 RadixThemesBox,
 {css:({ ["height"] : "auto", ["overflow"] : "hidden", ["@media screen and (min-width: 0px)"] : ({ ["marginLeft"] : "0" }), ["@media screen and (min-width: 62em)"] : ({ ["marginLeft"] : "-2em" }) })},
-jsx(Img_313426746455881500796697668050988396767,{},)
+jsx(Img_302282887257328031966313806048484390216,{},)
 ,),jsx(
 RadixThemesBox,
 {css:({ ["width"] : "100%", ["maxWidth"] : "1280px", ["alignSelf"] : "end", ["@media screen and (min-width: 0px)"] : ({ ["paddingLeft"] : "0" }), ["@media screen and (min-width: 62em)"] : ({ ["paddingLeft"] : "3em" }) })},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["@media screen and (min-width: 0px)"] : ({ ["alignItems"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["alignItems"] : "start" }) }),direction:"column",gap:"4"},
-jsx(Text_17037081057075227923768297436447827437,{},)
-,jsx(Text_99633831357110369685866192190511901652,{},)
-,jsx(Flex_274458392877270375329160319754559664422,{},)
+jsx(Text_125881020908006325847710864802793956367,{},)
+,jsx(Text_149873311447041206734584823012363415439,{},)
+,jsx(Flex_51804744579926959345057816250942351028,{},)
 ,),),),jsx(
 RadixThemesBox,
 {css:({ ["backgroundColor"] : "black", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["width"] : "100%", ["maxWidth"] : "1344px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["height"] : "42px" })},
@@ -230,7 +230,7 @@ jsx(
 RadixThemesHeading,
 {css:({ ["marginBottom"] : "1em", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["font_size"] : ({ ["base"] : "32px", ["md"] : "48px", ["lg"] : "60px" }), ["textAlign"] : "center" })},
 "Featured Projects"
-,),jsx(Grid_29884419286892216221658959008603702739,{},)
+,),jsx(Grid_45291402166960877956959558949234823483,{},)
 ,jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["fontWeight"] : "bold", ["color"] : "red", ["marginTop"] : "2em", ["alignSelf"] : "flex-end", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
@@ -244,7 +244,7 @@ RadixThemesFlex,
 jsx(RadixThemesSeparator,{css:({ ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1280px" }),size:"4"},)
 ,jsx(
 RadixThemesGrid,
-{columns:({ ["base"] : "1", ["md"] : "3" }),css:({ ["width"] : "100%", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1280px" }),gap:"6"},
+{columns:"3",css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1366px" }),gap:"6"},
 jsx(
 RadixThemesBox,
 {},
@@ -261,7 +261,7 @@ RadixThemesBox,
 {},
 jsx(
 RadixThemesText,
-{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px", ["letterSpacing"] : "wide" })},
+{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px" })},
 "PAGES"
 ,),jsx(
 RadixThemesFlex,
@@ -299,7 +299,7 @@ RadixThemesBox,
 {},
 jsx(
 RadixThemesText,
-{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px", ["letterSpacing"] : "wide" })},
+{as:"p",css:({ ["color"] : "red", ["fontSize"] : "16px" })},
 "GET IN TOUCH"
 ,),jsx(
 RadixThemesFlex,
@@ -331,7 +331,7 @@ RadixThemesBox,
 jsx(
 RadixThemesFlex,
 {align:"center",css:({ ["height"] : "100%" }),direction:"row",justify:"center",gap:"4"},
-jsx(Text_101293345110516020862261840462185915770,{},)
+jsx(Text_138661135738884472973866110525338532485,{},)
 ,jsx(RadixThemesFlex,{css:({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch" })},)
 ,jsx(
 RadixThemesLink,
