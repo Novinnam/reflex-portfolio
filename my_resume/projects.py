@@ -1,5 +1,6 @@
 import reflex as rx
 from .components import navbar, project_card, global_footer
+from .projects_data import all_projects  # ✅ import your data
 
 @rx.page(
     route="/projects",
@@ -57,39 +58,16 @@ def projects_page():
             margin_bottom="1em"
         ),
 
-        # 🔲 Grid of project cards
+        # 🔲 Grid of project cards — now generated from all_projects
         rx.grid(
-            project_card(
-                "Fetch",
-                "A compliance and buying SAAS for veterinary groups and their practices that I’ve helped co-found.",
-                "/fetch.jpg"
-            ),
-            project_card(
-                "TACM",
-                "A construction management SAAS for pharmaceutical turnover & commissioning that I’ve helped co-found.",
-                "/tacm.jpg",
-                border=True
-            ),
-            project_card(
-                "Event Fan Cam",
-                "A stand-alone brand activation that I’ve built, letting attendees at live events take-over the big-screen.",
-                "/event_fan_cam.jpg",
-                border=True
-            ),
-            project_card(
-                "Backstage Experiential",
-                "With Backstage I help experiential marketing agencies wow their clients with cutting edge event-tech and digital brand activations.",
-                "/backstage.jpg"
-            ),
-            project_card(
-                "Craft CMS Plugins",
-                "x3 plugins for Craft CMS that I sell through the Craft plugin store.",
-                "/craft.png"
-            ),
-            project_card(
-                "Pubs With A Fire",
-                "An app I built to find your nearest cosy pub with a fireplace. Mentioned in the Daily Mail 🔥.",
-                "/pubs_with_fire.jpg"
+            rx.foreach(
+                all_projects,
+                lambda project: project_card(
+                    project["title"],
+                    project["description"],
+                    project["image_url"],
+                    border=project["border"]
+                )
             ),
             columns={"base": "1", "md": "2", "lg": "3"},
             spacing="6",
