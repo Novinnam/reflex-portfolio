@@ -236,7 +236,7 @@ def rod_cap_page():
             padding_top="4em",
             padding_bottom="3em",
             align="center",
-            max_width='1280px',
+            max_width='800px',
             margin_x='auto'
         ),
 
@@ -396,7 +396,7 @@ def bell_bracket_page():
             padding_top="4em",
             padding_bottom="3em",
             align="center",
-            max_width='1280px',
+            max_width='800px',
             margin_x='auto' 
         ),
 
