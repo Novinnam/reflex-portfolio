@@ -22,6 +22,9 @@ type Pages = {
   "/projects/rod_cap": {
     params: {};
   };
+  "/bell-bracket-page": {
+    params: {};
+  };
   "/projects-page": {
     params: {};
   };
@@ -54,7 +57,7 @@ type RouteFiles = {
   };
   "root.jsx": {
     id: "root";
-    page: "/404" | "/" | "/projects/bell_bracket" | "/projects/rod_cap" | "/projects-page" | "/rod-cap-page" | "/about-page" | "/projects" | "/about" | "/*";
+    page: "/404" | "/" | "/projects/bell_bracket" | "/projects/rod_cap" | "/bell-bracket-page" | "/projects-page" | "/rod-cap-page" | "/about-page" | "/projects" | "/about" | "/*";
   };
   "routes/[projects].[bell_bracket]._index.jsx": {
     id: "routes/[projects].[bell_bracket]._index";
@@ -63,6 +66,10 @@ type RouteFiles = {
   "routes/[projects].[rod_cap]._index.jsx": {
     id: "routes/[projects].[rod_cap]._index";
     page: "/projects/rod_cap";
+  };
+  "routes/[bell-bracket-page]._index.jsx": {
+    id: "routes/[bell-bracket-page]._index";
+    page: "/bell-bracket-page";
   };
   "routes/[projects-page]._index.jsx": {
     id: "routes/[projects-page]._index";

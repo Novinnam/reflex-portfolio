@@ -99,7 +99,7 @@ def rod_cap_page():
             rx.text(
                 "PROJECT DETAILS",
                 color="red",
-                font_size="14px",
+                font_size="20px",
                 font_weight="bold",
                 letter_spacing="wide",
                 margin_bottom="0.5em"
@@ -135,13 +135,13 @@ def rod_cap_page():
         # 📌 Process Section
         rx.text(
             "PROCESS",
-            font_size="0.8em",
+            font_size="20px",
             font_weight="bold",
             color="red",
             letter_spacing="wide",
             text_align="left",
             max_width="1280px",
-            margin_x="auto",
+            margin_x="25%",
             margin_bottom="1em"
         ),
 
@@ -250,7 +250,7 @@ def rod_cap_page():
 
 @rx.page(
     route="/projects/bell_bracket",
-    title="Bell Bracket | Novin",
+    title="Bell Bracket Optimization | Novin",
 )
 def bell_bracket_page():
     return rx.box(
@@ -261,13 +261,13 @@ def bell_bracket_page():
             rx.text(
                 "PROJECT DETAILS",
                 color="red",
-                font_size="14px",
+                font_size="20px",
                 font_weight="bold",
                 letter_spacing="wide",
                 margin_bottom="0.5em"
             ),
             rx.heading(
-                "Bell Bracket - 3D Scanning and Fusion 360 Modeling",
+                "Bell Bracket - Topology Optimization for Additive Manufacturing",
                 font_family="Georgia, serif",
                 font_size={"base": "28px", "md": "42px", "lg": "56px"},
                 text_align="center",
@@ -276,9 +276,9 @@ def bell_bracket_page():
                 margin_bottom="0.5em"
             ),
             rx.text(
-                "This project involved the design of a bell bracket using 3D scanning to capture the geometry of the original part, "
-                "followed by refinement and modification in Autodesk Fusion 360. The goal was to create a functional and accurate "
-                "bracket model for manufacturing purposes.",
+                "This project involved the design and optimization of a bell bracket using topology optimization in Fusion 360. "
+                "The goal was to create a lightweight, functional structure that fits within predefined dimensions while ensuring it "
+                "could withstand a 10kN load using LUVOCOM® 3F PET CF 9780 BK material for additive manufacturing.",
                 font_size="18px",
                 max_width="750px",
                 text_align="center",
@@ -295,102 +295,165 @@ def bell_bracket_page():
         # 📌 Process Section
         rx.text(
             "PROCESS",
-            font_size="0.8em",
+            font_size="20px",
             font_weight="bold",
             color="red",
             letter_spacing="wide",
             text_align="left",
             max_width="1280px",
-            margin_x="auto",
+            margin_x="25%",
             margin_bottom="1em"
         ),
 
-        # 💡 3D Scanning + Fusion 360 Workflow
+        # 💡 Topology Optimization + Design Process
         rx.vstack(
             rx.text(
-                "1. 3D Scanning the Bell Bracket",
+                "1. Defining the Design Space and Boundary Conditions",
                 font_size="1.25em",
                 font_weight="bold",
                 margin_bottom="1em",
             ),
             rx.text(
-                "The first step was to use a 3D scanner to capture the bell bracket's geometry, including all its edges, "
-                "curves, and features. This scan generated a highly accurate mesh model to work with in the design process.",
+                "The design process began by defining the allowable design space for the bell bracket, set at 77.1mm x 112.3mm x 15mm. "
+                "Boundary conditions were established with a 10kN load applied along the positive X direction, fixed roller supports, "
+                "and pin constraints, which guided the topology optimization in Fusion 360.",
                 font_size="16px",
                 color="gray",
                 margin_bottom="1em",
             ),
+            rx.hstack(
+                rx.image(
+                    src="/bell_bracket1_2.png",  # Image from your uploaded files
+                    alt="Initial Design Space Definition",
+                    width="50%",
+                    max_width='500px',
+                    margin_bottom="2em"
+                ),
+                rx.image(
+                    src="/bell_bracket3.png",  # Image from your uploaded files
+                    alt="Initial Design Space Definition",
+                    width="50%",
+                    margin_bottom="2em"
+                )
+            ),
+            rx.text(
+                "2. Topology Optimization in Fusion 360",
+                font_size="1.25em",
+                font_weight="bold",
+                margin_bottom="1em",
+            ),
+            rx.text(
+                "Once the design space and boundary conditions were set, Fusion 360 was used to perform topology optimization. "
+                "The goal was to maximize stiffness within the space while keeping the weight of the bell bracket as low as possible. "
+                "The optimization process generated multiple design iterations for evaluation.",
+                font_size="16px",
+                color="gray",
+                margin_bottom="1em",
+            ),
+            rx.hstack(
+                rx.image(
+                    src="/bell_bracket2_2.png",  # Image for optimization results
+                    alt="Topology Optimization in Fusion 360",
+                    width="100%",
+                    max_width="500px",
+                    margin_bottom="2em"
+                ),
+                rx.image(
+                    src="/bell_bracket2.png",  # Image from your uploaded files
+                    alt="Initial Design Space Definition",
+                    width="100%",
+                    max_width="1280px",
+                    margin_bottom="2em"
+                )
+            ),
             rx.image(
-                src="/bell_bracket1.png",  # Replace with your actual image path
-                alt="3D Scan of Bell Bracket",
+                src="/bell_bracket2.png",  # Image for optimization results
+                alt="Topology Optimization in Fusion 360",
                 width="100%",
                 max_width="1280px",
                 margin_bottom="2em"
             ),
             rx.text(
-                "2. Importing the Scan into Fusion 360",
+                "3. Reviewing Optimization Results and Refining the Design",
                 font_size="1.25em",
                 font_weight="bold",
                 margin_bottom="1em",
             ),
             rx.text(
-                "Once the 3D scan was completed, the next step was to import the mesh into Fusion 360. "
-                "In Fusion 360, I could refine and modify the scanned geometry and use it as a reference for the final design.",
+                "After running the topology optimization, the generated design was reviewed and further refined. "
+                "This step involved adjusting the geometry to ensure it met all functional and manufacturing requirements, while "
+                "also checking the safety factor for load-bearing capacity.",
                 font_size="16px",
                 color="gray",
                 margin_bottom="1em",
             ),
             rx.image(
-                src="/bell_bracket2.png",  # Replace with your actual image path
-                alt="Fusion 360 Workspace for Bell Bracket",
+                src="/bell_bracket3.png",  # Image for the refined model
+                alt="Refined Bell Bracket Design",
                 width="100%",
                 max_width="1280px",
                 margin_bottom="2em"
             ),
             rx.text(
-                "3. Refining the Model in Fusion 360",
+                "4. Generative Design and Final Iteration",
                 font_size="1.25em",
                 font_weight="bold",
                 margin_bottom="1em",
             ),
             rx.text(
-                "I used Fusion 360’s advanced tools to refine the scanned model. I adjusted the geometry, ensuring all measurements were accurate, "
-                "and made necessary modifications to create the final design. This process helped in ensuring that the part would fit perfectly when fabricated.",
-                font_size="16px",
-                color="gray",
-                margin_bottom="1em",
-            ),
-            rx.image(
-                src="/bell_bracket3.png",  # Replace with your actual image path (third image)
-                alt="Refining the Bell Bracket Model",
-                width="100%",
-                max_width="1280px",
-                margin_bottom="2em"
-            ),
-            rx.text(
-                "4. Finalizing the Design",
-                font_size="1.25em",
-                font_weight="bold",
-                margin_bottom="1em",
-            ),
-            rx.text(
-                "After the model was complete, I used Fusion 360’s rendering tools to visualize the final design. "
-                "The model was iterated several times to ensure it met both functional and aesthetic requirements, making it ready for production.",
+                "To further explore the potential for lightweight design, a generative design approach was also employed. "
+                "Fusion 360’s generative design tool created several possible design alternatives. After reviewing the options, "
+                "the final design was selected based on mass minimization and optimal load distribution.",
                 font_size="16px",
                 color="gray",
                 margin_bottom="2em",
             ),
             rx.image(
-                src="/bell_bracket4.png",  # Replace with your actual image path (final rendered model)
-                alt="Rendered Image of Final Bell Bracket",
+                src="/bell_bracket2.png",  # Another perspective image for generative design
+                alt="Generative Design Final Model",
                 width="100%",
                 max_width="1280px",
                 margin_bottom="2em"
             ),
             rx.text(
-                "This project resulted in a highly accurate and functional bell bracket design, ready for manufacturing and further testing.",
+                "This process resulted in an optimized, lightweight bell bracket design that meets all performance and manufacturability requirements.",
                 font_size="16px",
                 color="gray",
+            ),
+            rx.text(
+                "5. Final Design Overview",
+                font_size="1.25em",
+                font_weight="bold",
+                margin_bottom="1em",
+            ),
+            rx.text(
+                "Here is some views of the final design, showing its structure and how it meets the design and load-bearing requirements.",
+                font_size="16px",
+                color="gray",
+                margin_bottom="2em",
+            ),
+            rx.hstack(
+                rx.image(
+                src="/bell_bracket4.png",  # Image for final perspective view
+                alt="Final Design Overview",
+                width="100%",
+                max_width="50%",
+                margin_bottom="2em"
+            ),
+            rx.image(
+                src="/bell_bracket5.png",  # Image for final perspective view
+                alt="Final Design Overview",
+                width="100%",
+                max_width="50%",
+                margin_bottom="2em"
+            ),
+            rx.image(
+                src="/bell_bracket6.png",  # Image for final perspective view
+                alt="Final Design Overview",
+                width="100%",
+                max_width="50%",
+                margin_bottom="2em"
+            ),
             ),
             spacing="2",
             padding_top="4em",
