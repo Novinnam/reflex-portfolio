@@ -12,7 +12,8 @@ class FooterState(rx.State):
 def project_card(title, description, image_url, border=False, link=None):
     return rx.box(
         rx.vstack(
-            rx.image(
+            rx.link(
+                rx.image(
                 src=image_url,
                 width="100%",
                 style={
@@ -23,6 +24,8 @@ def project_card(title, description, image_url, border=False, link=None):
                     "filter": "grayscale(0%)"
                 },
                 border=rx.cond(border, "1px solid red", "none"),
+            ),
+            href=f'/projects/{link}',
             ),
             rx.link(title, font_weight="bold", font_size="1.1em", href=f"/projects/{link}", color="black"),
             rx.text(description, font_size="0.9em", color="gray"),
