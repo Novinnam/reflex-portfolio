@@ -21,4 +21,7 @@
   <url>
     <loc>http://localhost:3000/projects/rod_cap</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/projects/bell_bracket</loc>
+  </url>
 </urlset>
