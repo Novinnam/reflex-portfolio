@@ -16,7 +16,13 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/projects/rod_cap": {
+    params: {};
+  };
   "/projects-page": {
+    params: {};
+  };
+  "/rod-cap-page": {
     params: {};
   };
   "/about-page": {
@@ -45,11 +51,19 @@ type RouteFiles = {
   };
   "root.jsx": {
     id: "root";
-    page: "/404" | "/" | "/projects-page" | "/about-page" | "/projects" | "/about" | "/*";
+    page: "/404" | "/" | "/projects/rod_cap" | "/projects-page" | "/rod-cap-page" | "/about-page" | "/projects" | "/about" | "/*";
+  };
+  "routes/[projects].[rod_cap]._index.jsx": {
+    id: "routes/[projects].[rod_cap]._index";
+    page: "/projects/rod_cap";
   };
   "routes/[projects-page]._index.jsx": {
     id: "routes/[projects-page]._index";
     page: "/projects-page";
+  };
+  "routes/[rod-cap-page]._index.jsx": {
+    id: "routes/[rod-cap-page]._index";
+    page: "/rod-cap-page";
   };
   "routes/[about-page]._index.jsx": {
     id: "routes/[about-page]._index";

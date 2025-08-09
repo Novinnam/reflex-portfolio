@@ -1,6 +1,6 @@
 import reflex as rx
 from .about import about_page
-from .projects import projects_page
+from .projects import projects_page, rod_cap_page
 from .components import project_card, navbar, global_footer
 from .projects_data import all_projects
 
@@ -190,7 +190,8 @@ def featured_projects() -> rx.Component:
                     project["title"],
                     project["description"],
                     project["image_url"],
-                    border=project["border"]
+                    border=project["border"],
+                    link=project["link"]
                 )
             ),
             columns={"base": "1", "md": "1", "lg": "2"},
@@ -236,3 +237,4 @@ app = rx.App()
 app.add_page(index)
 app.add_page(about_page)
 app.add_page(projects_page)
+app.add_page(rod_cap_page)

@@ -10,9 +10,15 @@
     <loc>http://localhost:3000/projects-page</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/rod-cap-page</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/about</loc>
   </url>
   <url>
     <loc>http://localhost:3000/projects</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/projects/rod_cap</loc>
   </url>
 </urlset>

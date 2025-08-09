@@ -27,7 +27,7 @@ RadixThemesText,
   )
 }
 
-function Grid_161893050081134101996273851995463138250 () {
+function Grid_308915881710784034217735406182252828255 () {
   
 
 
@@ -39,18 +39,21 @@ function Grid_161893050081134101996273851995463138250 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "2", ["lg"] : "3" }),css:({ ["marginBottom"] : "3em", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),gap:"6"},
-[({ ["title"] : "Rod Cap", ["description"] : "A compliance and buying SAAS for veterinary groups and their practices that I\u2019ve helped co-found.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true }), ({ ["title"] : "Bell Bracket", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true }), ({ ["title"] : "Single Power Screw", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true })].map((project_rx_state_,index_ef3a9b81a01cfa04)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "A compliance and buying SAAS for veterinary groups and their practices that I\u2019ve helped co-found.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_dbabdedb4150a225)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_ef3a9b81a01cfa04},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_dbabdedb4150a225},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
 jsx("img",{css:({ ["filter"] : "grayscale(100%)", ["transition"] : "filter 0.5s ease-in-out", ["width"] : "100%", ["&:hover"] : ({ ["filter"] : "grayscale(0%)" }), ["border"] : (isTrue(project_rx_state_["border"]) ? "1px solid red" : "none") }),src:project_rx_state_["image_url"]},)
 ,jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontWeight"] : "bold", ["fontSize"] : "1.1em" })},
+RadixThemesLink,
+{asChild:true,css:({ ["fontWeight"] : "bold", ["fontSize"] : "1.1em", ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
+jsx(
+ReactRouterLink,
+{to:("/projects/"+project_rx_state_["link"])},
 project_rx_state_["title"]
-,),jsx(
+,),),jsx(
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
 project_rx_state_["description"]
@@ -133,7 +136,7 @@ RadixThemesText,
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.8em", ["fontWeight"] : "bold", ["color"] : "red", ["letterSpacing"] : "wide", ["textAlign"] : "left", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginBottom"] : "1em" })},
 "PINNED"
-,),jsx(Grid_161893050081134101996273851995463138250,{},)
+,),jsx(Grid_308915881710784034217735406182252828255,{},)
 ,jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["width"] : "100%", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),direction:"column",gap:"3"},

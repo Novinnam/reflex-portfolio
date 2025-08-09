@@ -66,7 +66,8 @@ def projects_page():
                     project["title"],
                     project["description"],
                     project["image_url"],
-                    border=project["border"]
+                    border=project["border"],
+                    link=project["link"]
                 )
             ),
             columns={"base": "1", "md": "2", "lg": "3"},
@@ -83,3 +84,10 @@ def projects_page():
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em"
     )
+
+@rx.page(
+    route="/projects/rod_cap",
+    title="Rod Cap | Novin",
+)
+def rod_cap_page():
+    return navbar()

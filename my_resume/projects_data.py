@@ -8,7 +8,8 @@ all_projects = [
             "that I’ve helped co-found."
         ),
         "image_url": "/rod_cap_perspective.png",
-        "border": True
+        "border": True,
+        "link":"rod_cap"
     },
     {
         "title": "Bell Bracket",
@@ -17,7 +18,8 @@ all_projects = [
             "that I’ve helped co-found."
         ),
         "image_url": "/bell_bracket_perspective.png",
-        "border": True
+        "border": True,
+        "link":"bell_bracket"
     },
     {
         "title": "Single Power Screw",
@@ -26,6 +28,7 @@ all_projects = [
             "that I’ve helped co-found."
         ),
         "image_url": "/single_power_screw_perspective.png",
-        "border": True
+        "border": True,
+        "link":"single_power_screw"
     },
 ]

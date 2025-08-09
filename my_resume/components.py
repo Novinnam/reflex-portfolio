@@ -9,7 +9,7 @@ class FooterState(rx.State):
         """Update date/time dynamically."""
         self.today = datetime.now().strftime("%A %d %B at %H:%M")
 
-def project_card(title, description, image_url, border=False):
+def project_card(title, description, image_url, border=False, link=None):
     return rx.box(
         rx.vstack(
             rx.image(
@@ -24,7 +24,7 @@ def project_card(title, description, image_url, border=False):
                 },
                 border=rx.cond(border, "1px solid red", "none"),
             ),
-            rx.text(title, font_weight="bold", font_size="1.1em"),
+            rx.link(title, font_weight="bold", font_size="1.1em", href=f"/projects/{link}", color="black"),
             rx.text(description, font_size="0.9em", color="gray"),
         ),
         padding_x={"base": "1em", "md": "2em"},
