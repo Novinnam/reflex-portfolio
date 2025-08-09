@@ -9,7 +9,7 @@ import { jsx } from "@emotion/react"
 
 
 
-function Grid_49555181874659308012858203131752538147 () {
+function Grid_293173774978830985052634797497520859174 () {
   
 
 
@@ -21,9 +21,9 @@ function Grid_49555181874659308012858203131752538147 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "2", ["lg"] : "3" }),css:({ ["marginBottom"] : "3em", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),gap:"6"},
-[({ ["title"] : "Rod Cap", ["description"] : "A compliance and buying SAAS for veterinary groups and their practices that I\u2019ve helped co-found.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_a96e6e5b692fb42b)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "A compliance and buying SAAS for veterinary groups and their practices that I\u2019ve helped co-found.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_34f3ce37bce01c82)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_a96e6e5b692fb42b},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_34f3ce37bce01c82},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
@@ -136,7 +136,7 @@ RadixThemesText,
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.8em", ["fontWeight"] : "bold", ["color"] : "red", ["letterSpacing"] : "wide", ["textAlign"] : "left", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginBottom"] : "1em" })},
 "PINNED"
-,),jsx(Grid_49555181874659308012858203131752538147,{},)
+,),jsx(Grid_293173774978830985052634797497520859174,{},)
 ,jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["width"] : "100%", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),direction:"column",gap:"3"},

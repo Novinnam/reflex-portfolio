@@ -278,7 +278,7 @@ def bell_bracket_page():
             rx.text(
                 "This project involved the design and optimization of a bell bracket using topology optimization in Fusion 360. "
                 "The goal was to create a lightweight, functional structure that fits within predefined dimensions while ensuring it "
-                "could withstand a 10kN load using LUVOCOM® 3F PET CF 9780 BK material for additive manufacturing.",
+                "could withstand a 5kN load using LUVOCOM® 3F PET CF 9780 BK material for additive manufacturing.",
                 font_size="18px",
                 max_width="750px",
                 text_align="center",
@@ -301,7 +301,7 @@ def bell_bracket_page():
             letter_spacing="wide",
             text_align="left",
             max_width="1280px",
-            margin_x="25%",
+            margin_x="16.67%",
             margin_bottom="1em"
         ),
 
@@ -325,12 +325,12 @@ def bell_bracket_page():
                 rx.image(
                     src="/bell_bracket1_2.png",  # Image from your uploaded files
                     alt="Initial Design Space Definition",
-                    width="50%",
-                    max_width='500px',
-                    margin_bottom="2em"
+                    max_width='50%',
+                    margin_bottom="2em",
+                    margin_y='auto'
                 ),
                 rx.image(
-                    src="/bell_bracket3.png",  # Image from your uploaded files
+                    src="/bell_bracket1.png",  # Image from your uploaded files
                     alt="Initial Design Space Definition",
                     width="50%",
                     margin_bottom="2em"
@@ -354,24 +354,15 @@ def bell_bracket_page():
                 rx.image(
                     src="/bell_bracket2_2.png",  # Image for optimization results
                     alt="Topology Optimization in Fusion 360",
-                    width="100%",
-                    max_width="500px",
-                    margin_bottom="2em"
+                    max_width="50%",
+                    margin_y="auto"
                 ),
                 rx.image(
                     src="/bell_bracket2.png",  # Image from your uploaded files
                     alt="Initial Design Space Definition",
-                    width="100%",
-                    max_width="1280px",
+                    max_width="50%",
                     margin_bottom="2em"
                 )
-            ),
-            rx.image(
-                src="/bell_bracket2.png",  # Image for optimization results
-                alt="Topology Optimization in Fusion 360",
-                width="100%",
-                max_width="1280px",
-                margin_bottom="2em"
             ),
             rx.text(
                 "3. Reviewing Optimization Results and Refining the Design",
@@ -388,40 +379,14 @@ def bell_bracket_page():
                 margin_bottom="1em",
             ),
             rx.image(
-                src="/bell_bracket3.png",  # Image for the refined model
+                src="/bell_bracket7.png",  # Image for the refined model
                 alt="Refined Bell Bracket Design",
                 width="100%",
                 max_width="1280px",
                 margin_bottom="2em"
             ),
             rx.text(
-                "4. Generative Design and Final Iteration",
-                font_size="1.25em",
-                font_weight="bold",
-                margin_bottom="1em",
-            ),
-            rx.text(
-                "To further explore the potential for lightweight design, a generative design approach was also employed. "
-                "Fusion 360’s generative design tool created several possible design alternatives. After reviewing the options, "
-                "the final design was selected based on mass minimization and optimal load distribution.",
-                font_size="16px",
-                color="gray",
-                margin_bottom="2em",
-            ),
-            rx.image(
-                src="/bell_bracket2.png",  # Another perspective image for generative design
-                alt="Generative Design Final Model",
-                width="100%",
-                max_width="1280px",
-                margin_bottom="2em"
-            ),
-            rx.text(
-                "This process resulted in an optimized, lightweight bell bracket design that meets all performance and manufacturability requirements.",
-                font_size="16px",
-                color="gray",
-            ),
-            rx.text(
-                "5. Final Design Overview",
+                "4. Final Design Overview",
                 font_size="1.25em",
                 font_weight="bold",
                 margin_bottom="1em",
@@ -436,30 +401,37 @@ def bell_bracket_page():
                 rx.image(
                 src="/bell_bracket4.png",  # Image for final perspective view
                 alt="Final Design Overview",
-                width="100%",
                 max_width="50%",
                 margin_bottom="2em"
             ),
             rx.image(
                 src="/bell_bracket5.png",  # Image for final perspective view
                 alt="Final Design Overview",
-                width="100%",
                 max_width="50%",
                 margin_bottom="2em"
+            )
             ),
-            rx.image(
-                src="/bell_bracket6.png",  # Image for final perspective view
-                alt="Final Design Overview",
-                width="100%",
-                max_width="50%",
-                margin_bottom="2em"
-            ),
+            rx.hstack(
+                rx.image(
+                    src="/bell_bracket6.png",  # Image for final perspective view
+                    alt="Final Design Overview",
+                    width="100%",
+                    max_width="50%",
+                    margin_bottom="2em"
+                ),
+                rx.image(
+                    src="/bell_bracket3.png",  # Image for final perspective view
+                    alt="Final Design Overview",
+                    width="100%",
+                    max_width="50%",
+                    margin_bottom="2em"
+                )
             ),
             spacing="2",
             padding_top="4em",
             padding_bottom="3em",
             align="center",
-            max_width='800px',
+            max_width='66.67%',
             margin_x='auto' 
         ),
 
