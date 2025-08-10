@@ -315,7 +315,7 @@ def bell_bracket_page():
             ),
             rx.text(
                 "The design process began by defining the allowable design space for the bell bracket, set at 77.1mm x 112.3mm x 15mm. "
-                "Boundary conditions were established with a 10kN load applied along the positive X direction, fixed roller supports, "
+                "Boundary conditions were established with a 5kN load applied along the positive X direction, fixed roller supports, "
                 "and pin constraints, which guided the topology optimization in Fusion 360.",
                 font_size="16px",
                 color="gray",
