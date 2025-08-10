@@ -442,3 +442,279 @@ def bell_bracket_page():
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em",
     )
+
+@rx.page(
+    route="/projects/single_power_screw",
+    title="Single Power Screw Press Machine | Novin",
+)
+def single_power_screw_page():
+    return rx.box(
+        navbar(),
+
+        # 💡 Hero section with heading/subheading
+        rx.vstack(
+            rx.text(
+                "PROJECT DETAILS",
+                color="red",
+                font_size="20px",
+                font_weight="bold",
+                letter_spacing="wide",
+                margin_bottom="0.5em"
+            ),
+            rx.heading(
+                "Single Power Screw Press Machine - Component and Connection Calculations",
+                font_family="Georgia, serif",
+                font_size={"base": "28px", "md": "42px", "lg": "56px"},
+                text_align="center",
+                line_height="1.3",
+                font_weight="semibold",
+                margin_bottom="0.5em"
+            ),
+            rx.text(
+                "This project involves the design and optimization of a Single Power Screw Press Machine. The goal is to determine "
+                "the calculations for each of its components and their interconnections for optimized performance.",
+                font_size="18px",
+                max_width="750px",
+                text_align="center",
+                color="gray",
+            ),
+            spacing="2",
+            padding_top="4em",
+            padding_bottom="3em",
+            align="center"
+        ),
+
+        rx.divider(margin_y="2em", max_width="1280px", margin_x="auto"),
+
+        # 📌 Project Criteria
+        rx.vstack(
+            rx.text(
+                "Required Project Output",
+                font_size="20px",  # Font size changed to 20px
+                font_weight="bold",
+                color="red",  # Color changed to red
+                letter_spacing="wide",
+                text_align="left",
+                margin_bottom="1em"
+            ),
+            rx.text(
+                "The project involves designing a Single Power Screw Press Machine, which includes selecting suitable materials, performing "
+                "analytical and numerical validation, creating 3D CAD models, generating working drawings, and providing an assembly drawing. "
+                "Finally, a calculation report will document the design methodology, results, and analysis to ensure optimal performance and safety.",
+                font_size="16px",
+                color="gray",
+                margin_bottom="2em",
+                max_width='80%',
+                margin_x='auto'
+            ),
+            rx.text(
+                "1. A completed project must have:",
+                font_size="18px",
+                font_weight="bold",
+                color="black",
+                margin_bottom="1em",
+                margin_x='auto'
+            ),
+            rx.image(
+                src="/single_power_screw5.png",  # First image
+                alt="Screw Press Design",
+                width="50%",
+                margin_right="1%",
+                margin_bottom='1%',
+                margin_x='auto'
+            ),
+            rx.divider(margin_y="2em"),
+        ),
+
+        # 📌 Images Section
+        rx.hstack(
+            rx.image(
+                src="/single_power_screw1.png",  # First image
+                alt="Screw Press Design",
+                width="50%",
+                margin_right="1%",
+                margin_bottom='1%'
+            ),
+            rx.image(
+                src="/single_power_screw2.png",  # Second image (replace with actual path)
+                alt="Screw Press Design Details",
+                width="50%",
+                margin_left="1%",
+                margin_bottom='1%'
+            ),
+        ),
+
+        rx.hstack(
+            rx.image(
+                src="/single_power_screw3.png",  # Third image (replace with actual path)
+                alt="Assembly View",
+                width="50%",
+                margin_right="1%",
+                margin_bottom='1%'
+            ),
+            rx.image(
+                src="/single_power_screw4.png",  # Fourth image (replace with actual path)
+                alt="Final Design",
+                width="50%",
+                margin_left="1%",
+                margin_bottom='1%'
+            ),
+        ),
+
+        # 📌 Navigation to Calculation Pages
+        rx.text(
+            "CALCULATIONS",
+            font_size="20px",  # Font size changed to 20px
+            font_weight="bold",
+            color="red",  # Color changed to red
+            letter_spacing="wide",
+            text_align="left",
+            max_width="1280px",
+            margin_x="16.67%",
+            margin_bottom="1em"
+        ),
+        
+        # Component Calculation Link
+        rx.link(
+            rx.button(
+                "Component Calculation",
+                width="200px",
+                padding="1em",
+                background_color="blue.400",
+                color="white",
+                font_size="18px",
+                font_weight="bold",
+                border_radius="md",
+                margin_bottom="1em"
+            ),
+            href="/projects/single_power_screw/components"
+        ),
+        
+        # Connection Calculation Link
+        rx.link(
+            rx.button(
+                "Connection Calculation",
+                width="200px",
+                padding="1em",
+                background_color="blue.400",
+                color="white",
+                font_size="18px",
+                font_weight="bold",
+                border_radius="md",
+                margin_bottom="3em"
+            ),
+            href="/projects/single_power_screw/connections"
+        ),
+        
+        global_footer(),
+
+        bg="#f5f5f0",
+        width="100%",
+        padding_x={"base": "1em", "md": "2em"},
+        padding_bottom="2em",
+        max_width="67%",
+        margin_x='auto'
+    )
+
+
+@rx.page(
+    route="/projects/single_power_screw/components",
+    title="Component Calculations | Single Power Screw Press Machine",
+)
+def component_calculations_page():
+    return rx.box(
+        navbar(),
+        
+        # 💡 Heading for Component Calculations
+        rx.vstack(
+            rx.text(
+                "Component Calculations",
+                color="red",
+                font_size="20px",
+                font_weight="bold",
+                letter_spacing="wide",
+                margin_bottom="0.5em"
+            ),
+            rx.heading(
+                "Detailed Calculations for Each Component of the Machine",
+                font_family="Georgia, serif",
+                font_size={"base": "28px", "md": "42px", "lg": "56px"},
+                text_align="center",
+                line_height="1.3",
+                font_weight="semibold",
+                margin_bottom="1em"
+            ),
+            rx.text(
+                "Each component in the Single Power Screw Press Machine has unique calculations based on its design and material properties. "
+                "Below, we explore the calculations for each component of the machine.",
+                font_size="18px",
+                max_width="750px",
+                text_align="center",
+                color="gray",
+                margin_bottom="3em"
+            ),
+            # Add calculations for each component as per your requirements (e.g., for screw, base, etc.)
+            rx.text("Screw Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+            rx.text("Base Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+            rx.text("Pressure Plate Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+            # Add more as needed
+        ),
+        
+        global_footer(),
+
+        bg="#f5f5f0",
+        width="100%",
+        padding_x={"base": "1em", "md": "2em"},
+        padding_bottom="2em",
+    )
+
+@rx.page(
+    route="/projects/single_power_screw/connections",
+    title="Connection Calculations | Single Power Screw Press Machine",
+)
+def connection_calculations_page():
+    return rx.box(
+        navbar(),
+        
+        # 💡 Heading for Connection Calculations
+        rx.vstack(
+            rx.text(
+                "Connection Calculations",
+                color="red",
+                font_size="20px",
+                font_weight="bold",
+                letter_spacing="wide",
+                margin_bottom="0.5em"
+            ),
+            rx.heading(
+                "Calculations for Connections Between Components",
+                font_family="Georgia, serif",
+                font_size={"base": "28px", "md": "42px", "lg": "56px"},
+                text_align="center",
+                line_height="1.3",
+                font_weight="semibold",
+                margin_bottom="1em"
+            ),
+            rx.text(
+                "This section calculates the forces and stresses transmitted through the connections between the components of the Single "
+                "Power Screw Press Machine, ensuring a well-coordinated functioning of the entire system.",
+                font_size="18px",
+                max_width="750px",
+                text_align="center",
+                color="gray",
+                margin_bottom="3em"
+            ),
+            # Add calculations for the connections between components (e.g., forces, torque, etc.)
+            rx.text("Connection 1 (Screw to Wheel) Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+            rx.text("Connection 2 (Base to Pressure Plate) Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+            # Add more connections as needed
+        ),
+        
+        global_footer(),
+
+        bg="#f5f5f0",
+        width="100%",
+        padding_x={"base": "1em", "md": "2em"},
+        padding_bottom="2em",
+    )
+

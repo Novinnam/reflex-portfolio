@@ -9,7 +9,25 @@ import { jsx } from "@emotion/react"
 
 
 
-function Grid_154619279998609924121816521820233347134 () {
+function Text_101293345110516020862261840462185915770 () {
+  
+  const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontFamily"] : "monospace", ["--default-font-family"] : "monospace", ["fontSize"] : "0.8em", ["color"] : "white" })},
+("Version "+reflex___state____state__my_resume___components____footer_state.version_rx_state_+" \u2013 Date: "+reflex___state____state__my_resume___components____footer_state.today_rx_state_)
+,)
+  )
+}
+
+function Grid_211607448917396510501690114448573748980 () {
   
 
 
@@ -21,9 +39,9 @@ function Grid_154619279998609924121816521820233347134 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "2", ["lg"] : "3" }),css:({ ["marginBottom"] : "3em", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),gap:"6"},
-[({ ["title"] : "Rod Cap", ["description"] : "A compliance and buying SAAS for veterinary groups and their practices that I\u2019ve helped co-found.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_5109ee6c5bf146f8)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "A compliance and buying SAAS for veterinary groups and their practices that I\u2019ve helped co-found.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "A construction management SAAS for pharmaceutical turnover & commissioning that I\u2019ve helped co-found.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_d6affa27a146e0ac)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_5109ee6c5bf146f8},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_d6affa27a146e0ac},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
@@ -46,24 +64,6 @@ RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
 project_rx_state_["description"]
 ,),),))),)
-  )
-}
-
-function Text_101293345110516020862261840462185915770 () {
-  
-  const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontFamily"] : "monospace", ["--default-font-family"] : "monospace", ["fontSize"] : "0.8em", ["color"] : "white" })},
-("Version "+reflex___state____state__my_resume___components____footer_state.version_rx_state_+" \u2013 Date: "+reflex___state____state__my_resume___components____footer_state.today_rx_state_)
-,)
   )
 }
 
@@ -142,7 +142,7 @@ RadixThemesText,
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.8em", ["fontWeight"] : "bold", ["color"] : "red", ["letterSpacing"] : "wide", ["textAlign"] : "left", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginBottom"] : "1em" })},
 "PINNED"
-,),jsx(Grid_154619279998609924121816521820233347134,{},)
+,),jsx(Grid_211607448917396510501690114448573748980,{},)
 ,jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["width"] : "100%", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),direction:"column",gap:"3"},

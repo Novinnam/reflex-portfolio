@@ -1,6 +1,6 @@
 import reflex as rx
 from .about import about_page
-from .projects import projects_page, rod_cap_page, bell_bracket_page
+from .projects import projects_page, rod_cap_page, bell_bracket_page, single_power_screw_page
 from .components import project_card, navbar, global_footer
 from .projects_data import all_projects
 
@@ -239,3 +239,4 @@ app.add_page(about_page)
 app.add_page(projects_page)
 app.add_page(rod_cap_page)
 app.add_page(bell_bracket_page)
+app.add_page(single_power_screw_page)
