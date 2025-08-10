@@ -7,10 +7,11 @@ from .projects_data import all_projects
 class HeroState(rx.State):
     name: str = "Novin"
     location: str = "Luxembourg"
-    bio: str = "I'm Novin, an independent software developer from Luxembourg."
+    bio: str = "I'm Novin, a mechanical engineer and passionate Python programming lover."
     description: str = (
-        "I run a few of my own software businesses while also helping companies "
-        "get their own products and ideas off the ground. Read a bit more about me."
+        "I'm a mechanical engineer with a passion for Python programming. "
+        "Recently, I've started exploring robotics simulations, focusing on ROS to enhance robotic systems. "
+        "I also deployed this portfolio website to showcase my work."
     )
     social_links = [
         {"platform": "linkedin", "url": "https://www.linkedin.com/in/novinnnam/"},
