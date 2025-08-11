@@ -1,21 +1,30 @@
-FROM python:3.11-slim
+# Use official miniconda base image
+FROM continuumio/miniconda3
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-ENV PORT=8080
-
+# Set working directory
 WORKDIR /app
 
-COPY requirements.txt /app/
+# Copy your local environment.yml or requirements.txt to container
+COPY environment.yml .
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
+# Create conda environment from environment.yml and activate it
+RUN conda env create -f environment.yml
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "web_reflex", "/bin/bash", "-c"]
 
-COPY . /app
+# Alternatively, if you don't have environment.yml but just requirements.txt:
+# RUN conda create -n web_reflex python=3.13 -y && \
+#     conda run -n web_reflex pip install -r requirements.txt
 
-RUN reflex export --frontend --backend
+# Copy app code into container
+COPY . .
 
-CMD ["granian", "--interface", "asgi", "--host", "0.0.0.0", "--port", "8080", "backend.app:app"]
+# Set environment variable for conda environment activation (optional)
+ENV PATH /opt/conda/envs/web_reflex/bin:$PATH
+
+# Expose port (change according to your app)
+EXPOSE 8000
+
+# Run your reflex app (adjust command as needed)
+CMD ["conda", "run", "-n", "web_reflex", "reflex", "run", "--no-browser", "--port", "8000"]
