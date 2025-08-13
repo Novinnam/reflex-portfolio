@@ -35,7 +35,6 @@ examples-rclpy-minimal-client==0.19.5
 examples-rclpy-minimal-publisher==0.19.5
 examples-rclpy-minimal-service==0.19.5
 examples-rclpy-minimal-subscriber==0.19.5
-fastapi==0.116.0
 geometry-msgs==5.3.6
 granian==2.4.1
 greenlet==3.2.3
@@ -153,7 +152,7 @@ sniffio==1.3.1
 SQLAlchemy==2.0.41
 sqlmodel==0.0.24
 sros2==0.13.3
-starlette==0.46.2
+starlette==0.47.2
 statistics-msgs==2.0.2
 std-msgs==5.3.6
 std-srvs==5.3.6
