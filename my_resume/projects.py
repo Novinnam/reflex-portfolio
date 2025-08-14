@@ -484,7 +484,7 @@ def single_power_screw_page():
             align="center"
         ),
 
-        rx.divider(margin_y="2em", max_width="1280px", margin_x="auto"),
+        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
 
         # 📌 Project Criteria
         rx.vstack(
@@ -495,16 +495,17 @@ def single_power_screw_page():
                 color="red",  # Color changed to red
                 letter_spacing="wide",
                 text_align="left",
-                margin_bottom="1em"
+                margin_bottom="1em",
+                margin_x='16.7%'
             ),
             rx.text(
                 "The project involves designing a Single Power Screw Press Machine, which includes selecting suitable materials, performing "
                 "analytical and numerical validation, creating 3D CAD models, generating working drawings, and providing an assembly drawing. "
                 "Finally, a calculation report will document the design methodology, results, and analysis to ensure optimal performance and safety.",
                 font_size="16px",
-                color="gray",
+                color="black",
                 margin_bottom="2em",
-                max_width='80%',
+                max_width='60%',
                 margin_x='auto'
             ),
             rx.text(
@@ -518,12 +519,12 @@ def single_power_screw_page():
             rx.image(
                 src="/single_power_screw5.png",  # First image
                 alt="Screw Press Design",
-                width="50%",
+                width="55%",
                 margin_right="1%",
                 margin_bottom='1%',
                 margin_x='auto'
             ),
-            rx.divider(margin_y="2em"),
+            rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
         ),
 
         # 📌 Images Section
@@ -542,6 +543,8 @@ def single_power_screw_page():
                 margin_left="1%",
                 margin_bottom='1%'
             ),
+            max_width="66.67%",
+            margin_x='auto'
         ),
 
         rx.hstack(
@@ -559,6 +562,8 @@ def single_power_screw_page():
                 margin_left="1%",
                 margin_bottom='1%'
             ),
+            max_width="66.67%",
+            margin_x='auto'
         ),
 
         # 📌 Navigation to Calculation Pages
@@ -568,42 +573,45 @@ def single_power_screw_page():
             font_weight="bold",
             color="red",  # Color changed to red
             letter_spacing="wide",
-            text_align="left",
-            max_width="1280px",
-            margin_x="16.67%",
+            text_align="center",
+            margin_x="auto",
             margin_bottom="1em"
         ),
         
-        # Component Calculation Link
-        rx.link(
-            rx.button(
-                "Component Calculation",
-                width="200px",
-                padding="1em",
-                background_color="blue.400",
-                color="white",
-                font_size="18px",
-                font_weight="bold",
-                border_radius="md",
-                margin_bottom="1em"
+        rx.hstack(
+            # Component Calculation Link
+            rx.link(
+                rx.button(
+                    "Component Calculation",
+                    width="200px",
+                    padding="1em",
+                    background_color="blue.400",
+                    color="white",
+                    font_size="18px",
+                    font_weight="bold",
+                    border_radius="md",
+                    margin_bottom="3em",
+                ),
+                href="/projects/single_power_screw/components",
             ),
-            href="/projects/single_power_screw/components"
-        ),
-        
-        # Connection Calculation Link
-        rx.link(
-            rx.button(
-                "Connection Calculation",
-                width="200px",
-                padding="1em",
-                background_color="blue.400",
-                color="white",
-                font_size="18px",
-                font_weight="bold",
-                border_radius="md",
-                margin_bottom="3em"
+            
+            # Connection Calculation Link
+            rx.link(
+                rx.button(
+                    "Connection Calculation",
+                    width="200px",
+                    padding="1em",
+                    background_color="blue.400",
+                    color="white",
+                    font_size="18px",
+                    font_weight="bold",
+                    border_radius="md",
+                    margin_bottom="3em",
+                ),
+                href="/projects/single_power_screw/connections",
             ),
-            href="/projects/single_power_screw/connections"
+            margin_x='40%',
+            max_width='67%'
         ),
         
         global_footer(),
@@ -612,8 +620,6 @@ def single_power_screw_page():
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em",
-        max_width="67%",
-        margin_x='auto'
     )
 
 
@@ -684,7 +690,8 @@ def connection_calculations_page():
                 font_size="20px",
                 font_weight="bold",
                 letter_spacing="wide",
-                margin_bottom="0.5em"
+                margin_bottom="0.5em",
+                margin_x='auto'
             ),
             rx.heading(
                 "Calculations for Connections Between Components",
@@ -693,7 +700,8 @@ def connection_calculations_page():
                 text_align="center",
                 line_height="1.3",
                 font_weight="semibold",
-                margin_bottom="1em"
+                margin_bottom="1em",
+                margin_x='auto'
             ),
             rx.text(
                 "This section calculates the forces and stresses transmitted through the connections between the components of the Single "
@@ -702,7 +710,8 @@ def connection_calculations_page():
                 max_width="750px",
                 text_align="center",
                 color="gray",
-                margin_bottom="3em"
+                margin_bottom="3em",
+                margin_x='auto'
             ),
             # Add calculations for the connections between components (e.g., forces, torque, etc.)
             rx.text("Connection 1 (Screw to Wheel) Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
