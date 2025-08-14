@@ -82,7 +82,7 @@ def global_footer() -> rx.Component:
                 rx.vstack(
                     rx.link("Email", href="mailto:mohammadhassan.novin.001@student.uni.lu"),
                     rx.link("LinkedIn", href="https://www.linkedin.com/in/novinnnam/"),
-                    rx.link("Github", href="https://github.com/Novinnam"),
+                    rx.link("Github", href="https://github.com/Novinnam/reflex-portfolio"),
                     align_items="start",
                 )
             ),
