@@ -10,24 +10,6 @@ import { jsx } from "@emotion/react"
 
 
 
-function Text_99633831357110369685866192190511901652 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
-reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
-,)
-  )
-}
-
 function Img_313426746455881500796697668050988396767 () {
   
   const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
@@ -40,6 +22,30 @@ function Img_313426746455881500796697668050988396767 () {
   return (
     jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
 
+  )
+}
+
+function Flex_215476459063174615094991421053957350266 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
+reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_27fb76caec0bd354)=>(jsx(
+RadixThemesLink,
+{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_27fb76caec0bd354},
+jsx(
+ReactRouterLink,
+{to:link_rx_state_["url"]},
+jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
+,),))),)
   )
 }
 
@@ -61,30 +67,6 @@ RadixThemesText,
   )
 }
 
-function Flex_308120670599329324984302245328167635669 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
-reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_b6f3dea6ba390772)=>(jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_b6f3dea6ba390772},
-jsx(
-ReactRouterLink,
-{to:link_rx_state_["url"]},
-jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
-,),))),)
-  )
-}
-
 function Text_17037081057075227923768297436447827437 () {
   
   const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
@@ -103,7 +85,25 @@ reflex___state____state__my_resume___my_resume____hero_state.bio_rx_state_
   )
 }
 
-function Grid_247502306596111543701986481124098328005 () {
+function Text_99633831357110369685866192190511901652 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
+reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
+,)
+  )
+}
+
+function Grid_70220081167722015301228056813604158392 () {
   
 
 
@@ -115,9 +115,9 @@ function Grid_247502306596111543701986481124098328005 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
-[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_494229e91c0d663d)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_fba33021a6ba4ec7)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_494229e91c0d663d},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_fba33021a6ba4ec7},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
@@ -213,7 +213,7 @@ RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["@media screen and (min-width: 0px)"] : ({ ["alignItems"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["alignItems"] : "start" }) }),direction:"column",gap:"4"},
 jsx(Text_17037081057075227923768297436447827437,{},)
 ,jsx(Text_99633831357110369685866192190511901652,{},)
-,jsx(Flex_308120670599329324984302245328167635669,{},)
+,jsx(Flex_215476459063174615094991421053957350266,{},)
 ,),),),jsx(
 RadixThemesBox,
 {css:({ ["backgroundColor"] : "black", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["width"] : "100%", ["maxWidth"] : "1344px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["height"] : "42px" })},
@@ -238,7 +238,7 @@ jsx(
 RadixThemesHeading,
 {css:({ ["marginBottom"] : "1em", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["font_size"] : ({ ["base"] : "32px", ["md"] : "48px", ["lg"] : "60px" }), ["textAlign"] : "center" })},
 "Featured Projects"
-,),jsx(Grid_247502306596111543701986481124098328005,{},)
+,),jsx(Grid_70220081167722015301228056813604158392,{},)
 ,jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["fontWeight"] : "bold", ["color"] : "red", ["marginTop"] : "2em", ["alignSelf"] : "flex-end", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},

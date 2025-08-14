@@ -691,7 +691,8 @@ def connection_calculations_page():
                 font_weight="bold",
                 letter_spacing="wide",
                 margin_bottom="0.5em",
-                margin_x='auto'
+                margin_x='auto',
+                padding_top='4em'
             ),
             rx.heading(
                 "Calculations for Connections Between Components",
@@ -713,9 +714,33 @@ def connection_calculations_page():
                 margin_bottom="3em",
                 margin_x='auto'
             ),
+            rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
             # Add calculations for the connections between components (e.g., forces, torque, etc.)
-            rx.text("Connection 1 (Screw to Wheel) Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
-            rx.text("Connection 2 (Base to Pressure Plate) Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+            # Use Card components to better organize calculation data
+
+            rx.card(
+                rx.text("Connection 1: Screw to Wheel", font_size="20px", font_weight="bold", margin_bottom="1em"),
+                rx.text("Calculate the force transmitted through the screw to the wheel connection, considering torque, friction, and stress.", font_size="16px", color="gray", margin_bottom="1em"),
+                rx.text("Calculated Force: 500 N", font_size="18px", font_weight="semibold", margin_bottom="1em"),
+                rx.text("Calculated Stress: 200 MPa", font_size="18px", font_weight="semibold", margin_bottom="1em"),
+                padding="1em",
+                bg="white",
+                border_radius="8px",
+                shadow="md",
+                margin_bottom="2em"
+            ),
+            rx.card(
+                rx.text("Connection 2: Base to Pressure Plate", font_size="20px", font_weight="bold", margin_bottom="1em"),
+                rx.text("Calculate the forces transmitted from the base to the pressure plate, considering the impact of the press mechanism.", font_size="16px", color="gray", margin_bottom="1em"),
+                rx.text("Calculated Force: 600 N", font_size="18px", font_weight="semibold", margin_bottom="1em"),
+                rx.text("Calculated Stress: 250 MPa", font_size="18px", font_weight="semibold", margin_bottom="1em"),
+                padding="1em",
+                bg="white",
+                border_radius="8px",
+                shadow="md",
+                margin_bottom="2em"
+            ),
             # Add more connections as needed
         ),
         
@@ -726,4 +751,3 @@ def connection_calculations_page():
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em",
     )
-
