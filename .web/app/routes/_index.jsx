@@ -29,7 +29,64 @@ reflex___state____state__my_resume___my_resume____hero_state.bio_rx_state_
   )
 }
 
-function Grid_55298565335618879891046000786335707959 () {
+function Text_99633831357110369685866192190511901652 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
+reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
+,)
+  )
+}
+
+function Flex_14150160347677826606356720453480723266 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
+reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_a5d3c0b14460d6bf)=>(jsx(
+RadixThemesLink,
+{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_a5d3c0b14460d6bf},
+jsx(
+ReactRouterLink,
+{to:link_rx_state_["url"]},
+jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
+,),))),)
+  )
+}
+
+function Img_313426746455881500796697668050988396767 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
+
+  )
+}
+
+function Grid_316239748961122302487859696671668527433 () {
   
 
 
@@ -41,9 +98,9 @@ function Grid_55298565335618879891046000786335707959 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
-[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_f1bd29d4155dae68)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_f12417db2b731ad8)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_f1bd29d4155dae68},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_f12417db2b731ad8},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
@@ -66,63 +123,6 @@ RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
 project_rx_state_["description"]
 ,),),))),)
-  )
-}
-
-function Img_313426746455881500796697668050988396767 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
-
-  )
-}
-
-function Flex_289130033922952679488308503095313334530 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
-reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_6441ff69a4891f31)=>(jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_6441ff69a4891f31},
-jsx(
-ReactRouterLink,
-{to:link_rx_state_["url"]},
-jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
-,),))),)
-  )
-}
-
-function Text_99633831357110369685866192190511901652 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
-reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
-,)
   )
 }
 
@@ -196,7 +196,7 @@ RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["@media screen and (min-width: 0px)"] : ({ ["alignItems"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["alignItems"] : "start" }) }),direction:"column",gap:"4"},
 jsx(Text_17037081057075227923768297436447827437,{},)
 ,jsx(Text_99633831357110369685866192190511901652,{},)
-,jsx(Flex_289130033922952679488308503095313334530,{},)
+,jsx(Flex_14150160347677826606356720453480723266,{},)
 ,),),),jsx(
 RadixThemesBox,
 {css:({ ["backgroundColor"] : "black", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["width"] : "100%", ["maxWidth"] : "1344px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["height"] : "42px" })},
@@ -221,7 +221,7 @@ jsx(
 RadixThemesHeading,
 {css:({ ["marginBottom"] : "1em", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["font_size"] : ({ ["base"] : "32px", ["md"] : "48px", ["lg"] : "60px" }), ["textAlign"] : "center" })},
 "Featured Projects"
-,),jsx(Grid_55298565335618879891046000786335707959,{},)
+,),jsx(Grid_316239748961122302487859696671668527433,{},)
 ,jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["fontWeight"] : "bold", ["color"] : "red", ["marginTop"] : "2em", ["alignSelf"] : "flex-end", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},

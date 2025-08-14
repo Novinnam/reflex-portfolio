@@ -3,7 +3,7 @@
 import { Fragment, useEffect } from "react"
 import { Box as RadixThemesBox, Flex as RadixThemesFlex, Grid as RadixThemesGrid, Heading as RadixThemesHeading, Link as RadixThemesLink, Separator as RadixThemesSeparator, Text as RadixThemesText } from "@radix-ui/themes"
 import { Link as ReactRouterLink } from "react-router"
-import { Grid_181623535961358288194421310325823142578, Text_101293345110516020862261840462185915770 } from "$/utils/stateful_components"
+import { Grid_280526097857515883318868996429050097770, Text_101293345110516020862261840462185915770 } from "$/utils/stateful_components"
 import { jsx } from "@emotion/react"
 
 
@@ -83,7 +83,7 @@ RadixThemesText,
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.8em", ["fontWeight"] : "bold", ["color"] : "red", ["letterSpacing"] : "wide", ["textAlign"] : "left", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginBottom"] : "1em" })},
 "PINNED"
-,),jsx(Grid_181623535961358288194421310325823142578,{},)
+,),jsx(Grid_280526097857515883318868996429050097770,{},)
 ,jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["width"] : "100%", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),direction:"column",gap:"3"},
