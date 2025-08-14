@@ -17,7 +17,7 @@ def about_page() -> rx.Component:
                 ),
                 rx.heading(
                     rx.fragment(
-                        "The one-man tech team ready to bring your next big idea to life."
+                        "The one-man team ready to build your next big robotics solution."
                     ),
                     style={
                         "fontFamily": "Georgia, serif",
@@ -28,8 +28,8 @@ def about_page() -> rx.Component:
                     }
                 ),
                 rx.text("Hi, I’m Mohammadhassan Novinnam (Novin).", margin_top="1.5rem"),
-                rx.text("Mechanical & HVAC engineer turned AI/ML practitioner.", margin_top="0.25rem"),
-                rx.text("Now focused on robotics, ROS, image processing, and Python systems.", margin_top="0.25rem"),
+                rx.text("Mechanical engineer with a passion for programming and robotics.", margin_top="0.25rem"),
+                rx.text("Completed a robotics course and now focused on ROS simulations in Python.", margin_top="0.25rem"),
                 direction="column",
                 justify="end",  # bottom-align text
                 align="start",
@@ -89,15 +89,14 @@ def about_page() -> rx.Component:
         ),
 
         # ABOUT ME SECTION
-        rx.box(
+rx.box(
     # Main Section Wrapper
     rx.flex(
         # LEFT COLUMN
         rx.box(
             rx.text(
-                "For over 10 years I've been helping founders & business owners build the technology powering their organisations. "
-                "I've developed everything from simple marketing websites to entire SAAS platforms and ",
-                rx.link("everything in between.", href="#", text_decoration="underline"),
+                "I've spent years mastering mechanical engineering, focusing on mechanical design and analysis. "
+                "From HVAC systems to designing chillers, I've worked on critical design calculations and production phases.",
                 font_size="22px",
                 color="#000000",
                 line_height="1.8",
@@ -105,8 +104,9 @@ def about_page() -> rx.Component:
                 text_align="left",
             ),
             rx.text(
-                "With a background in computer science, I'm a problem solver at heart and love taking on complex and challenging projects. "
-                "I'm great at quickly getting up to speed and breaking down tricky business requirements for industry-specific systems.",
+                "After transitioning into data science, I specialized in supervised learning architectures, enhancing my problem-solving skills. "
+                "This journey has been about understanding complex systems, both mechanical and data-driven."
+                " Implemented AI models and optimized systems.",
                 font_size="22px",
                 color="#000000",
                 line_height="1.8",
@@ -120,9 +120,8 @@ def about_page() -> rx.Component:
         # RIGHT COLUMN
         rx.box(
             rx.text(
-                "As a ",
-                rx.text("full-stack", as_="span", font_style="italic"),
-                " developer, I'm a one-stop-shop, able to take ideas from conception to completion, handling the entire process from start to finish.",
+                "Currently, I'm in Luxembourg pursuing my master's degree. "
+                "Here, I've done extensive mechanical analysis, further sharpening my expertise in real-world applications.",
                 font_size="22px",
                 color="#000000",
                 line_height="1.8",
@@ -130,8 +129,8 @@ def about_page() -> rx.Component:
                 text_align="left",
             ),
             rx.text(
-                "So whether you're a non-technical founder building your first app or an established enterprise with an existing tech team, "
-                "I'm ready to jump in and help you get your next big idea off the ground.",
+                "After completing a robotics course, my passion for simulations, particularly in ROS2, grew immensely. "
+                "Now, I’m eager to dive deep into robotics and seek opportunities where I can combine this passion with Python.",
                 font_size="22px",
                 color="#000000",
                 line_height="1.8",
@@ -139,8 +138,8 @@ def about_page() -> rx.Component:
                 text_align="left",
             ),
             rx.text(
-                "Want to chat more → ",
-                rx.link("Send me an email", href="mailto:your@email.com", text_decoration="underline"),
+                "Let’s connect → ",
+                rx.link("Send me an email", href="mailto:mohammadhassan.novin.001@student.uni.lu", text_decoration="underline"),
                 font_size="22px",
                 color="#000000",
                 line_height="1.8",

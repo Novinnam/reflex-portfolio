@@ -40,7 +40,7 @@ def navbar():
             rx.hstack(
                 rx.text("Novinnam", font_weight="semibold", font_size="35px", color="#000000", font_family="Sans-serif"),
                 rx.spacer(),
-                rx.link("Mohammadhassan.novin.001@student.uni.lu", href="mailto:mohammadhassan.novin.001@student.uni.lu", color="red", font_size='20px'),
+                rx.link("Email", href="mailto:mohammadhassan.novin.001@student.uni.lu", color="red", font_size='20px'),
                 rx.link("Home", href="/", color='black', font_size='20px'),
                 rx.link("About", href="/about", color='black', font_size='20px'),
                 rx.link("Projects", href="/projects", color='black', font_size='20px'),

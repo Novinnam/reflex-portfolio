@@ -216,7 +216,7 @@ def featured_projects() -> rx.Component:
 
 @rx.page(
     route="/",
-    title="Novin | Software Developer",
+    title="Novin | Robotics Specialist",
 )
 def index():
     return rx.box(

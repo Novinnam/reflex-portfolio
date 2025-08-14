@@ -41,7 +41,7 @@ RadixThemesLink,
 jsx(
 ReactRouterLink,
 {to:"mailto:mohammadhassan.novin.001@student.uni.lu"},
-"Mohammadhassan.novin.001@student.uni.lu"
+"Email"
 ,),),jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["color"] : "black", ["fontSize"] : "20px", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
@@ -79,7 +79,7 @@ RadixThemesHeading,
 jsx(
 Fragment,
 {},
-"The one-man tech team ready to bring your next big idea to life."
+"The one-man team ready to build your next big robotics solution."
 ,),),jsx(
 RadixThemesText,
 {as:"p",css:({ ["marginTop"] : "1.5rem" })},
@@ -87,11 +87,11 @@ RadixThemesText,
 ,),jsx(
 RadixThemesText,
 {as:"p",css:({ ["marginTop"] : "0.25rem" })},
-"Mechanical & HVAC engineer turned AI/ML practitioner."
+"Mechanical engineer with a passion for programming and robotics."
 ,),jsx(
 RadixThemesText,
 {as:"p",css:({ ["marginTop"] : "0.25rem" })},
-"Now focused on robotics, ROS, image processing, and Python systems."
+"Completed a robotics course and now focused on ROS simulations in Python."
 ,),),jsx(
 RadixThemesBox,
 {css:({ ["padding"] : "2rem" })},
@@ -122,44 +122,32 @@ RadixThemesBox,
 jsx(
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "22px", ["color"] : "#000000", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["textAlign"] : "left" })},
-"For over 10 years I've been helping founders & business owners build the technology powering their organisations. I've developed everything from simple marketing websites to entire SAAS platforms and "
-,jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["textDecoration"] : "underline", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
-jsx(
-ReactRouterLink,
-{to:"#"},
-"everything in between."
-,),),),jsx(
+"I've spent years mastering mechanical engineering, focusing on mechanical design and analysis. From HVAC systems to designing chillers, I've worked on critical design calculations and production phases."
+,),jsx(
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "22px", ["color"] : "#000000", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["textAlign"] : "left" })},
-"With a background in computer science, I'm a problem solver at heart and love taking on complex and challenging projects. I'm great at quickly getting up to speed and breaking down tricky business requirements for industry-specific systems."
+"After transitioning into data science, I specialized in supervised learning architectures, enhancing my problem-solving skills. This journey has been about understanding complex systems, both mechanical and data-driven. Implemented AI models and optimized systems."
 ,),),jsx(
 RadixThemesBox,
 {css:({ ["width"] : "50%", ["paddingLeft"] : "2rem" })},
 jsx(
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "22px", ["color"] : "#000000", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["textAlign"] : "left" })},
-"As a "
-,jsx(
-RadixThemesText,
-{as:"span",css:({ ["fontStyle"] : "italic" })},
-"full-stack"
-,)," developer, I'm a one-stop-shop, able to take ideas from conception to completion, handling the entire process from start to finish."
+"Currently, I'm in Luxembourg pursuing my master's degree. Here, I've done extensive mechanical analysis, further sharpening my expertise in real-world applications."
 ,),jsx(
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "22px", ["color"] : "#000000", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["textAlign"] : "left" })},
-"So whether you're a non-technical founder building your first app or an established enterprise with an existing tech team, I'm ready to jump in and help you get your next big idea off the ground."
+"After completing a robotics course, my passion for simulations, particularly in ROS2, grew immensely. Now, I\u2019m eager to dive deep into robotics and seek opportunities where I can combine this passion with Python."
 ,),jsx(
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "22px", ["color"] : "#000000", ["lineHeight"] : "1.8", ["marginTop"] : "1em", ["textAlign"] : "left" })},
-"Want to chat more \u2192 "
+"Let\u2019s connect \u2192 "
 ,jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["textDecoration"] : "underline", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
 jsx(
 ReactRouterLink,
-{to:"mailto:your@email.com"},
+{to:"mailto:mohammadhassan.novin.001@student.uni.lu"},
 "Send me an email"
 ,),),),),),),jsx(
 RadixThemesBox,

@@ -6,10 +6,106 @@ import { Link as ReactRouterLink } from "react-router"
 import { StateContexts } from "$/utils/context"
 import { DynamicIcon } from "lucide-react/dynamic.mjs"
 import { isTrue } from "$/utils/state"
-import { Text_101293345110516020862261840462185915770 } from "$/utils/stateful_components"
 import { jsx } from "@emotion/react"
 
 
+
+function Img_313426746455881500796697668050988396767 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
+
+  )
+}
+
+function Grid_136910986775156983309440499552635850667 () {
+  
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesGrid,
+{columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
+[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_a8a5e3642fb0a602)=>(jsx(
+RadixThemesBox,
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_a8a5e3642fb0a602},
+jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"column",gap:"3"},
+jsx(
+RadixThemesLink,
+{asChild:true,css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
+jsx(
+ReactRouterLink,
+{to:("/projects/"+project_rx_state_["link"])},
+jsx("img",{css:({ ["filter"] : "grayscale(100%)", ["transition"] : "filter 0.5s ease-in-out", ["width"] : "100%", ["&:hover"] : ({ ["filter"] : "grayscale(0%)" }), ["border"] : (isTrue(project_rx_state_["border"]) ? "1px solid red" : "none") }),src:project_rx_state_["image_url"]},)
+,),),jsx(
+RadixThemesLink,
+{asChild:true,css:({ ["fontWeight"] : "bold", ["fontSize"] : "1.1em", ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
+jsx(
+ReactRouterLink,
+{to:("/projects/"+project_rx_state_["link"])},
+project_rx_state_["title"]
+,),),jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
+project_rx_state_["description"]
+,),),))),)
+  )
+}
+
+function Flex_28406912103606262033649260813687332391 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
+reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_39a4cf57cb4543cd)=>(jsx(
+RadixThemesLink,
+{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_39a4cf57cb4543cd},
+jsx(
+ReactRouterLink,
+{to:link_rx_state_["url"]},
+jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
+,),))),)
+  )
+}
+
+function Text_101293345110516020862261840462185915770 () {
+  
+  const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontFamily"] : "monospace", ["--default-font-family"] : "monospace", ["fontSize"] : "0.8em", ["color"] : "white" })},
+("Version "+reflex___state____state__my_resume___components____footer_state.version_rx_state_+" \u2013 Date: "+reflex___state____state__my_resume___components____footer_state.today_rx_state_)
+,)
+  )
+}
 
 function Text_17037081057075227923768297436447827437 () {
   
@@ -47,85 +143,6 @@ reflex___state____state__my_resume___my_resume____hero_state.description_rx_stat
   )
 }
 
-function Flex_14150160347677826606356720453480723266 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
-reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_a5d3c0b14460d6bf)=>(jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_a5d3c0b14460d6bf},
-jsx(
-ReactRouterLink,
-{to:link_rx_state_["url"]},
-jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
-,),))),)
-  )
-}
-
-function Img_313426746455881500796697668050988396767 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx("img",{css:({ ["@media screen and (min-width: 0px)"] : ({ ["width"] : "830px" }), ["@media screen and (min-width: 62em)"] : ({ ["width"] : "990px" }), ["@media screen and (min-width: 80em)"] : ({ ["width"] : "1223px" }), ["height"] : "auto", ["borderRadius"] : "lg" }),src:reflex___state____state__my_resume___my_resume____hero_state.profile_image_rx_state_},)
-
-  )
-}
-
-function Grid_316239748961122302487859696671668527433 () {
-  
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesGrid,
-{columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
-[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_f12417db2b731ad8)=>(jsx(
-RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_f12417db2b731ad8},
-jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"column",gap:"3"},
-jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
-jsx(
-ReactRouterLink,
-{to:("/projects/"+project_rx_state_["link"])},
-jsx("img",{css:({ ["filter"] : "grayscale(100%)", ["transition"] : "filter 0.5s ease-in-out", ["width"] : "100%", ["&:hover"] : ({ ["filter"] : "grayscale(0%)" }), ["border"] : (isTrue(project_rx_state_["border"]) ? "1px solid red" : "none") }),src:project_rx_state_["image_url"]},)
-,),),jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["fontWeight"] : "bold", ["fontSize"] : "1.1em", ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
-jsx(
-ReactRouterLink,
-{to:("/projects/"+project_rx_state_["link"])},
-project_rx_state_["title"]
-,),),jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
-project_rx_state_["description"]
-,),),))),)
-  )
-}
-
 export default function Component() {
     
 
@@ -159,7 +176,7 @@ RadixThemesLink,
 jsx(
 ReactRouterLink,
 {to:"mailto:mohammadhassan.novin.001@student.uni.lu"},
-"Mohammadhassan.novin.001@student.uni.lu"
+"Email"
 ,),),jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["color"] : "black", ["fontSize"] : "20px", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
@@ -196,7 +213,7 @@ RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["@media screen and (min-width: 0px)"] : ({ ["alignItems"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["alignItems"] : "start" }) }),direction:"column",gap:"4"},
 jsx(Text_17037081057075227923768297436447827437,{},)
 ,jsx(Text_99633831357110369685866192190511901652,{},)
-,jsx(Flex_14150160347677826606356720453480723266,{},)
+,jsx(Flex_28406912103606262033649260813687332391,{},)
 ,),),),jsx(
 RadixThemesBox,
 {css:({ ["backgroundColor"] : "black", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["width"] : "100%", ["maxWidth"] : "1344px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["height"] : "42px" })},
@@ -221,7 +238,7 @@ jsx(
 RadixThemesHeading,
 {css:({ ["marginBottom"] : "1em", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["font_size"] : ({ ["base"] : "32px", ["md"] : "48px", ["lg"] : "60px" }), ["textAlign"] : "center" })},
 "Featured Projects"
-,),jsx(Grid_316239748961122302487859696671668527433,{},)
+,),jsx(Grid_136910986775156983309440499552635850667,{},)
 ,jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["fontWeight"] : "bold", ["color"] : "red", ["marginTop"] : "2em", ["alignSelf"] : "flex-end", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
@@ -348,7 +365,7 @@ ReactRouterLink,
 ,),),),),),),jsx(
 "title",
 {},
-"Novin | Software Developer"
+"Novin | Robotics Specialist"
 ,),jsx("meta",{content:"favicon.ico",property:"og:image"},)
 ,)
   )
