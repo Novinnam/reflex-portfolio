@@ -678,7 +678,7 @@ def component_calculations_page():
 class ConnectionCalculationsState(rx.State):
     # Define the base vars (state variables)
     slide_index: int = 0  # Initial slide index
-    circle_pos: tuple[int, int] = (0, 0)  # Initial position of the circle
+    circle_pos: tuple[int, int] = (85, 640)  # Initial position of the circle
 
     # Define the event handler to go to the next slide
     @rx.event
@@ -695,21 +695,22 @@ class ConnectionCalculationsState(rx.State):
     # Method to update the circle position based on slide index
     def update_circle_position(self):
         positions = [
-            (30, 100),  # Slide 1 circle position (x, y)
-            (10, 200),  # Slide 2 circle position
-            (20, 300),  # Slide 3 circle position, etc.
+            (26.5, 615),  # Slide 1 circle position (x, y)
+            (26.5, 520),  # Slide 2 circle position
+            (26.5, 190),  # Slide 3 circle position, etc.
         ]
         
         # Update the position of the circle directly
         self.circle_pos = positions[self.slide_index % len(positions)]  # Calculate and update circle position
-    
+
+
 # Function to render the page
 @rx.page(route="/projects/single_power_screw/connections", title="Connection Calculations | Single Power Screw Press Machine")
 def connection_calculations_page():
 
     return rx.box(
         navbar(),
-        
+
         # Heading and other text elements
         rx.vstack(
             rx.text(
@@ -743,32 +744,30 @@ def connection_calculations_page():
                 margin_x='auto'
             ),
             rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
-            
+
             # Image with dynamic circle
             rx.box(
                 rx.image(
                     src="/connection_calculations.jpg",  # Replace with actual image URL
                     alt="Connection Diagram",
                     height='100%',
-                    width="100%"
+                    width="100%",
                 ),
                 rx.box(
-                    # Circle that moves according to slide index
-                    rx.box(
-                        # Red border with transparent fill
-                        border="5px solid red",
-                        bg="transparent",  # No fill color
-                        position="relative",
-                        top=f"{ConnectionCalculationsState.circle_pos[1]}%",  # Y position
-                        left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
-                        width="100px",  # Set the width of the circle
-                        height="100px",  # Set the height of the circle
-                        border_radius="50%",  # Make it circular
-                        transition="all 0.5s ease"  # Smooth transition for circle movement
-                    )
+                    # Red border with transparent fill
+                    border="5px solid red",
+                    bg="transparent",  # No fill color
+                    position="relative",  # Using absolute position
+                    top=f"{-ConnectionCalculationsState.circle_pos[1]}px",  # Y position
+                    left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
+                    width="100px",  # Set the width of the circle
+                    height="100px",  # Set the height of the circle
+                    border_radius="50%",  # Make it circular
+                    transition="all 0.5s ease"  # Smooth transition for circle movement
                 ),
                 margin_x='auto'
-            ),         
+            ),
+
             # Navigation buttons
             rx.box(
                 rx.button("Previous", on_click=ConnectionCalculationsState.go_to_previous_slide, bg="gray", color="white", margin_right="1em"),
@@ -776,9 +775,9 @@ def connection_calculations_page():
                 margin_x='auto'
             ),
         ),
-        
+
         global_footer(),
-        
+
         bg="#f5f5f0",
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
