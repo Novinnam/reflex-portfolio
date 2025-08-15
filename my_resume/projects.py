@@ -674,15 +674,43 @@ def component_calculations_page():
         padding_bottom="2em",
     )
 
-@rx.page(
-    route="/projects/single_power_screw/connections",
-    title="Connection Calculations | Single Power Screw Press Machine",
-)
+# Define the state class
+class ConnectionCalculationsState(rx.State):
+    # Define the base vars (state variables)
+    slide_index: int = 0  # Initial slide index
+    circle_pos: tuple[int, int] = (0, 0)  # Initial position of the circle
+
+    # Define the event handler to go to the next slide
+    @rx.event
+    def go_to_next_slide(self):
+        self.slide_index = self.slide_index + 1
+        self.update_circle_position()  # Directly update the circle position
+
+    # Define the event handler to go to the previous slide
+    @rx.event
+    def go_to_previous_slide(self):
+        self.slide_index = self.slide_index - 1
+        self.update_circle_position()  # Directly update the circle position
+
+    # Method to update the circle position based on slide index
+    def update_circle_position(self):
+        positions = [
+            (30, 100),  # Slide 1 circle position (x, y)
+            (10, 200),  # Slide 2 circle position
+            (20, 300),  # Slide 3 circle position, etc.
+        ]
+        
+        # Update the position of the circle directly
+        self.circle_pos = positions[self.slide_index % len(positions)]  # Calculate and update circle position
+    
+# Function to render the page
+@rx.page(route="/projects/single_power_screw/connections", title="Connection Calculations | Single Power Screw Press Machine")
 def connection_calculations_page():
+
     return rx.box(
         navbar(),
         
-        # 💡 Heading for Connection Calculations
+        # Heading and other text elements
         rx.vstack(
             rx.text(
                 "Connection Calculations",
@@ -715,37 +743,42 @@ def connection_calculations_page():
                 margin_x='auto'
             ),
             rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
-
-            # Add calculations for the connections between components (e.g., forces, torque, etc.)
-            # Use Card components to better organize calculation data
-
-            rx.card(
-                rx.text("Connection 1: Screw to Wheel", font_size="20px", font_weight="bold", margin_bottom="1em"),
-                rx.text("Calculate the force transmitted through the screw to the wheel connection, considering torque, friction, and stress.", font_size="16px", color="gray", margin_bottom="1em"),
-                rx.text("Calculated Force: 500 N", font_size="18px", font_weight="semibold", margin_bottom="1em"),
-                rx.text("Calculated Stress: 200 MPa", font_size="18px", font_weight="semibold", margin_bottom="1em"),
-                padding="1em",
-                bg="white",
-                border_radius="8px",
-                shadow="md",
-                margin_bottom="2em"
+            
+            # Image with dynamic circle
+            rx.box(
+                rx.image(
+                    src="/connection_calculations.jpg",  # Replace with actual image URL
+                    alt="Connection Diagram",
+                    height='100%',
+                    width="100%"
+                ),
+                rx.box(
+                    # Circle that moves according to slide index
+                    rx.box(
+                        # Red border with transparent fill
+                        border="5px solid red",
+                        bg="transparent",  # No fill color
+                        position="relative",
+                        top=f"{ConnectionCalculationsState.circle_pos[1]}%",  # Y position
+                        left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
+                        width="100px",  # Set the width of the circle
+                        height="100px",  # Set the height of the circle
+                        border_radius="50%",  # Make it circular
+                        transition="all 0.5s ease"  # Smooth transition for circle movement
+                    )
+                ),
+                margin_x='auto'
+            ),         
+            # Navigation buttons
+            rx.box(
+                rx.button("Previous", on_click=ConnectionCalculationsState.go_to_previous_slide, bg="gray", color="white", margin_right="1em"),
+                rx.button("Next", on_click=ConnectionCalculationsState.go_to_next_slide, bg="blue", color="white"),
+                margin_x='auto'
             ),
-            rx.card(
-                rx.text("Connection 2: Base to Pressure Plate", font_size="20px", font_weight="bold", margin_bottom="1em"),
-                rx.text("Calculate the forces transmitted from the base to the pressure plate, considering the impact of the press mechanism.", font_size="16px", color="gray", margin_bottom="1em"),
-                rx.text("Calculated Force: 600 N", font_size="18px", font_weight="semibold", margin_bottom="1em"),
-                rx.text("Calculated Stress: 250 MPa", font_size="18px", font_weight="semibold", margin_bottom="1em"),
-                padding="1em",
-                bg="white",
-                border_radius="8px",
-                shadow="md",
-                margin_bottom="2em"
-            ),
-            # Add more connections as needed
         ),
         
         global_footer(),
-
+        
         bg="#f5f5f0",
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
