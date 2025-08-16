@@ -748,7 +748,7 @@ def connection_calculations_page():
             rx.hstack(
                 rx.box(
                     # Title in larger font
-                    rx.text('Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660', font_size='24px'),
+                    rx.text('Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660', font_size='24px', width='80%'),
                     
                     rx.table.root(
                         rx.table.header(
@@ -800,7 +800,7 @@ def connection_calculations_page():
                                 rx.table.cell("-"),
                             ),
                         ),
-                        width="100%",
+                        width="80%",
                         margin='1em',
                         padding='1em',
                     ),
@@ -825,6 +825,7 @@ def connection_calculations_page():
                         border_radius="50%",  # Make it circular
                         transition="all 0.5s ease"  # Smooth transition for circle movement
                     ),
+                    width='80%'
                 ),
                 margin_x='auto'
             ),
@@ -835,6 +836,8 @@ def connection_calculations_page():
                 rx.button("Next", on_click=ConnectionCalculationsState.go_to_next_slide, bg="blue", color="white"),
                 margin_x='auto'
             ),
+            max_width='80%',
+            margin_x='auto'
         ),
 
         global_footer(),
