@@ -9,7 +9,7 @@ import { jsx } from "@emotion/react"
 
 
 
-function Grid_125997766274633871569489810462328426994 () {
+function Grid_63929692130234652818430807656374429016 () {
   
 
 
@@ -21,9 +21,9 @@ function Grid_125997766274633871569489810462328426994 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "2", ["lg"] : "3" }),css:({ ["marginBottom"] : "3em", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),gap:"6"},
-[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_76532762f3bd370f)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_9cf8675137ee9753)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_76532762f3bd370f},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_9cf8675137ee9753},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
@@ -142,7 +142,7 @@ RadixThemesText,
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.8em", ["fontWeight"] : "bold", ["color"] : "red", ["letterSpacing"] : "wide", ["textAlign"] : "left", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginBottom"] : "1em" })},
 "PINNED"
-,),jsx(Grid_125997766274633871569489810462328426994,{},)
+,),jsx(Grid_63929692130234652818430807656374429016,{},)
 ,jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["width"] : "100%", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),direction:"column",gap:"3"},

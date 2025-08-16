@@ -16,12 +16,6 @@ type Pages = {
   "/": {
     params: {};
   };
-  "/projects/single_power_screw/connections": {
-    params: {};
-  };
-  "/projects/single_power_screw/components": {
-    params: {};
-  };
   "/projects/single_power_screw": {
     params: {};
   };
@@ -69,15 +63,7 @@ type RouteFiles = {
   };
   "root.jsx": {
     id: "root";
-    page: "/404" | "/" | "/projects/single_power_screw/connections" | "/projects/single_power_screw/components" | "/projects/single_power_screw" | "/projects/bell_bracket" | "/single-power-screw-page" | "/projects/rod_cap" | "/bell-bracket-page" | "/projects-page" | "/rod-cap-page" | "/about-page" | "/projects" | "/about" | "/*";
-  };
-  "routes/[projects].[single_power_screw].[connections]._index.jsx": {
-    id: "routes/[projects].[single_power_screw].[connections]._index";
-    page: "/projects/single_power_screw/connections";
-  };
-  "routes/[projects].[single_power_screw].[components]._index.jsx": {
-    id: "routes/[projects].[single_power_screw].[components]._index";
-    page: "/projects/single_power_screw/components";
+    page: "/404" | "/" | "/projects/single_power_screw" | "/projects/bell_bracket" | "/single-power-screw-page" | "/projects/rod_cap" | "/bell-bracket-page" | "/projects-page" | "/rod-cap-page" | "/about-page" | "/projects" | "/about" | "/*";
   };
   "routes/[projects].[single_power_screw]._index.jsx": {
     id: "routes/[projects].[single_power_screw]._index";

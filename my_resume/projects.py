@@ -565,6 +565,8 @@ def single_power_screw_page():
             max_width="66.67%",
             margin_x='auto'
         ),
+        
+        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
 
         # 📌 Navigation to Calculation Pages
         rx.text(
@@ -573,273 +575,386 @@ def single_power_screw_page():
             font_weight="bold",
             color="red",  # Color changed to red
             letter_spacing="wide",
-            text_align="center",
+            text_align="left",
+            margin_x="16.7%",
+            margin_bottom="1em"
+        ),
+        # 📌 Add the calculation and formula section here
+    rx.vstack(
+        rx.text(
+            "2. Methods",
+            font_size="18px",
+            font_weight="bold",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.text(
+            "The analysis followed systematic mechanical engineering design practices. Calculations were carried out using fundamental equations for:",
+            font_size="18px",
+            color="black",
+            margin_bottom="1em",
+            max_width='80%',
+            margin_x='20%'
+        ),
+
+        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+        rx.text(
+            "2.1 Compressive Buckling and Safety Factor Evaluation Using Johnson's Formula:",
+            font_size="16px",
+            font_weight="bold",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.text(
+            "Define known inputs:",
+            font_weight="bold",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.hstack(
+            rx.table.root(
+                rx.table.header(
+                    rx.table.row(
+                        rx.table.column_header_cell("Parameter"),
+                        rx.table.column_header_cell("Value"),
+                    ),
+                ),
+                rx.table.body(
+                    rx.table.row(
+                        rx.table.row_header_cell(rx.markdown("$$P$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                        rx.table.cell(rx.markdown("$$20 kN$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                    ),
+                    rx.table.row(
+                        rx.table.row_header_cell(rx.markdown("$$L$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                        rx.table.cell(rx.markdown("$$180 mm$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                    ),
+                    rx.table.row(
+                        rx.table.row_header_cell(rx.markdown("$$E$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                        rx.table.cell(rx.markdown("$$2.0·10^5 MPa$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                    ),
+                    rx.table.row(
+                        rx.table.row_header_cell(rx.markdown("$$n_s$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                        rx.table.cell(rx.markdown("$$3$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                    ),
+                    rx.table.row(
+                        rx.table.row_header_cell(rx.markdown("$$S_y$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                        rx.table.cell(rx.markdown("$$550 MPa$$"), color="black", font_size='20px', font_family="Georgia, serif"),
+                    ),
+                    ),
+                    max_width='100%',
+                ),
+                rx.image(
+                    src="/column_effective_length.png",  # Image after calculations
+                    alt="Calculation Image",
+                    width="60%",
+                    margin_x="auto",
+                    margin_bottom="1em"
+                ),
+                margin_x='auto'
+            ),
+        
+        rx.text(
+            "Determine Effective Length:",
+            font_weight="bold",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.markdown(
+            "$$le(l) = 0.7 · l$$",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='25%'
+        ),
+        rx.text(
+            "Calculate Minimum Required Core Diameter d:",
+            font_weight="bold",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.markdown(
+            r"$$d(P, le(l), E, ns) = \sqrt{\frac{32 \cdot P \cdot le^{2} \cdot ns}{\pi^{2} \cdot E}}$$",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='25%'
+        ),
+        rx.markdown(
+            "$$d(P, le(l), E, ns) = 8.373 mm$$",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x="25%"
+        ),
+        rx.image(
+            src="/thread_table.png",  # Image after calculations
+            alt="Calculation Image",
+            width="40%",
             margin_x="auto",
             margin_bottom="1em"
         ),
-        
-        rx.hstack(
-            # Component Calculation Link
-            rx.link(
-                rx.button(
-                    "Component Calculation",
-                    width="200px",
-                    padding="1em",
-                    background_color="blue.400",
-                    color="white",
-                    font_size="18px",
-                    font_weight="bold",
-                    border_radius="md",
-                    margin_bottom="3em",
-                ),
-                href="/projects/single_power_screw/components",
-            ),
-            
-            # Connection Calculation Link
-            rx.link(
-                rx.button(
-                    "Connection Calculation",
-                    width="200px",
-                    padding="1em",
-                    background_color="blue.400",
-                    color="white",
-                    font_size="18px",
-                    font_weight="bold",
-                    border_radius="md",
-                    margin_bottom="3em",
-                ),
-                href="/projects/single_power_screw/connections",
-            ),
-            margin_x='40%',
-            max_width='67%'
+        rx.text(
+            "Select Thread Based on Required Diameter:",
+            font_weight="bold",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
         ),
-        
-        global_footer(),
-
-        bg="#f5f5f0",
-        width="100%",
-        padding_x={"base": "1em", "md": "2em"},
-        padding_bottom="2em",
-    )
-
-
-@rx.page(
-    route="/projects/single_power_screw/components",
-    title="Component Calculations | Single Power Screw Press Machine",
-)
-def component_calculations_page():
-    return rx.box(
-        navbar(),
-        
-        # 💡 Heading for Component Calculations
-        rx.vstack(
-            rx.text(
-                "Component Calculations",
-                color="red",
-                font_size="20px",
-                font_weight="bold",
-                letter_spacing="wide",
-                margin_bottom="0.5em"
-            ),
-            rx.heading(
-                "Detailed Calculations for Each Component of the Machine",
-                font_family="Georgia, serif",
-                font_size={"base": "28px", "md": "42px", "lg": "56px"},
-                text_align="center",
-                line_height="1.3",
-                font_weight="semibold",
-                margin_bottom="1em"
-            ),
-            rx.text(
-                "Each component in the Single Power Screw Press Machine has unique calculations based on its design and material properties. "
-                "Below, we explore the calculations for each component of the machine.",
-                font_size="18px",
-                max_width="750px",
-                text_align="center",
-                color="gray",
-                margin_bottom="3em"
-            ),
-            # Add calculations for each component as per your requirements (e.g., for screw, base, etc.)
-            rx.text("Screw Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
-            rx.text("Base Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
-            rx.text("Pressure Plate Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
-            # Add more as needed
+        rx.text(
+            "S22x3 with minor d = 16.794 mm is chosen",
+            font_size="20px",
+            font_family='Times New Roman',
+            color="black",
+            margin_bottom="1em",
+            margin_x='25%'
         ),
-        
-        global_footer(),
-
-        bg="#f5f5f0",
-        width="100%",
-        padding_x={"base": "1em", "md": "2em"},
-        padding_bottom="2em",
-    )
-
-# Define the state class
-class ConnectionCalculationsState(rx.State):
-    # Define the base vars (state variables)
-    slide_index: int = 0  # Initial slide index
-    circle_pos: tuple[float, float] = (85, 640)  # Initial position of the circle
-
-    # Define the event handler to go to the next slide
-    @rx.event
-    def go_to_next_slide(self):
-        self.slide_index = self.slide_index + 1
-        self.update_circle_position()  # Directly update the circle position
-
-    # Define the event handler to go to the previous slide
-    @rx.event
-    def go_to_previous_slide(self):
-        self.slide_index = self.slide_index - 1
-        self.update_circle_position()  # Directly update the circle position
-
-    # Method to update the circle position based on slide index
-    def update_circle_position(self):
-        positions = [
-            (26.5, 615),  # Slide 1 circle position (x, y)
-            (26.5, 520),  # Slide 2 circle position
-            (26.5, 190),  # Slide 3 circle position, etc.
-        ]
-        
-        # Update the position of the circle directly
-        self.circle_pos = positions[self.slide_index % len(positions)]  # Calculate and update circle position
-
-
-# Function to render the page
-@rx.page(route="/projects/single_power_screw/connections", title="Connection Calculations | Single Power Screw Press Machine")
-def connection_calculations_page():
-
-    return rx.box(
-        navbar(),
-
-        # Heading and other text elements
+        rx.image(
+            src="/screw1.png",  # Image after calculations
+            alt="Calculation Image",
+            width="30%",
+            margin_x="auto",
+            margin_bottom="1em"
+        ),
+        rx.text(
+            "Section Properties & Slenderness:",
+            font_weight="bold",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
         rx.vstack(
-            rx.text(
-                "Connection Calculations",
-                color="red",
-                font_size="20px",
-                font_weight="bold",
-                letter_spacing="wide",
-                margin_bottom="0.5em",
-                margin_x='auto',
-                padding_top='4em'
-            ),
-            rx.heading(
-                "Calculations for Connections Between Components",
-                font_family="Georgia, serif",
-                font_size={"base": "28px", "md": "42px", "lg": "56px"},
-                text_align="center",
-                line_height="1.3",
-                font_weight="semibold",
-                margin_bottom="1em",
-                margin_x='auto'
-            ),
-            rx.text(
-                "This section calculates the forces and stresses transmitted through the connections between the components of the Single "
-                "Power Screw Press Machine, ensuring a well-coordinated functioning of the entire system.",
-                font_size="18px",
-                max_width="750px",
-                text_align="center",
-                color="gray",
-                margin_bottom="3em",
-                margin_x='auto'
-            ),
-            rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
-
             rx.hstack(
-                rx.box(
-                    # Title in larger font
-                    rx.text('Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660', font_size='24px', width='80%'),
-                    
-                    rx.table.root(
-                        rx.table.header(
-                            rx.table.row(
-                                rx.table.column_header_cell("Property"),
-                                rx.table.column_header_cell("Value"),
-                                rx.table.column_header_cell("Unit"),
-                            ),
-                        ),
-                        rx.table.body(
-                            rx.table.row(
-                                rx.table.row_header_cell("S<sub>u</sub><sub>b</sub> := 240"),
-                                rx.table.cell(""),
-                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("Sᵧᵦ := 120"),
-                                rx.table.cell(""),
-                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("Sᶜᵦ := 320"),
-                                rx.table.cell(""),
-                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("Hᴮ := 65"),
-                                rx.table.cell(""),
-                                rx.table.cell("-"),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("Eᵦ := 100"),
-                                rx.table.cell(""),
-                                rx.table.cell("<span style='color: blue;'>GPa</span>", dangerous_inner_html=True),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("νᵦ := 0.35"),
-                                rx.table.cell(""),
-                                rx.table.cell("-"),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("Eᵃ := 2·10⁵"),
-                                rx.table.cell(""),
-                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
-                            ),
-                            rx.table.row(
-                                rx.table.row_header_cell("νᵃ := 0.3"),
-                                rx.table.cell(""),
-                                rx.table.cell("-"),
-                            ),
-                        ),
-                        width="80%",
-                        margin='1em',
-                        padding='1em',
-                    ),
+                rx.markdown(
+                    r"$$A(d) = \frac{\pi d^2}{4}$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
                 ),
-                # Image with dynamic circle
-                rx.box(
-                    rx.image(
-                        src="/connection_calculations.jpg",  # Replace with actual image URL
-                        alt="Connection Diagram",
-                        height='100%',
-                        width="100%",
-                    ),
-                    rx.box(
-                        # Red border with transparent fill
-                        border="5px solid red",
-                        bg="transparent",  # No fill color
-                        position="relative",  # Using absolute position
-                        top=f"{-ConnectionCalculationsState.circle_pos[1]}px",  # Y position
-                        left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
-                        width="100px",  # Set the width of the circle
-                        height="100px",  # Set the height of the circle
-                        border_radius="50%",  # Make it circular
-                        transition="all 0.5s ease"  # Smooth transition for circle movement
-                    ),
-                    width='80%'
+                rx.markdown(
+                    r"$$rg(A,I) = \sqrt{\frac{I}{A}}$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
                 ),
-                margin_x='auto'
+                rx.markdown(
+                    r"$$I(d) = \frac{\pi d^4}{32}$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                spacing='9'
             ),
-
-            # Navigation buttons
-            rx.box(
-                rx.button("Previous", on_click=ConnectionCalculationsState.go_to_previous_slide, bg="gray", color="white", margin_right="1em"),
-                rx.button("Next", on_click=ConnectionCalculationsState.go_to_next_slide, bg="blue", color="white"),
-                margin_x='auto'
+            rx.hstack(
+                rx.markdown(
+                    r"$$A(d) = 221.512 \, \text{mm}^2$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                rx.markdown(
+                    r"$$rg(A(d), I(d)) = 5.938 \, \text{mm}$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                rx.markdown(
+                    r"$$I(d) = (7.809 \times 10^3) \, \text{mm}^4$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                spacing='9'
             ),
-            max_width='80%',
-            margin_x='auto'
+            rx.hstack(
+                rx.markdown(
+                    r"$$C_{cr}(rg, E, Sy) = \sqrt{\frac{2 \cdot \pi^2 \cdot E}{Sy}}$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                rx.markdown(
+                    r"$$C(\ell_e, rg) = \frac{\ell_e}{rg}$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                spacing='9'
+            ),
+            rx.hstack(
+                rx.markdown(
+                    r"$$C_{cr}(rg, E, Sy) = 84.722$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                rx.markdown(
+                    r"$$C(\ell_e, rg(A(d), I(d))) = 21.221$$",
+                    font_size="16px",
+                    color="black",
+                    margin_bottom="1em",
+                ),
+                spacing='9'
+            ),
+            margin_x='25%',
+        ),
+        rx.text(
+            "Buckling Check & Safety Factor:",
+            font_weight="bold",
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.vstack(
+            rx.markdown(r"$$\sigma_J(S_y, \ell_e, E, r_g) = S_y - \frac{S_y^2}{4 \pi^2 E} \cdot \left(\frac{\ell_e(l)}{r_g(A(d), I(d))}\right)^2$$"),
+            rx.markdown(r"$$\sigma_J(S_y, \ell_e, E, r_g) = 532.747 \, \text{MPa}$$"),
+            rx.markdown(r"$$\sigma(P, A) := \frac{P}{A}$$"),
+            rx.markdown(r"$$\sigma(P, A(d)) = 90.288 \, \text{MPa}$$"),
+            rx.markdown(r"$$n := \frac{\sigma_J(S_y, \ell_e, E, r_g)}{\sigma(P, A(d))}$$"),
+            rx.markdown(r"$$n = 5.901$$"),
+            margin_x='25%'
         ),
 
+        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+        rx.text(
+            "2.2. Contact stress between the screw and the washer:",
+            font_size="16px",
+            font_weight="bold",
+            color="black",
+            margin_bottom="1em",
+            margin_x='20%'
+        ),
+        rx.text(
+            "Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660",
+            font_family='Times New Roman',
+            font_size="18px",
+            color="black",
+            margin_bottom="1em",
+            max_width='80%',
+            margin_x='20%'
+        ),
+        rx.hstack(
+            rx.markdown(r"$$S_{ub} = 240 \, \text{MPa}$$"),
+            rx.markdown(r"$$S_{yb} = 120 \, \text{MPa}$$"),
+            rx.markdown(r"$$E_b = 100 \, \text{GPa}$$"),
+            rx.markdown(r"$$\nu_b = 0.35$$"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        rx.hstack(
+            rx.markdown(r"$$S_{cb} = 320 \, \text{MPa}$$"),
+            rx.markdown(r"$$HB_b = 65$$"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        # Header Row
+        rx.hstack(
+            rx.markdown("**Screw**"),
+            rx.markdown("**Washer (Bronze)**"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        # Row 1 - Diameters
+        rx.hstack(
+            rx.text(
+            "The diameter of screw head, washer groove: ",
+            font_family='Times New Roman',
+            font_size="16px",
+            color="black",
+            margin_bottom="1em",
+            max_width='100%',
+            margin_x='20%'
+            ),
+            rx.markdown(r"$$d_a = 60 \, \text{mm}$$"),
+            rx.markdown(r"$$d_b = 62 \, \text{mm}$$"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        # Row 2 - E Modulus
+        rx.hstack(
+            rx.markdown(r"$$E_a = 2 \cdot 10^5 \, \text{MPa}$$"),
+            rx.markdown(r"$$E_b = 1 \cdot 10^5 \, \text{MPa}$$"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        # Row 3 - Poisson ratio
+        rx.hstack(
+            rx.markdown(r"$$\nu_a = 0.3$$"),
+            rx.markdown(r"$$\nu_b = 0.35$$"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        # Row 4 - Radius of Groove
+        rx.hstack(
+            rx.markdown(r"$$R_a = \frac{d_a}{2} = 30 \, \text{mm}$$"),
+            rx.markdown(r"$$R_b = \frac{d_b}{2} = 31 \, \text{mm}$$"),
+            spacing='9',
+            margin_x='25%'
+        ),
+        # Row 5 (empty for a neat appearance)
+        rx.hstack(
+            rx.markdown(""),
+            rx.markdown(""),
+            spacing='9',
+            margin_x='1250%'
+        ),
+        # Row 6 (empty for a neat appearance)
+        rx.hstack(
+            rx.markdown(""),
+            rx.markdown(""),
+            spacing='9',
+            margin_x='25%'
+        ),
+    ),
+        
+        # rx.hstack(
+        #     # Component Calculation Link
+        #     rx.link(
+        #         rx.button(
+        #             "Component Calculation",
+        #             width="200px",
+        #             padding="1em",
+        #             background_color="blue.400",
+        #             color="white",
+        #             font_size="18px",
+        #             font_weight="bold",
+        #             border_radius="md",
+        #             margin_bottom="3em",
+        #         ),
+        #         href="/projects/single_power_screw/components",
+        #     ),
+            
+        #     # Connection Calculation Link
+        #     rx.link(
+        #         rx.button(
+        #             "Connection Calculation",
+        #             width="200px",
+        #             padding="1em",
+        #             background_color="blue.400",
+        #             color="white",
+        #             font_size="18px",
+        #             font_weight="bold",
+        #             border_radius="md",
+        #             margin_bottom="3em",
+        #         ),
+        #         href="/projects/single_power_screw/connections",
+        #     ),
+        #     margin_x='40%',
+        #     max_width='67%'
+        # ),
+        
         global_footer(),
 
         bg="#f5f5f0",
@@ -847,3 +962,229 @@ def connection_calculations_page():
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em",
     )
+
+
+# @rx.page(
+#     route="/projects/single_power_screw/components",
+#     title="Component Calculations | Single Power Screw Press Machine",
+# )
+# def component_calculations_page():
+#     return rx.box(
+#         navbar(),
+        
+#         # 💡 Heading for Component Calculations
+#         rx.vstack(
+#             rx.text(
+#                 "Component Calculations",
+#                 color="red",
+#                 font_size="20px",
+#                 font_weight="bold",
+#                 letter_spacing="wide",
+#                 margin_bottom="0.5em"
+#             ),
+#             rx.heading(
+#                 "Detailed Calculations for Each Component of the Machine",
+#                 font_family="Georgia, serif",
+#                 font_size={"base": "28px", "md": "42px", "lg": "56px"},
+#                 text_align="center",
+#                 line_height="1.3",
+#                 font_weight="semibold",
+#                 margin_bottom="1em"
+#             ),
+#             rx.text(
+#                 "Each component in the Single Power Screw Press Machine has unique calculations based on its design and material properties. "
+#                 "Below, we explore the calculations for each component of the machine.",
+#                 font_size="18px",
+#                 max_width="750px",
+#                 text_align="center",
+#                 color="gray",
+#                 margin_bottom="3em"
+#             ),
+#             # Add calculations for each component as per your requirements (e.g., for screw, base, etc.)
+#             rx.text("Screw Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+#             rx.text("Base Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+#             rx.text("Pressure Plate Calculation: ...", font_size="16px", color="gray", margin_bottom="1em"),
+#             # Add more as needed
+#         ),
+        
+#         global_footer(),
+
+#         bg="#f5f5f0",
+#         width="100%",
+#         padding_x={"base": "1em", "md": "2em"},
+#         padding_bottom="2em",
+#     )
+
+# # Define the state class
+# class ConnectionCalculationsState(rx.State):
+#     # Define the base vars (state variables)
+#     slide_index: int = 0  # Initial slide index
+#     circle_pos: tuple[float, float] = (85, 640)  # Initial position of the circle
+
+#     # Define the event handler to go to the next slide
+#     @rx.event
+#     def go_to_next_slide(self):
+#         self.slide_index = self.slide_index + 1
+#         self.update_circle_position()  # Directly update the circle position
+
+#     # Define the event handler to go to the previous slide
+#     @rx.event
+#     def go_to_previous_slide(self):
+#         self.slide_index = self.slide_index - 1
+#         self.update_circle_position()  # Directly update the circle position
+
+#     # Method to update the circle position based on slide index
+#     def update_circle_position(self):
+#         positions = [
+#             (26.5, 615),  # Slide 1 circle position (x, y)
+#             (26.5, 520),  # Slide 2 circle position
+#             (26.5, 190),  # Slide 3 circle position, etc.
+#         ]
+        
+#         # Update the position of the circle directly
+#         self.circle_pos = positions[self.slide_index % len(positions)]  # Calculate and update circle position
+
+
+# # Function to render the page
+# @rx.page(route="/projects/single_power_screw/connections", title="Connection Calculations | Single Power Screw Press Machine")
+# def connection_calculations_page():
+
+#     return rx.box(
+#         navbar(),
+
+#         # Heading and other text elements
+#         rx.vstack(
+#             rx.text(
+#                 "Connection Calculations",
+#                 color="red",
+#                 font_size="20px",
+#                 font_weight="bold",
+#                 letter_spacing="wide",
+#                 margin_bottom="0.5em",
+#                 margin_x='auto',
+#                 padding_top='4em'
+#             ),
+#             rx.heading(
+#                 "Calculations for Connections Between Components",
+#                 font_family="Georgia, serif",
+#                 font_size={"base": "28px", "md": "42px", "lg": "56px"},
+#                 text_align="center",
+#                 line_height="1.3",
+#                 font_weight="semibold",
+#                 margin_bottom="1em",
+#                 margin_x='auto'
+#             ),
+#             rx.text(
+#                 "This section calculates the forces and stresses transmitted through the connections between the components of the Single "
+#                 "Power Screw Press Machine, ensuring a well-coordinated functioning of the entire system.",
+#                 font_size="18px",
+#                 max_width="750px",
+#                 text_align="center",
+#                 color="gray",
+#                 margin_bottom="3em",
+#                 margin_x='auto'
+#             ),
+#             rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+#             rx.hstack(
+#                 rx.box(
+#                     # Title in larger font
+#                     rx.text('Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660', font_size='24px', width='80%'),
+                    
+#                     rx.table.root(
+#                         rx.table.header(
+#                             rx.table.row(
+#                                 rx.table.column_header_cell("Property"),
+#                                 rx.table.column_header_cell("Value"),
+#                                 rx.table.column_header_cell("Unit"),
+#                             ),
+#                         ),
+#                         rx.table.body(
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("S<sub>u</sub><sub>b</sub> := 240"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("Sᵧᵦ := 120"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("Sᶜᵦ := 320"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("Hᴮ := 65"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("-"),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("Eᵦ := 100"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("<span style='color: blue;'>GPa</span>", dangerous_inner_html=True),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("νᵦ := 0.35"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("-"),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("Eᵃ := 2·10⁵"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+#                             ),
+#                             rx.table.row(
+#                                 rx.table.row_header_cell("νᵃ := 0.3"),
+#                                 rx.table.cell(""),
+#                                 rx.table.cell("-"),
+#                             ),
+#                         ),
+#                         width="80%",
+#                         margin='1em',
+#                         padding='1em',
+#                     ),
+#                 ),
+#                 # Image with dynamic circle
+#                 rx.box(
+#                     rx.image(
+#                         src="/connection_calculations.jpg",  # Replace with actual image URL
+#                         alt="Connection Diagram",
+#                         height='100%',
+#                         width="100%",
+#                     ),
+#                     rx.box(
+#                         # Red border with transparent fill
+#                         border="5px solid red",
+#                         bg="transparent",  # No fill color
+#                         position="relative",  # Using absolute position
+#                         top=f"{-ConnectionCalculationsState.circle_pos[1]}px",  # Y position
+#                         left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
+#                         width="100px",  # Set the width of the circle
+#                         height="100px",  # Set the height of the circle
+#                         border_radius="50%",  # Make it circular
+#                         transition="all 0.5s ease"  # Smooth transition for circle movement
+#                     ),
+#                     width='80%'
+#                 ),
+#                 margin_x='auto'
+#             ),
+
+#             # Navigation buttons
+#             rx.box(
+#                 rx.button("Previous", on_click=ConnectionCalculationsState.go_to_previous_slide, bg="gray", color="white", margin_right="1em"),
+#                 rx.button("Next", on_click=ConnectionCalculationsState.go_to_next_slide, bg="blue", color="white"),
+#                 margin_x='auto'
+#             ),
+#             max_width='80%',
+#             margin_x='auto'
+#         ),
+
+#         global_footer(),
+
+#         bg="#f5f5f0",
+#         width="100%",
+#         padding_x={"base": "1em", "md": "2em"},
+#         padding_bottom="2em",
+#     )
