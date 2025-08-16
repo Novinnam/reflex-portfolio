@@ -678,7 +678,7 @@ def component_calculations_page():
 class ConnectionCalculationsState(rx.State):
     # Define the base vars (state variables)
     slide_index: int = 0  # Initial slide index
-    circle_pos: tuple[int, int] = (85, 640)  # Initial position of the circle
+    circle_pos: tuple[float, float] = (85, 640)  # Initial position of the circle
 
     # Define the event handler to go to the next slide
     @rx.event
