@@ -745,25 +745,86 @@ def connection_calculations_page():
             ),
             rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
 
-            # Image with dynamic circle
-            rx.box(
-                rx.image(
-                    src="/connection_calculations.jpg",  # Replace with actual image URL
-                    alt="Connection Diagram",
-                    height='100%',
-                    width="100%",
-                ),
+            rx.hstack(
                 rx.box(
-                    # Red border with transparent fill
-                    border="5px solid red",
-                    bg="transparent",  # No fill color
-                    position="relative",  # Using absolute position
-                    top=f"{-ConnectionCalculationsState.circle_pos[1]}px",  # Y position
-                    left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
-                    width="100px",  # Set the width of the circle
-                    height="100px",  # Set the height of the circle
-                    border_radius="50%",  # Make it circular
-                    transition="all 0.5s ease"  # Smooth transition for circle movement
+                    # Title in larger font
+                    rx.text('Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660', font_size='24px'),
+                    
+                    rx.table.root(
+                        rx.table.header(
+                            rx.table.row(
+                                rx.table.column_header_cell("Property"),
+                                rx.table.column_header_cell("Value"),
+                                rx.table.column_header_cell("Unit"),
+                            ),
+                        ),
+                        rx.table.body(
+                            rx.table.row(
+                                rx.table.row_header_cell("S<sub>u</sub><sub>b</sub> := 240"),
+                                rx.table.cell(""),
+                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("Sᵧᵦ := 120"),
+                                rx.table.cell(""),
+                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("Sᶜᵦ := 320"),
+                                rx.table.cell(""),
+                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("Hᴮ := 65"),
+                                rx.table.cell(""),
+                                rx.table.cell("-"),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("Eᵦ := 100"),
+                                rx.table.cell(""),
+                                rx.table.cell("<span style='color: blue;'>GPa</span>", dangerous_inner_html=True),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("νᵦ := 0.35"),
+                                rx.table.cell(""),
+                                rx.table.cell("-"),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("Eᵃ := 2·10⁵"),
+                                rx.table.cell(""),
+                                rx.table.cell("<span style='color: blue;'>MPa</span>", dangerous_inner_html=True),
+                            ),
+                            rx.table.row(
+                                rx.table.row_header_cell("νᵃ := 0.3"),
+                                rx.table.cell(""),
+                                rx.table.cell("-"),
+                            ),
+                        ),
+                        width="100%",
+                        margin='1em',
+                        padding='1em',
+                    ),
+                ),
+                # Image with dynamic circle
+                rx.box(
+                    rx.image(
+                        src="/connection_calculations.jpg",  # Replace with actual image URL
+                        alt="Connection Diagram",
+                        height='100%',
+                        width="100%",
+                    ),
+                    rx.box(
+                        # Red border with transparent fill
+                        border="5px solid red",
+                        bg="transparent",  # No fill color
+                        position="relative",  # Using absolute position
+                        top=f"{-ConnectionCalculationsState.circle_pos[1]}px",  # Y position
+                        left=f"{ConnectionCalculationsState.circle_pos[0]}%",  # X position
+                        width="100px",  # Set the width of the circle
+                        height="100px",  # Set the height of the circle
+                        border_radius="50%",  # Make it circular
+                        transition="all 0.5s ease"  # Smooth transition for circle movement
+                    ),
                 ),
                 margin_x='auto'
             ),
