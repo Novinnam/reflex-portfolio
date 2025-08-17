@@ -871,6 +871,12 @@ def single_power_screw_page():
             rx.markdown("The diameter of screw head, washer groove: ", font_family='Times New Roman'),
             rx.markdown(r"$$d_a = 60 mm$$"),
             rx.markdown(r"$$d_b = 62 mm$$"),
+            rx.image(
+            src="/screw2.png",  # Image after calculations
+            alt="Calculation Image",
+            width="20%",
+            margin_x="auto",
+        ),
             spacing='9',
             margin_x='25%'
         ),
