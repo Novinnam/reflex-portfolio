@@ -861,29 +861,22 @@ def single_power_screw_page():
         ),
         # Header Row
         rx.hstack(
-            rx.markdown("**Screw**"),
+            rx.markdown("**Screw**", margin_x='25%'),
             rx.markdown("**Washer (Bronze)**"),
             spacing='9',
-            margin_x='25%'
+            margin_x='40%'
         ),
         # Row 1 - Diameters
         rx.hstack(
-            rx.text(
-            "The diameter of screw head, washer groove: ",
-            font_family='Times New Roman',
-            font_size="16px",
-            color="black",
-            margin_bottom="1em",
-            max_width='100%',
-            margin_x='20%'
-            ),
-            rx.markdown(r"$$d_a = 60 \, \text{mm}$$"),
-            rx.markdown(r"$$d_b = 62 \, \text{mm}$$"),
+            rx.markdown("The diameter of screw head, washer groove: ", font_family='Times New Roman'),
+            rx.markdown(r"$$d_a = 60 mm$$"),
+            rx.markdown(r"$$d_b = 62 mm$$"),
             spacing='9',
             margin_x='25%'
         ),
         # Row 2 - E Modulus
         rx.hstack(
+            rx.markdown("E Modulus for both: ", font_family='Times New Roman'),
             rx.markdown(r"$$E_a = 2 \cdot 10^5 \, \text{MPa}$$"),
             rx.markdown(r"$$E_b = 1 \cdot 10^5 \, \text{MPa}$$"),
             spacing='9',
@@ -891,6 +884,7 @@ def single_power_screw_page():
         ),
         # Row 3 - Poisson ratio
         rx.hstack(
+            rx.markdown("The poisson ratio: ", font_family='Times New Roman'),
             rx.markdown(r"$$\nu_a = 0.3$$"),
             rx.markdown(r"$$\nu_b = 0.35$$"),
             spacing='9',
@@ -898,24 +892,26 @@ def single_power_screw_page():
         ),
         # Row 4 - Radius of Groove
         rx.hstack(
+            rx.markdown("Radius of the groove: ", font_family='Times New Roman'),
             rx.markdown(r"$$R_a = \frac{d_a}{2} = 30 \, \text{mm}$$"),
             rx.markdown(r"$$R_b = \frac{d_b}{2} = 31 \, \text{mm}$$"),
             spacing='9',
             margin_x='25%'
         ),
-        # Row 5 (empty for a neat appearance)
         rx.hstack(
-            rx.markdown(""),
-            rx.markdown(""),
+            rx.markdown("The equivalent E modulus: ", font_family='Times New Roman'),
+            rx.markdown(r"$$E' := \frac{2}{\left( \frac{1-\nu_a^2}{E_a} \right) + \left( \frac{1-\nu_b^2}{E_b} \right)} = (1.501 \cdot 10^5) \, \text{MPa}$$"),
+
             spacing='9',
-            margin_x='1250%'
+            margin_x='20%'
         ),
-        # Row 6 (empty for a neat appearance)
         rx.hstack(
-            rx.markdown(""),
-            rx.markdown(""),
+            rx.markdown(r"$$r_{ax} := R_a = 30 \, \text{mm}$$"),
+            rx.markdown(r"$$r_{ay} := R_a = 30 \, \text{mm}$$"),
+            rx.markdown(r"$$r_{bx} := -R_b = -31 \, \text{mm}$$"),
+            rx.markdown(r"$$r_{by} := -R_b = -31 \, \text{mm}$$"),
             spacing='9',
-            margin_x='25%'
+            margin_x='20%'
         ),
     ),
         
