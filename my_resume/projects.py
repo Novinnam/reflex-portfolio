@@ -859,66 +859,729 @@ def single_power_screw_page():
             spacing='9',
             margin_x='25%'
         ),
-        # Header Row
         rx.hstack(
-            rx.markdown("**Screw**", margin_x='25%'),
-            rx.markdown("**Washer (Bronze)**"),
-            spacing='9',
-            margin_x='40%'
-        ),
-        # Row 1 - Diameters
-        rx.hstack(
-            rx.markdown("The diameter of screw head, washer groove: ", font_family='Times New Roman'),
-            rx.markdown(r"$$d_a = 60 mm$$"),
-            rx.markdown(r"$$d_b = 62 mm$$"),
-            rx.image(
-            src="/screw2.png",  # Image after calculations
-            alt="Calculation Image",
-            width="20%",
-            margin_x="auto",
-        ),
-            spacing='9',
-            margin_x='25%'
-        ),
-        # Row 2 - E Modulus
-        rx.hstack(
-            rx.markdown("E Modulus for both: ", font_family='Times New Roman'),
-            rx.markdown(r"$$E_a = 2 \cdot 10^5 \, \text{MPa}$$"),
-            rx.markdown(r"$$E_b = 1 \cdot 10^5 \, \text{MPa}$$"),
-            spacing='9',
-            margin_x='25%'
-        ),
-        # Row 3 - Poisson ratio
-        rx.hstack(
-            rx.markdown("The poisson ratio: ", font_family='Times New Roman'),
-            rx.markdown(r"$$\nu_a = 0.3$$"),
-            rx.markdown(r"$$\nu_b = 0.35$$"),
-            spacing='9',
-            margin_x='25%'
-        ),
-        # Row 4 - Radius of Groove
-        rx.hstack(
-            rx.markdown("Radius of the groove: ", font_family='Times New Roman'),
-            rx.markdown(r"$$R_a = \frac{d_a}{2} = 30 \, \text{mm}$$"),
-            rx.markdown(r"$$R_b = \frac{d_b}{2} = 31 \, \text{mm}$$"),
-            spacing='9',
-            margin_x='25%'
-        ),
-        rx.hstack(
-            rx.markdown("The equivalent E modulus: ", font_family='Times New Roman'),
-            rx.markdown(r"$$E' := \frac{2}{\left( \frac{1-\nu_a^2}{E_a} \right) + \left( \frac{1-\nu_b^2}{E_b} \right)} = (1.501 \cdot 10^5) \, \text{MPa}$$"),
+            # ---------------- LEFT: all rows after the properties ----------------
+            rx.grid(
+                # Header row
+                rx.text(""),
+                rx.text("Screw", font_weight="bold"),
+                rx.text("Washer (Bronze)", font_weight="bold"),
 
-            spacing='9',
-            margin_x='20%'
+                # Diameter row
+                rx.text("The diameter of screw head, washer groove:", font_family="Times New Roman"),
+                rx.markdown(r"$$d_a = 60 \, \text{mm}$$"),
+                rx.markdown(r"$$d_b = 62 \, \text{mm}$$"),
+
+                # E modulus row
+                rx.text("E Modulus for both:", font_family="Times New Roman"),
+                rx.markdown(r"$$E_a = 2 \cdot 10^5 \, \text{MPa}$$"),
+                rx.markdown(r"$$E_b = 1 \cdot 10^5 \, \text{MPa}$$"),
+
+                # Poisson row
+                rx.text("The poisson ratio:", font_family="Times New Roman"),
+                rx.markdown(r"$$\nu_a = 0.3$$"),
+                rx.markdown(r"$$\nu_b = 0.35$$"),
+
+                # Radius row
+                rx.text("Radius of the groove:", font_family="Times New Roman"),
+                rx.markdown(r"$$R_a = 30 \, \text{mm}$$"),
+                rx.markdown(r"$$R_b = 31 \, \text{mm}$$"),
+
+                columns="2fr 1fr 1fr",   # <-- label wider, data equal
+                column_gap="2rem",
+                row_gap="1rem",
+                width="80%",
+            ),
+
+            # ---------------- RIGHT: the image ----------------
+            rx.vstack(
+                rx.image(
+                    src="/screw2.png",
+                    alt="Calculation Image",
+                    width="100%",
+                ),
+                width="25%",
+                align="center",
+            ),
+
+            max_width="67%",
+            align="start",
+            margin_x="auto",
+            spacing="6",
         ),
         rx.hstack(
-            rx.markdown(r"$$r_{ax} := R_a = 30 \, \text{mm}$$"),
-            rx.markdown(r"$$r_{ay} := R_a = 30 \, \text{mm}$$"),
-            rx.markdown(r"$$r_{bx} := -R_b = -31 \, \text{mm}$$"),
-            rx.markdown(r"$$r_{by} := -R_b = -31 \, \text{mm}$$"),
-            spacing='9',
-            margin_x='20%'
+        # ---------------- LEFT: formulas ----------------
+            rx.vstack(
+                rx.text(
+                    "Sign Convention:",
+                    font_size="16px",
+                    font_weight="bold",
+                ),
+
+                rx.markdown(
+                    r"$$R(r_x, r_y) \;:=\; \left(\frac{1}{r_{ax}} + \frac{1}{r_{bx}}\right)^{-1}$$",
+                    margin_x="20%",
+                ),
+
+                rx.markdown(
+                    r"$$\frac{1}{r_{ax}} + \frac{1}{r_{bx}} \ge \frac{1}{r_{ay}} + \frac{1}{r_{by}} = 1$$",
+                    margin_x="20%",
+                ),
+
+                rx.markdown(
+                    r"$$R_x := R(r_{ax}, r_{bx}) = 930 \, \text{mm}$$",
+                    margin_x="20%",
+                ),
+                rx.markdown(
+                    r"$$R_y := R(r_{ay}, r_{by}) = 930 \, \text{mm}$$",
+                    margin_x="20%",
+                ),
+
+                rx.text(
+                    "The effective radius:",
+                    font_weight="bold",
+                    margin_top="0.75em",
+                ),
+
+                rx.markdown(
+                    r"$$R_{\text{eff}} := \left(\frac{1}{R_x} + \frac{1}{R_y}\right)^{-1} = 465 \, \text{mm}$$",
+                    margin_x="20%",
+                ),
+
+                rx.text(
+                    "The radius ratio:",
+                    font_weight="bold",
+                    margin_top="0.75em",
+                ),
+
+                rx.markdown(
+                    r"$$\alpha := \frac{R_y}{R_x} = 1$$",
+                    margin_x="20%",
+                ),
+
+                width="58%",
+                align="start",
+                spacing="3",
+            ),
+
+        # ---------------- RIGHT: 3 images stacked ----------------
+        rx.vstack(
+            rx.image(
+                src="/sign_convention_a.png",
+                width="100%",
+            ),
+            rx.image(
+                src="/sign_convention_b.png",
+                width="100%",
+            ),
+            rx.image(
+                src="/sign_convention_c.png",
+                width="100%",
+            ),
+            width="38%",
+            spacing="4",
+            align="center",
         ),
+
+        width="67%",
+        margin_x="auto",
+        align="start",
+        spacing="3",
+    ),
+    rx.hstack(
+    # ---------------- LEFT: formulas ----------------
+    rx.vstack(
+        rx.text(
+            "Define the ellipticity parameter as:",
+            font_size="16px",
+            font_weight="bold",
+        ),
+
+        rx.markdown(
+            r"$$k_e(x) := x^{\frac{2}{\pi}}$$",
+            margin_x="20%",
+        ),
+
+        rx.markdown(
+            r"$$k_e(\alpha_r) = 1$$",
+            margin_x="20%",
+        ),
+
+        rx.markdown(
+            r"$$\Phi(x) := \begin{cases}"
+            r"\frac{\pi}{2} + \left(\frac{\pi}{2} - 1\right)\ln(x), & 1 \le x \le 100 \\"
+            r"\frac{\pi}{2} - \left(\frac{\pi}{2} - 1\right)\ln(x), & 0.01 \le x < 1 \\"
+            r"0, & \text{else}"
+            r"\end{cases}$$",
+            margin_x="20%",
+        ),
+
+        rx.markdown(
+            r"$$E(x) := \begin{cases}"
+            r"1 + \left(\frac{\pi - 2}{2x}\right), & 1 \le x \le 100 \\"
+            r"1 + \left(\frac{\pi}{2} - 1\right)x, & 0.01 \le x < 1 \\"
+            r"0, & \text{else}"
+            r"\end{cases}$$",
+            margin_x="20%",
+        ),
+
+        width="58%",
+        align="start",
+        spacing="3",
+    ),
+
+    # ---------------- RIGHT: image ----------------
+    rx.vstack(
+        rx.image(
+            src="/simplified_contact.png",   # <-- your image
+            width="100%",
+        ),
+        width="38%",
+        align="center",
+    ),
+
+    width="67%",
+    margin_x="auto",
+    align="start",
+    spacing="2",
+    ),
+    rx.hstack(
+    # ---------------- LEFT: formulas ----------------
+    rx.vstack(
+        rx.text(
+            "The contact diameters are:",
+            font_size="16px",
+            font_weight="bold",
+        ),
+
+        rx.markdown(r"$$W := 20 \,\text{kN}$$", margin_x="20%"),
+
+        rx.markdown(
+            r"$$D_x(x, R_{\mathrm{eff}}, W, E) := 2\left(\frac{6\cdot \Phi(x)\cdot W\cdot R_{\mathrm{eff}}}{\pi\cdot k_e(x)\cdot E}\right)^{\frac{1}{3}}$$",
+            margin_x="20%",
+        ),
+
+        rx.markdown(
+            r"$$D_x := D_x(\alpha_r, R_{\mathrm{eff}}, W, E) = 11.414 \,\text{mm}$$",
+            margin_x="20%",
+        ),
+
+        rx.markdown(
+            r"$$D_y(x, R_{\mathrm{eff}}, W, E) := 2\left(\frac{6\cdot k_e(x)^2\cdot \Phi(x)\cdot W\cdot R_{\mathrm{eff}}}{\pi\cdot E}\right)^{\frac{1}{3}}$$",
+            margin_x="20%",
+        ),
+
+        rx.markdown(
+            r"$$D_y := D_y(\alpha_r, R_{\mathrm{eff}}, W, E) = 11.414 \,\text{mm}$$",
+            margin_x="20%",
+        ),
+
+        width="58%",
+        align="start",
+        spacing="3",
+    ),
+
+    # ---------------- RIGHT: image ----------------
+    rx.vstack(
+        rx.image(
+            src="/hertz_pressure_distribution.png",
+            alt="Hertz pressure distribution",
+            width="100%",
+        ),
+        width="38%",
+        align="center",
+    ),
+
+    width="67%",
+    margin_x="auto",
+    align="start",
+    spacing="2",
+    ),
+    rx.vstack(
+        # --- The contact diameters ---
+        rx.text(
+            "The contact diameters:",
+            font_size="16px",
+            font_weight="bold",
+            color="black",
+        ),
+        rx.markdown(
+            r"$$d_c := \frac{D_x + D_y}{2} = 11.414 \,\text{mm}$$",
+            margin_x="20%",
+        ),
+
+        # --- Pressure distribution ---
+        rx.text(
+            "Pressure distribution:",
+            font_size="16px",
+            font_weight="bold",
+            color="black",
+            margin_top="1.25em",
+        ),
+        rx.text(
+            "The maximum pressure",
+            font_size="16px",
+            color="black",
+            margin_top="0.25em",
+            margin_bottom="0.25em",
+        ),
+        rx.markdown(
+            r"$$P_{max} := \frac{6W}{\pi \cdot D_x \cdot D_y} = 293.186 \,\text{MPa}$$",
+            margin_x="20%",
+        ),
+        rx.markdown(
+            r"$$p_h(x,y,D_x,D_y,P_{max}) := P_{max}\left(1 - \left(2\frac{x}{D_x}\right)^2 - \left(2\frac{y}{D_y}\right)^2\right)^{\frac{1}{2}}$$",
+            margin_x="20%",
+        ),
+        rx.markdown(
+            r"$$p_h(0.05D_x,\,0.09D_y,\,D_x,\,D_y,\,P_{max}) = 286.903 \,\text{MPa}$$",
+            margin_x="20%",
+        ),
+
+        # --- Maximum deflection ---
+        rx.text(
+            "The maximum deflection in the contact is:",
+            font_size="16px",
+            font_weight="bold",
+            color="black",
+            margin_top="1.25em",
+        ),
+        rx.markdown(
+            r"$$\delta_{max}(x, R_{\mathrm{eff}}, W, E) := E(x)\left(\frac{9}{2\Phi(x)\,R_{\mathrm{eff}}}\cdot\left(\frac{W}{\pi\,k_e(x)\,E}\right)^2\right)^{\frac{1}{3}}$$",
+            margin_x="20%",
+        ),
+        rx.markdown(
+            r"$$\delta_{max} := \delta_{max}(\alpha_r, R_{\mathrm{eff}}, W, E') = 35 \,\mu\text{m}$$",
+            margin_x="20%",
+        ),
+
+        # layout
+        width="60%",        # because margin_x=20% + 60% content + 20%
+        margin_x="20%",
+        align="start",
+        spacing="4",
+    ),
+    rx.vstack(
+    # --- Average compression stress ---
+    rx.text(
+        "The average compression stress:",
+        font_size="16px",
+        font_weight="bold",
+        color="black",
+    ),
+
+    rx.markdown(
+        r"$$A(d_c) := \pi \cdot \frac{d_c^2}{4}$$",
+        margin_x="20%",
+    ),
+
+    rx.markdown(
+        r"$$\sigma_{comp} := \frac{W}{A(d_c)} = 195.458 \,\text{MPa}$$",
+        margin_x="20%",
+    ),
+
+    rx.markdown(
+        r"$$\sigma_{comp} < S_{cb} = 1$$",
+        margin_x="20%",
+    ),
+
+    # --- Safety factor ---
+    rx.text(
+        "The safety factor for bearing load:",
+        font_size="16px",
+        font_weight="bold",
+        color="black",
+        margin_top="1.25em",
+    ),
+
+    rx.markdown(
+        r"$$n_c := \frac{S_{cb}}{\sigma_{comp}} = 1.637$$",
+        margin_x="20%",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+    ),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+    rx.vstack(
+    # --- Section title ---
+    rx.text(
+        "2.3. Required assembly torque:",
+        font_size="18px",
+        font_weight="bold",
+        color="black",
+    ),
+
+    # --- Selected thread ---
+    rx.text(
+        "Selected thread S22×3:",
+        font_size="16px",
+        color="black",
+        margin_top="0.75em",
+    ),
+
+    # --- Thread Data heading ---
+    rx.text(
+        "Thread Data:",
+        font_size="16px",
+        font_weight="bold",
+        color="black",
+        margin_top="0.75em",
+        margin_x="5%",
+    ),
+
+    # --- Parameters row ---
+    rx.hstack(
+        rx.markdown(
+            r"$$P_p = 3 \,\text{mm}$$",
+            margin_x="10%",
+        ),
+        rx.markdown(
+            r"$$d_p = 19.954 \,\text{mm}$$",
+            margin_x="10%",
+        ),
+        spacing="9",
+        margin_top="0.75em",
+        width="100%",
+        justify="start",
+    ),
+
+    width="60%",
+    margin_x="20%",   # <-- same structure everywhere
+    align="start",
+    spacing="4",
+),
+
+rx.vstack(
+    # Image with highlight
+    rx.box(
+        rx.image(
+            src="/thread_table.png",
+            alt="Thread table",
+            width="100%",
+            display="block",
+        ),
+        rx.box(
+            position="absolute",
+            border="4px solid red",
+            border_radius="6px",
+            left="2.5%",
+            top="43%",
+            width="91%",
+            height="3.5%",
+            pointer_events="none",
+        ),
+        position="relative",
+        width="100%",
+    ),
+
+    rx.text(
+        "The friction coefficient in the thread:",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+    rx.markdown(r"$$\mu := 0.12$$", margin_x="20%"),
+
+    rx.text(
+        "The friction coefficient between screw and the bronze washer:",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+    rx.markdown(r"$$\mu_c := 0.12$$", margin_x="20%"),
+
+    rx.markdown(
+        r"$$T(d_p,\rho,\alpha,P,r_c,\mu_c) := 0.5\,d_p\,\tan(\rho+\alpha)\,P + r_c\,\mu_c\,P$$",
+        margin_x="20%",
+    ),
+    rx.hstack(
+    rx.box(
+        rx.markdown(
+            r"$$\alpha := \arctan\left(\frac{P_p}{d_p \pi}\right) = 2.74^\circ$$",
+            margin="0",
+        ),
+        width="50%",
+        text_align="center",
+    ),
+
+    rx.box(
+        rx.markdown(
+            r"$$\rho := \arctan(\mu) = 6.843^\circ$$",
+            margin="0",
+        ),
+        width="50%",
+        text_align="center",
+    ),
+
+    width="100%",
+),
+    rx.markdown(r"$$r_c := \frac{d_p}{2}$$", margin_x="20%"),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+rx.hstack(
+    # ---------------- LEFT: formulas ----------------
+    rx.vstack(
+    rx.text("Max Torque:", font_size="16px", font_weight="bold"),
+
+    rx.markdown(
+        r"$$T_{max} := T(d_p,\rho,\alpha,W,r_c,\mu_c) = 57.632 \,\mathrm{N\cdot m}$$",
+        margin_x="20%",
+    ),
+
+    rx.text("Thread Torque:", font_size="16px", font_weight="bold", margin_top="1em"),
+
+    rx.markdown(
+        r"$$T_{thread}(d_p,\rho,\alpha,P) := 0.5\,d_p\,\tan(\rho+\alpha)\,P$$",
+        margin_x="20%",
+    ),
+
+    rx.markdown(
+        r"$$T_{act} = 33.688 \,\mathrm{N\cdot m}$$",
+        margin_x="20%",
+    ),
+
+    rx.text("Mating Face Torque:", font_size="16px", font_weight="bold", margin_top="1em"),
+
+    rx.markdown(
+        r"$$T_{mating}(r_c,\mu_c,P) := r_c\,\mu_c\,P$$",
+        margin_x="20%",
+    ),
+
+    rx.markdown(
+        r"$$T_{ma\_act} = 23.945 \,\mathrm{N\cdot m}$$",
+        margin_x="20%",
+    ),
+
+    width="58%",
+    align="start",
+    spacing="4",
+),
+
+
+    # ---------------- RIGHT: cropped + circled images ----------------
+    # ---------------- RIGHT: images ----------------
+    rx.vstack(
+
+        # -------- TOP IMAGE --------
+        rx.box(
+            rx.image(
+                src="/top_thread_washer_connection.png",
+                width="70%",
+            ),
+            rx.box(
+                position="absolute",
+                left="12%",
+                top="25%",
+                width="50%",
+                height="70%",
+                border="6px solid red",
+                border_radius="9999px",
+                pointer_events="none",
+            ),
+            position="relative",
+            width="70%",
+        ),
+
+        # -------- BOTTOM IMAGE --------
+        rx.box(
+            rx.image(
+                src="/bot_ball_washer_connection.png",
+                width="70%",
+            ),
+            rx.box(
+                position="absolute",
+                left="25%",
+                top="22%",
+                width="25%",
+                height="35%",
+                border="6px solid red",
+                border_radius="9999px",
+                pointer_events="none",
+            ),
+            position="relative",
+            width="70%",
+        ),
+        width="38%",
+        spacing="6",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    spacing="3",
+    align="start",
+),
+
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+    # --- Section Title ---
+    rx.text(
+        "2.4. Force on Handwheel:",
+        font_size="18px",
+        font_weight="bold",
+        color="black",
+    ),
+
+    # --- Handle size ---
+    rx.text(
+        "Size of the handle wheel:",
+        font_size="16px",
+        color="black",
+        margin_top="0.75em",
+        margin_x="10%",
+    ),
+
+    rx.markdown(
+        r"$$D_{hw} := 315 \,\mathrm{mm}$$",
+        margin_x="20%",
+    ),
+
+    # --- Force equation ---
+    rx.markdown(
+        r"$$P_h := \frac{T_{max}}{D_{hw}} = 182.96 \,\mathrm{N}$$",
+        margin_x="20%",
+    ),
+
+    # --- Explanation paragraph ---
+    rx.text(
+        "Given that the average maximum sustainable force applied by a human "
+        "is typically considered to be around 250 N, the required force falls "
+        "well within acceptable human ergonomic limits.",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+    # --- Section title ---
+    rx.text(
+        "2.5. Checking stress in Screw:",
+        font_size="18px",
+        font_weight="bold",
+        color="black",
+    ),
+
+    # --- d_min ---
+    rx.markdown(
+        r"$$d_{min} := 16.794 \,\mathrm{mm}$$",
+        margin_x="20%",
+    ),
+
+    # --- Shear stress due to torque ---
+    rx.text(
+        "Shear stress due to torque:",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+    rx.markdown(
+        r"$$\tau(T,d) := \frac{T}{\frac{\pi \, d_{min}^{3}}{16}}$$",
+        margin_x="20%",
+    ),
+    rx.markdown(
+        r"$$\tau_{max} := \tau(T_{max}, d_{min}) = 61.969 \,\mathrm{MPa}$$",
+        margin_x="20%",
+    ),
+
+    # --- Compression stress due to force ---
+    rx.text(
+        "Compression stress due to the force:",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+    rx.markdown(
+        r"$$P := W = 20 \,\mathrm{kN}$$",
+        margin_x="20%",
+    ),
+    rx.markdown(
+        r"$$\sigma_c := \frac{P}{A(d_{min})} = 90.288 \,\mathrm{MPa}$$",
+        margin_x="20%",
+    ),
+
+    # --- Equivalent stress ---
+    rx.text(
+        "Equivalent stress:",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+    rx.markdown(
+        r"$$\sigma_{equ} := \sqrt{\sigma_c^{2} + 3\,\tau_{max}^{2}} = 140.258 \,\mathrm{MPa}$$",
+        margin_x="20%",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+    # --- Section Title ---
+    rx.text(
+        "2.6. Structural assessment of nut:",
+        font_size="18px",
+        font_weight="bold",
+        color="black",
+    ),
+
+    # --- Material description ---
+    rx.text(
+        "Wash material: High leaded Tin Bronze, UNS C93200, Copper casting alloy, Bearing Bronze SAE 660",
+        font_size="16px",
+        color="black",
+        margin_top="0.75em",
+    ),
+
+    # --- First row of parameters ---
+    rx.hstack(
+        rx.markdown(r"$$S_{ub} := 240 \,\mathrm{MPa}$$", margin="0"),
+        rx.markdown(r"$$n_{ns} := 1.3$$", margin="0"),
+        rx.markdown(r"$$d_{mj} := 22 \,\mathrm{mm}$$", margin="0"),
+        rx.markdown(r"$$S_b := 9.5 \,\mathrm{MPa}$$", margin="0"),
+        width="100%",
+        justify="between",
+        spacing="3",
+    ),
+
+    # --- Second row ---
+    rx.hstack(
+        rx.markdown(r"$$\tau_{all} := 0.4\,S_{ub} = 96 \,\mathrm{MPa}$$", margin="0"),
+        rx.markdown(r"$$n_r := 10$$", margin="0"),
+        width="100%",
+        justify="start",
+        spacing="6",
+        margin_top="0.5em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+)
+
+
+
     ),
         
         # rx.hstack(
