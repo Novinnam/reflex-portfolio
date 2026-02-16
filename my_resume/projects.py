@@ -1566,7 +1566,7 @@ rx.vstack(
 
     # --- Second row ---
     rx.hstack(
-        rx.markdown(r"$$\tau_{all} := 0.4\,S_{ub} = 96 \,\mathrm{MPa}$$", margin="0"),
+        rx.markdown(r"$$\tau_{all} := 0.4.S_{ub} = 96 \,\mathrm{MPa}$$", margin="0"),
         rx.markdown(r"$$n_r := 10$$", margin="0"),
         width="100%",
         justify="start",
@@ -1578,8 +1578,66 @@ rx.vstack(
     margin_x="20%",
     align="start",
     spacing="4",
-)
+),
 
+rx.vstack(
+    rx.text(
+        "Shear stress in thread:",
+        font_size="16px",
+        color="black",
+        margin_top="1em",
+    ),
+
+    rx.hstack(
+        # Formula column
+        rx.box(
+            rx.markdown(
+                r"$$\tau=\frac{P}{\pi \cdot d_r \cdot n_r \cdot p \cdot \psi} \leq \frac{\tau_{all}}{n_{ss}} = \frac{0.6\,S_u}{n_{ss}}$$",
+                margin="0",
+            ),
+            width="34%",      # give it real width
+            min_width="260px", # avoids collapsing
+            shrink="0",        # do NOT shrink
+            margin_x="20%"
+        ),
+
+        # Images column
+        rx.hstack(
+            rx.image(
+                src="/major_minor_dia.png",
+                width="70%",
+                height="auto",
+                border="1px solid #E5E7EB",
+                border_radius="8px",
+                padding="6px",
+                background="white",
+            ),
+            rx.image(
+                src="/area_factor_thread_stripping.png",
+                width="70%",
+                height="auto",
+                border="1px solid #E5E7EB",
+                border_radius="8px",
+                padding="6px",
+                background="white",
+            ),
+            width="66%",
+            spacing="1",
+            justify="between",
+            align="start",
+        ),
+
+        width="100%",
+        spacing="1",
+        justify="between",
+        align="start",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+)
 
 
     ),

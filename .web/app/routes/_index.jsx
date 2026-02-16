@@ -6,46 +6,9 @@ import { Link as ReactRouterLink } from "react-router"
 import { StateContexts } from "$/utils/context"
 import { DynamicIcon } from "lucide-react/dynamic.mjs"
 import { isTrue } from "$/utils/state"
-import { Text_101293345110516020862261840462185915770 } from "$/utils/stateful_components"
 import { jsx } from "@emotion/react"
 
 
-
-function Text_17037081057075227923768297436447827437 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesText,
-{as:"p",css:({ ["@media screen and (min-width: 0px)"] : ({ ["fontSize"] : "20px", ["textAlign"] : "center" }), ["@media screen and (min-width: 48em)"] : ({ ["fontSize"] : "28px" }), ["@media screen and (min-width: 80em)"] : ({ ["fontSize"] : "50px" }), ["fontWeight"] : "medium", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["lineHeight"] : "1.5", ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
-reflex___state____state__my_resume___my_resume____hero_state.bio_rx_state_
-,)
-  )
-}
-
-function Text_99633831357110369685866192190511901652 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesText,
-{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
-reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
-,)
-  )
-}
 
 function Img_313426746455881500796697668050988396767 () {
   
@@ -62,31 +25,7 @@ function Img_313426746455881500796697668050988396767 () {
   )
 }
 
-function Flex_138975520995756906452603932807589850900 () {
-  
-  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
-reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_cb4c11fa0f7fbb44)=>(jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_cb4c11fa0f7fbb44},
-jsx(
-ReactRouterLink,
-{to:link_rx_state_["url"]},
-jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
-,),))),)
-  )
-}
-
-function Grid_291067544626717491795840037957722476445 () {
+function Grid_312025174278483425789627948714017919899 () {
   
 
 
@@ -98,9 +37,9 @@ function Grid_291067544626717491795840037957722476445 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "1", ["lg"] : "2" }),gap:"4"},
-[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_90b577330074f7af)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" }), ({ ["title"] : "Coming Soon", ["description"] : "Coming soon", ["image_url"] : "/coming_soon.jpg", ["border"] : true })].map((project_rx_state_,index_c93a1b191db69512)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_90b577330074f7af},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_c93a1b191db69512},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},
@@ -123,6 +62,84 @@ RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.9em", ["color"] : "gray" })},
 project_rx_state_["description"]
 ,),),))),)
+  )
+}
+
+function Flex_113005818781391275801595520597284530186 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"row",justify:({ ["initial"] : "center", ["md"] : "start" }),gap:"4"},
+reflex___state____state__my_resume___my_resume____hero_state.social_links_rx_state_.map((link_rx_state_,index_82c970c96f083b17)=>(jsx(
+RadixThemesLink,
+{asChild:true,css:({ ["color"] : "black", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),key:index_82c970c96f083b17},
+jsx(
+ReactRouterLink,
+{to:link_rx_state_["url"]},
+jsx(DynamicIcon,{name:link_rx_state_["platform"].replaceAll("_", "-")},)
+,),))),)
+  )
+}
+
+function Text_17037081057075227923768297436447827437 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["@media screen and (min-width: 0px)"] : ({ ["fontSize"] : "20px", ["textAlign"] : "center" }), ["@media screen and (min-width: 48em)"] : ({ ["fontSize"] : "28px" }), ["@media screen and (min-width: 80em)"] : ({ ["fontSize"] : "50px" }), ["fontWeight"] : "medium", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["lineHeight"] : "1.5", ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
+reflex___state____state__my_resume___my_resume____hero_state.bio_rx_state_
+,)
+  )
+}
+
+function Text_101293345110516020862261840462185915770 () {
+  
+  const reflex___state____state__my_resume___components____footer_state = useContext(StateContexts.reflex___state____state__my_resume___components____footer_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontFamily"] : "monospace", ["--default-font-family"] : "monospace", ["fontSize"] : "0.8em", ["color"] : "white" })},
+("Version "+reflex___state____state__my_resume___components____footer_state.version_rx_state_+" \u2013 Date: "+reflex___state____state__my_resume___components____footer_state.today_rx_state_)
+,)
+  )
+}
+
+function Text_99633831357110369685866192190511901652 () {
+  
+  const reflex___state____state__my_resume___my_resume____hero_state = useContext(StateContexts.reflex___state____state__my_resume___my_resume____hero_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesText,
+{as:"p",css:({ ["fontSize"] : "18px", ["color"] : "#333333", ["lineHeight"] : "1.8", ["marginBottom"] : "1.5em", ["maxWidth"] : "1280px", ["@media screen and (min-width: 0px)"] : ({ ["textAlign"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["textAlign"] : "left" }) })},
+reflex___state____state__my_resume___my_resume____hero_state.description_rx_state_
+,)
   )
 }
 
@@ -196,7 +213,7 @@ RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["@media screen and (min-width: 0px)"] : ({ ["alignItems"] : "center" }), ["@media screen and (min-width: 62em)"] : ({ ["alignItems"] : "start" }) }),direction:"column",gap:"4"},
 jsx(Text_17037081057075227923768297436447827437,{},)
 ,jsx(Text_99633831357110369685866192190511901652,{},)
-,jsx(Flex_138975520995756906452603932807589850900,{},)
+,jsx(Flex_113005818781391275801595520597284530186,{},)
 ,),),),jsx(
 RadixThemesBox,
 {css:({ ["backgroundColor"] : "black", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["width"] : "100%", ["maxWidth"] : "1344px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["height"] : "42px" })},
@@ -221,7 +238,7 @@ jsx(
 RadixThemesHeading,
 {css:({ ["marginBottom"] : "1em", ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["font_size"] : ({ ["base"] : "32px", ["md"] : "48px", ["lg"] : "60px" }), ["textAlign"] : "center" })},
 "Featured Projects"
-,),jsx(Grid_291067544626717491795840037957722476445,{},)
+,),jsx(Grid_312025174278483425789627948714017919899,{},)
 ,jsx(
 RadixThemesLink,
 {asChild:true,css:({ ["fontWeight"] : "bold", ["color"] : "red", ["marginTop"] : "2em", ["alignSelf"] : "flex-end", ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
