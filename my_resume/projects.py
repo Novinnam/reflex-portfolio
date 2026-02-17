@@ -1636,11 +1636,746 @@ rx.vstack(
     width="60%",
     margin_x="20%",
     align="start",
-    spacing="4",
-)
+    spacing="1",
+),
 
+rx.vstack(
 
+    # ---------------- Title ----------------
+    rx.text(
+        "Minimum Nut Height to Prevent Thread Stripping:",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1.5em",
     ),
+
+    # ---------------- Minimum thread engagement ----------------
+    rx.text(
+        "The minimum thread convolution in the nut to avoid thread stripping:",
+        font_size="14px",
+        margin_top="0.75em",
+    ),
+
+    rx.markdown(
+        r"$$n_{r,s}(P,n_r,d,p,\psi,\tau_{all}) := \frac{P \cdot n_r}{\pi \cdot d \cdot p \cdot \psi \cdot \tau_{all}}$$",
+        margin_x="20%",
+    ),
+
+    # ---------------- Area factor ----------------
+    rx.text(
+        "Area factor for the major diameter (Buttress thread):",
+        font_size="14px",
+        margin_top="1em",
+    ),
+
+    rx.markdown(
+        r"$$\psi := 0.83$$",
+        margin_x="20%",
+    ),
+
+    rx.markdown(
+        r"$$n_{r,s}(W,n_r,d_{mj},P_p,\psi,\tau_{all}) = 12.106$$",
+        margin_x="20%",
+    ),
+
+    # ---------------- Nut height ----------------
+    rx.text(
+        "Minimum nut height due to shear stress:",
+        font_size="14px",
+        margin_top="1em",
+    ),
+
+    rx.markdown(
+        r"$$h_{nut,s} := n_{r,s}(W,n_r,d_{mj},P_p,\psi,\tau_{all}) \cdot P_p = 36.317 \,\mathrm{mm}$$",
+        margin_x="20%",
+    ),
+
+    # ---------------- Permissible bearing pressure table ----------------
+    rx.text(
+        "Permissible Bearing Pressure for Threaded Connections:",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1.5em",
+    ),
+
+    rx.table.root(
+        rx.table.header(
+            rx.table.row(
+                rx.table.column_header_cell("Material"),
+                rx.table.column_header_cell("Stationary"),
+                rx.table.column_header_cell("Semi-Movable"),
+                rx.table.column_header_cell("Movable"),
+            )
+        ),
+        rx.table.body(
+
+            rx.table.row(
+                rx.table.cell("Gray Cast Iron EN-GJL-150"),
+                rx.table.cell("12–15 MPa"),
+                rx.table.cell("8–10 MPa"),
+                rx.table.cell("4–5 MPa"),
+            ),
+
+            rx.table.row(
+                rx.table.cell("EN-GJL-200"),
+                rx.table.cell("16–20 MPa"),
+                rx.table.cell("10–13 MPa"),
+                rx.table.cell("6–6.5 MPa"),
+            ),
+
+            rx.table.row(
+                rx.table.cell("EN-GJL-250"),
+                rx.table.cell("20–25 MPa"),
+                rx.table.cell("13–16 MPa"),
+                rx.table.cell("6.5–8 MPa"),
+            ),
+
+            rx.table.row(
+                rx.table.cell("Cast Steel 200–400"),
+                rx.table.cell("25–30 MPa"),
+                rx.table.cell("16–20 MPa"),
+                rx.table.cell("8–10 MPa"),
+            ),
+
+            rx.table.row(
+                rx.table.cell("Steel E295, E335, E360"),
+                rx.table.cell("32–40 MPa"),
+                rx.table.cell("22–27 MPa"),
+                rx.table.cell("11–13.5 MPa"),
+            ),
+
+            rx.table.row(
+                rx.table.cell("Brass"),
+                rx.table.cell("24–28 MPa"),
+                rx.table.cell("15–19 MPa"),
+                rx.table.cell("7.5–9.5 MPa"),
+            ),
+
+            rx.table.row(
+                rx.table.cell("Bronze"),
+                rx.table.cell("32–40 MPa"),
+                rx.table.cell("22–27 MPa"),
+                rx.table.cell("11–14 MPa"),
+            ),
+        ),
+        width="100%",
+        margin_top="1em",
+        variant="surface",
+        max_width="70%",
+        margin_x="20%",
+    ),
+
+    # ---------------- Citation ----------------
+    rx.text(
+        "Source: E. Mazanek, Examples of Calculations in Fundamentals of Machine Design, WNT, Warsaw, 2012 (translated).",
+        font_size="12px",
+        color="gray",
+        margin_top="0.5em",
+        margin_x="20%",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.vstack(
+
+    # ---------------- Title ----------------
+    rx.text(
+        "The minimum height of the nut due to bearing stress:",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1.5em",
+    ),
+
+    # ---------------- Bearing thread number formula ----------------
+    rx.markdown(
+        r"$$n_{r,b}(W,d,D_1) := \frac{W}{\frac{\pi}{4}\,(d^{2}-D_1^{2}) \cdot S_b}$$",
+        margin_x="20%",
+    ),
+
+    # ---------------- Nut height due to bearing ----------------
+    rx.markdown(
+        r"$$h_{nut,b} := n_{r,b}(W,d_{mj},d_{min}) \cdot P_p = 39.817 \,\mathrm{mm}$$",
+        margin_x="20%",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- Section Title ----------------
+    rx.text(
+        "2.7. Efficiency of the thread:",
+        font_size="18px",
+        font_weight="bold",
+        margin_top="2em",
+    ),
+
+    # ---------------- Load relation ----------------
+    rx.markdown(
+        r"$$P := W$$",
+        margin_x="20%",
+    ),
+
+    # ---------------- Efficiency formula ----------------
+    rx.markdown(
+        r"$$\eta := \frac{P \cdot P_p}{T_{max} \cdot 2\pi} \cdot 100 = 16.569\%$$",
+        margin_x="20%",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- Section Header ----------------
+    rx.text(
+        "2.8. Key connection (Hand wheel – Power screw):",
+        font_size="18px",
+        font_weight="bold",
+        margin_top="2em",
+    ),
+    
+    # ---------------- Image with Red Highlight ----------------
+    rx.box(
+        rx.image(
+            src="/top_thread_washer_connection.png",
+            width="30%",
+        ),
+
+        # Red circular highlight
+        rx.box(
+            position="absolute",
+            left="10%",     # adjust if needed
+            top="8%",       # adjust if needed
+            width="10%",
+            height="30%",
+            border="6px solid red",
+            border_radius="9999px",
+            pointer_events="none",
+        ),
+
+        position="relative",
+        width="60%",
+        margin_x="20%",
+        margin_top="1em",
+    ),
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+# ---------------- Inventor Calculation Screenshot ----------------
+rx.vstack(
+
+    rx.text(
+        "Parallel Key Connection Generator – Autodesk Inventor:",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1.5em",
+    ),
+
+    rx.text(
+        "The key dimensions and safety verification were validated using Autodesk Inventor's "
+        "Parallel Key Connection Generator module.",
+        font_size="14px",
+        margin_top="0.5em",
+    ),
+
+    rx.box(
+        rx.image(
+            src="/key_connection_generator.png",
+            width="100%",
+            border_radius="8px",
+        ),
+        width="100%",
+        margin_top="0.75em",
+        border="1px solid #E5E7EB",
+        border_radius="10px",
+        overflow="hidden",
+    ),
+
+    rx.text(
+        "Torque: 57 N·m | Shaft diameter: 22 mm | Key size: 6×4 mm | Key length: 32 mm",
+        font_size="13px",
+        color="gray",
+        margin_top="0.5em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- Section Header ----------------
+    rx.text(
+        "2.9. Base analysis:",
+        font_size="18px",
+        font_weight="bold",
+        margin_top="2em",
+    ),
+
+    # ---------------- Max Stress ----------------
+    rx.text(
+        "Maximum Stress: 145 MPa",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1em",
+        margin_x="20%"
+    ),
+
+    rx.box(
+        rx.image(
+            src="/base_analysis_stress.png",
+            width="100%",
+            border_radius="8px",
+        ),
+        width="50%",
+        border="1px solid #E5E7EB",
+        border_radius="10px",
+        overflow="hidden",
+        margin_top="0.5em",
+        margin_x="20%",
+    ),
+
+    # ---------------- Max Displacement ----------------
+    rx.text(
+        "Maximum Displacement: 0.96 mm",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1.5em",
+        margin_x="20%",
+    ),
+
+    rx.box(
+        rx.image(
+            src="/base_analysis_displacement.png",
+            width="100%",
+            border_radius="8px",
+        ),
+        width="50%",
+        border="1px solid #E5E7EB",
+        border_radius="10px",
+        overflow="hidden",
+        margin_top="0.5em",
+        margin_x="20%",
+    ),
+
+    # ---------------- Engineering Note ----------------
+    rx.text(
+        "Finite element analysis performed to evaluate stress distribution and "
+        "structural displacement under maximum load conditions.",
+        font_size="14px",
+        color="gray",
+        margin_top="0.75em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+),
+
+rx.vstack(
+
+    # ---------------- Section Header ----------------
+    rx.text(
+        "2.10. Pressure plate analysis:",
+        font_size="18px",
+        font_weight="bold",
+        margin_top="2em",
+    ),
+
+    # ---------------- Max Stress ----------------
+    rx.text(
+        "Maximum Stress: 126 MPa",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1em",
+        margin_x="20%",
+    ),
+
+    rx.box(
+        rx.image(
+            src="/pressure_plate_analysis_stress.png",
+            width="100%",
+            border_radius="8px",
+        ),
+        width="50%",
+        border="1px solid #E5E7EB",
+        border_radius="10px",
+        overflow="hidden",
+        margin_top="0.5em",
+        margin_x="20%",
+    ),
+
+    # ---------------- Max Displacement ----------------
+    rx.text(
+        "Maximum Displacement: 0.39 mm",
+        font_size="16px",
+        font_weight="600",
+        margin_top="1.5em",
+        margin_x="20%",
+    ),
+
+    rx.box(
+        rx.image(
+            src="/pressure_plate_analysis_displacement.png",
+            width="100%",
+            border_radius="8px",
+        ),
+        width="50%",
+        border="1px solid #E5E7EB",
+        border_radius="10px",
+        overflow="hidden",
+        margin_top="0.5em",
+        margin_x="20%",
+    ),
+
+    # ---------------- Engineering Note ----------------
+    rx.text(
+        "Material properties and component dimensions were selected based on "
+        "standard references such as Fundamentals of Machine Elements and Engineering "
+        "Drawing and Design. Conservative design assumptions were applied.",
+        font_size="14px",
+        color="gray",
+        margin_top="0.75em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="4",
+), 
+
+# Divider before section
+rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+# 📌 Results and Discussion Title (RED like CALCULATIONS)
+rx.text(
+    "RESULTS",
+    font_size="20px",
+    font_weight="bold",
+    color="red",
+    letter_spacing="wide",
+    text_align="left",
+    margin_x="16.7%",
+    margin_bottom="1em"
+),
+
+# 📌 Discussion title (normal black)
+rx.text(
+    "3. Discussion",
+    font_size="18px", font_weight="bold", color="black", margin_bottom="1em", margin_x='20%'
+),
+
+# 📌 Explanation text
+rx.text(
+    "The results of the mechanical design and structural analyses are presented "
+    "and discussed in the following sections. Detailed evaluations include "
+    "screw selection and buckling verification, stress assessment of critical "
+    "components, nut structural validation, torque and efficiency calculations, "
+    "and contact stress evaluation at the screw–washer interface.",
+    font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
+),
+
+# 📌 Section overview list
+rx.text(
+    "The subsequent sections include:",
+    font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
+),
+
+rx.vstack(
+    rx.text("• 3.1. Screw Selection and Buckling Check"),
+    rx.text("• 3.2. Stress Analysis"),
+    rx.text("• 3.3. Nut Assessment"),
+    rx.text("• 3.4. Torque Requirements and Efficiency"),
+    rx.text("• 3.5. Contact Stress (Screw–Washer Interface)"),
+    font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    rx.text(
+        "3.1. Screw Selection and Buckling Check:",
+        font_size="16px",
+        font_weight="bold",
+        margin_top="1.5em",
+    ),
+
+    rx.text(
+        "A thread type S22×3 with a minor diameter of 16.794 mm was selected. "
+        "The calculated critical buckling stress was 532.747 MPa, and the applied "
+        "stress was 90.288 MPa, resulting in a safety factor of 5.90",
+        font_size="14px",
+        margin_top="0.75em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="3",
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- 3.2 ----------------
+    rx.text(
+        "3.2. Stress Analysis:",
+        font_size="16px",
+        font_weight="bold",
+        margin_top="1.5em",
+    ),
+
+    # Power screw
+    rx.text(
+        "Power screw:",
+        font_size="14px",
+        font_weight="bold",
+        margin_top="0.75em",
+    ),
+
+    rx.box(
+        rx.vstack(
+            rx.text("Shear Stress: 61.969 MPa"),
+            rx.text("Compression Stress: 90.288 MPa"),
+            rx.text("Equivalent Stress: 140.258 MPa"),
+            rx.text("All values were below material yield strength limits."),
+            align="start",
+            spacing="2",
+        ),
+        padding_left="18px",
+    ),
+
+    # Base frame
+    rx.text(
+        "Base frame:",
+        font_size="14px",
+        font_weight="bold",
+        margin_top="0.75em",
+    ),
+
+    rx.box(
+        rx.vstack(
+            rx.text("Maximum stress: 145 MPa"),
+            rx.text("Maximum displacement: 0.96 mm"),
+            align="start",
+            spacing="2",
+        ),
+        padding_left="18px",
+    ),
+
+    # Pressure plate
+    rx.text(
+        "Pressure plate:",
+        font_size="14px",
+        font_weight="bold",
+        margin_top="0.75em",
+    ),
+
+    rx.box(
+        rx.vstack(
+            rx.text("Maximum stress: 126 MPa"),
+            rx.text("Maximum displacement: 0.39 mm"),
+            align="start",
+            spacing="2",
+        ),
+        padding_left="18px",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="3",
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- 3.3 ----------------
+    rx.text(
+        "3.3. Nut Assessment:",
+        font_size="16px",
+        font_weight="bold",
+        margin_top="1.5em",
+    ),
+
+    rx.text(
+        "Nut material: High-leaded Tin Bronze (SAE 660)",
+        font_size="14px",
+        margin_top="0.75em",
+    ),
+
+    rx.text(
+        r"Shear strength $\tau_{all}$ = 96 MPa",
+        font_size="14px",
+        margin_top="0.5em",
+    ),
+
+    rx.box(
+        rx.vstack(
+            rx.text("Minimum height due to shear: 36.3 mm"),
+            rx.text("Minimum height due to bearing stress: 39.8 mm"),
+            rx.text(
+                "A final height of 40 mm was selected to satisfy both constraints"
+            ),
+            align="start",
+            spacing="2",
+        ),
+        padding_left="18px",
+        margin_top="0.5em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="3",
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- 3.4 ----------------
+    rx.text(
+        "3.4. Torque Requirements and Efficiency:",
+        font_size="16px",
+        font_weight="bold",
+        margin_top="1.5em",
+    ),
+
+    rx.box(
+        rx.vstack(
+            rx.text("Maximum required torque: 57.63 Nm"),
+            rx.text("Thread efficiency: 16.57%"),
+            rx.text(
+                "Handwheel force required: 182.96 N for a 315 mm diameter wheel"
+            ),
+            align="start",
+            spacing="2",
+        ),
+        padding_left="18px",
+        margin_top="0.75em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="3",
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.vstack(
+
+    # ---------------- 3.5 ----------------
+    rx.text(
+        "3.5. Contact Stress (Screw–Washer Interface):",
+        font_size="16px",
+        font_weight="bold",
+        margin_top="1.5em",
+    ),
+
+    rx.box(
+        rx.vstack(
+            rx.text("Max contact pressure: 293.19 MPa"),
+            rx.text("Average compression stress: 195.46 MPa"),
+            rx.text(
+                "Safety factor: 1.64, which is within acceptable limits for bronze alloy interfaces"
+            ),
+            align="start",
+            spacing="2",
+        ),
+        padding_left="18px",
+        margin_top="0.75em",
+    ),
+
+    width="60%",
+    margin_x="20%",
+    align="start",
+    spacing="3",
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.text(
+    "Conclusion",
+    font_size="20px",
+    font_weight="bold",
+    color="red",
+    letter_spacing="wide",
+    text_align="left",
+    margin_x="16.7%",
+    margin_bottom="1em"
+),
+
+# 📌 Explanation text
+rx.text(
+    """The structural and mechanical evaluations confirm the design’s safety and functionality under 
+    the given loading conditions. The screw-nut assembly, key connection, and base all meet design 
+    criteria with appropriate safety factors. Torque and efficiency values are acceptable for manual 
+    operation using a 315 mm handwheel.""",
+    font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
+),
+
+# 📌 Explanation text
+rx.text(
+    """No further reinforcement is needed, and all calculations align with classroom methodologies 
+    and literature standards.""",
+    font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
+),
+
+    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+
+rx.text(
+    "References",
+    font_size="20px",
+    font_weight="bold",
+    color="red",
+    letter_spacing="wide",
+    text_align="left",
+    margin_x="16.7%",
+    margin_bottom="1em"
+),
+
+# 📌 Explanation text
+rx.vstack(
+    rx.text("1. Madsen, David A. Engineering Drawing and Design. Delmar Cengage Learning."),
+    rx.text("2. Schmid, Steven R. Fundamentals of Machine Elements. CRC Press."),
+    rx.text("3. Lecture slides and notes, Professor Slavomir Kedziora, MSPC-18, University of Luxembourg, 2025."),
+    rx.text("4. https://www.matweb.com/"),
+    align="start",
+    spacing="2",
+    margin_x='20%'
+),
+
+),
+
         
         # rx.hstack(
         #     # Component Calculation Link
