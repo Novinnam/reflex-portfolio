@@ -41,7 +41,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ## Contact
 
 Feel free to reach out to me for collaboration or inquiries:
-- **Email**: [mohammadhassan.novin.001@student.uni.lu](mailto:mohammadhassan.novin.001@student.uni.lu)
+- **Email**: [mnovinnam1997@gmail.com](mailto:mnovinnam1997@gmail.com)
 - **LinkedIn**: [https://www.linkedin.com/in/novinnnam/](https://www.linkedin.com/in/novinnnam/)
 - **GitHub**: [https://github.com/Novinnam](https://github.com/Novinnam)
 
