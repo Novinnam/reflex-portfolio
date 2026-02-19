@@ -28,7 +28,7 @@ RadixThemesText,
   )
 }
 
-export function Grid_35281050167691710795432333708674827173 () {
+export function Grid_196503589661058945984980017496346943594 () {
   
 
 
@@ -40,9 +40,9 @@ export function Grid_35281050167691710795432333708674827173 () {
     jsx(
 RadixThemesGrid,
 {columns:({ ["base"] : "1", ["md"] : "2", ["lg"] : "3" }),css:({ ["marginBottom"] : "3em", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),gap:"6"},
-[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_7762dd0668cc50e9)=>(jsx(
+[({ ["title"] : "Rod Cap", ["description"] : "3D scanned and modeled in Fusion 360 to create a precise, functional part based on real-world dimensions, ready for manufacturing.", ["image_url"] : "/rod_cap_perspective.png", ["border"] : true, ["link"] : "rod_cap" }), ({ ["title"] : "Bell Bracket", ["description"] : " Topology optimized in Fusion 360 to create a lightweight, functional design for additive manufacturing.", ["image_url"] : "/bell_bracket_perspective.png", ["border"] : true, ["link"] : "bell_bracket" }), ({ ["title"] : "Single Power Screw", ["description"] : "Engineered with precise component and connection calculations, complete with 3D modeling and full technical documentation.", ["image_url"] : "/single_power_screw_perspective.png", ["border"] : true, ["link"] : "single_power_screw" })].map((project_rx_state_,index_f36a1d82b31fe3c9)=>(jsx(
 RadixThemesBox,
-{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_7762dd0668cc50e9},
+{css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }) }),key:index_f36a1d82b31fe3c9},
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",direction:"column",gap:"3"},

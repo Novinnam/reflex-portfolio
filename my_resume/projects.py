@@ -1779,71 +1779,73 @@ rx.vstack(
     ),
 
     rx.table.root(
-        rx.table.header(
-            rx.table.row(
-                rx.table.column_header_cell("Material"),
-                rx.table.column_header_cell("Stationary"),
-                rx.table.column_header_cell("Semi-Movable"),
-                rx.table.column_header_cell("Movable"),
-            )
-        ),
-        rx.table.body(
-
-            rx.table.row(
-                rx.table.cell("Gray Cast Iron EN-GJL-150"),
-                rx.table.cell("12–15 MPa"),
-                rx.table.cell("8–10 MPa"),
-                rx.table.cell("4–5 MPa"),
-            ),
-
-            rx.table.row(
-                rx.table.cell("EN-GJL-200"),
-                rx.table.cell("16–20 MPa"),
-                rx.table.cell("10–13 MPa"),
-                rx.table.cell("6–6.5 MPa"),
-            ),
-
-            rx.table.row(
-                rx.table.cell("EN-GJL-250"),
-                rx.table.cell("20–25 MPa"),
-                rx.table.cell("13–16 MPa"),
-                rx.table.cell("6.5–8 MPa"),
-            ),
-
-            rx.table.row(
-                rx.table.cell("Cast Steel 200–400"),
-                rx.table.cell("25–30 MPa"),
-                rx.table.cell("16–20 MPa"),
-                rx.table.cell("8–10 MPa"),
-            ),
-
-            rx.table.row(
-                rx.table.cell("Steel E295, E335, E360"),
-                rx.table.cell("32–40 MPa"),
-                rx.table.cell("22–27 MPa"),
-                rx.table.cell("11–13.5 MPa"),
-            ),
-
-            rx.table.row(
-                rx.table.cell("Brass"),
-                rx.table.cell("24–28 MPa"),
-                rx.table.cell("15–19 MPa"),
-                rx.table.cell("7.5–9.5 MPa"),
-            ),
-
-            rx.table.row(
-                rx.table.cell("Bronze"),
-                rx.table.cell("32–40 MPa"),
-                rx.table.cell("22–27 MPa"),
-                rx.table.cell("11–14 MPa"),
-            ),
-        ),
-        width="100%",
-        margin_top="1em",
-        variant="surface",
-        max_width="70%",
-        margin_x="20%",
+    rx.table.header(
+        rx.table.row(
+            rx.table.column_header_cell("Material", style={"color": "#000000", "fontWeight": 700}),
+            rx.table.column_header_cell("Stationary", style={"color": "#000000", "fontWeight": 700}),
+            rx.table.column_header_cell("Semi-Movable", style={"color": "#000000", "fontWeight": 700}),
+            rx.table.column_header_cell("Movable", style={"color": "#000000", "fontWeight": 700}),
+        )
     ),
+    rx.table.body(
+        rx.table.row(
+            rx.table.cell("Gray Cast Iron EN-GJL-150", style={"color": "#000000"}),
+            rx.table.cell("12–15 MPa", style={"color": "#000000"}),
+            rx.table.cell("8–10 MPa", style={"color": "#000000"}),
+            rx.table.cell("4–5 MPa", style={"color": "#000000"}),
+        ),
+        rx.table.row(
+            rx.table.cell("EN-GJL-200", style={"color": "#000000"}),
+            rx.table.cell("16–20 MPa", style={"color": "#000000"}),
+            rx.table.cell("10–13 MPa", style={"color": "#000000"}),
+            rx.table.cell("6–6.5 MPa", style={"color": "#000000"}),
+        ),
+        rx.table.row(
+            rx.table.cell("EN-GJL-250", style={"color": "#000000"}),
+            rx.table.cell("20–25 MPa", style={"color": "#000000"}),
+            rx.table.cell("13–16 MPa", style={"color": "#000000"}),
+            rx.table.cell("6.5–8 MPa", style={"color": "#000000"}),
+        ),
+        rx.table.row(
+            rx.table.cell("Cast Steel 200–400", style={"color": "#000000"}),
+            rx.table.cell("25–30 MPa", style={"color": "#000000"}),
+            rx.table.cell("16–20 MPa", style={"color": "#000000"}),
+            rx.table.cell("8–10 MPa", style={"color": "#000000"}),
+        ),
+        rx.table.row(
+            rx.table.cell("Steel E295, E335, E360", style={"color": "#000000"}),
+            rx.table.cell("32–40 MPa", style={"color": "#000000"}),
+            rx.table.cell("22–27 MPa", style={"color": "#000000"}),
+            rx.table.cell("11–13.5 MPa", style={"color": "#000000"}),
+        ),
+        rx.table.row(
+            rx.table.cell("Brass", style={"color": "#000000"}),
+            rx.table.cell("24–28 MPa", style={"color": "#000000"}),
+            rx.table.cell("15–19 MPa", style={"color": "#000000"}),
+            rx.table.cell("7.5–9.5 MPa", style={"color": "#000000"}),
+        ),
+        rx.table.row(
+            rx.table.cell("Bronze", style={"color": "#000000"}),
+            rx.table.cell("32–40 MPa", style={"color": "#000000"}),
+            rx.table.cell("22–27 MPa", style={"color": "#000000"}),
+            rx.table.cell("11–14 MPa", style={"color": "#000000"}),
+        ),
+    ),
+    width="100%",
+    margin_top="1em",
+
+    # 🔥 IMPORTANT: remove the muted surface variant
+    # variant="surface",
+
+    max_width="900px",
+    margin_x="auto",
+
+    style={
+        "border": "1px solid rgba(0,0,0,0.25)",
+        "color": "#000000",
+        "opacity": "1",
+    },
+),
 
     # ---------------- Citation ----------------
     rx.text(
