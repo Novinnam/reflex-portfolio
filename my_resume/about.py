@@ -10,7 +10,14 @@ def about_page() -> rx.Component:
             # LEFT: Bottom-aligned text with divider above
             rx.flex(
                 rx.box(
-                    rx.divider(),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
                     width="100%",
                     max_width="36rem",
                     margin_bottom="2rem"
@@ -81,7 +88,14 @@ def about_page() -> rx.Component:
         ),
 
         rx.box(
-            rx.divider(),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
             width="100%",
             max_width="1280px",
             mx="auto",
@@ -162,7 +176,14 @@ rx.box(
 ),
 
         rx.box(
-            rx.divider(),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
             width="100%",
             max_width="1280px",
             mx="auto",
@@ -288,8 +309,12 @@ rx.box(
     justify_content="center",
     margin_x="auto",
     max_width="900px"
-)
+),
 
+        bg="#f5f5f0",
+        color="#000000",
+        width="100%",
+        min_height="100vh",
 )
 
 

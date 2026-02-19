@@ -80,6 +80,7 @@ def projects_page():
         global_footer(),
 
         bg="#f5f5f0",
+        color="#000000",
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em"
@@ -130,7 +131,14 @@ def rod_cap_page():
             width_max='1280px'
         ),
 
-        rx.divider(margin_y="2em", max_width="1280px", margin_x="auto"),
+        rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
         # 📌 Process Section
         rx.text(
@@ -243,6 +251,7 @@ def rod_cap_page():
         global_footer(),
 
         bg="#f5f5f0",
+        color="#000000",
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em"
@@ -290,7 +299,14 @@ def bell_bracket_page():
             align="center"
         ),
 
-        rx.divider(margin_y="2em", max_width="1280px", margin_x="auto"),
+        rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
         # 📌 Process Section
         rx.text(
@@ -438,6 +454,7 @@ def bell_bracket_page():
         global_footer(),
 
         bg="#f5f5f0",
+        color="#000000",
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em",
@@ -484,7 +501,14 @@ def single_power_screw_page():
             align="center"
         ),
 
-        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+        rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
         # 📌 Project Criteria
         rx.vstack(
@@ -524,7 +548,14 @@ def single_power_screw_page():
                 margin_bottom='1%',
                 margin_x='auto'
             ),
-            rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+            rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
         ),
 
         # 📌 Images Section
@@ -566,7 +597,14 @@ def single_power_screw_page():
             margin_x='auto'
         ),
         
-        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+        rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
         # 📌 Navigation to Calculation Pages
         rx.text(
@@ -598,7 +636,14 @@ def single_power_screw_page():
             margin_x='20%'
         ),
 
-        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+        rx.divider(
+            height="2px",
+            background_color="#000000",
+            opacity="0.2",
+            max_width="1280px",
+            margin_x="auto",
+            margin_y="2em",
+        ),
 
         rx.text(
             "2.1 Compressive Buckling and Safety Factor Evaluation Using Johnson's Formula:",
@@ -826,7 +871,14 @@ def single_power_screw_page():
             margin_x='25%'
         ),
 
-        rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+        rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
         rx.text(
             "2.2. Contact stress between the screw and the washer:",
@@ -1205,7 +1257,14 @@ def single_power_screw_page():
     spacing="4",
     ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+    rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
     rx.vstack(
     # --- Section title ---
@@ -1420,7 +1479,14 @@ rx.hstack(
     align="start",
 ),
 
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
     # --- Section Title ---
@@ -1467,7 +1533,14 @@ rx.vstack(
     spacing="4",
 ),
 
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
     # --- Section title ---
@@ -1534,7 +1607,14 @@ rx.vstack(
     spacing="4",
 ),
 
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
     # --- Section Title ---
@@ -1808,7 +1888,14 @@ rx.vstack(
     spacing="4",
 ),
 
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -1838,7 +1925,14 @@ rx.vstack(
     spacing="4",
 ),
 
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -1923,7 +2017,14 @@ rx.vstack(
     spacing="4",
 ),
 
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -2069,7 +2170,14 @@ rx.vstack(
 ), 
 
 # Divider before section
-rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 # 📌 Results and Discussion Title (RED like CALCULATIONS)
 rx.text(
@@ -2114,7 +2222,14 @@ rx.vstack(
     font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -2139,7 +2254,14 @@ rx.vstack(
     spacing="3",
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -2213,7 +2335,14 @@ rx.vstack(
     spacing="3",
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -2257,7 +2386,14 @@ rx.vstack(
     spacing="3",
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -2289,7 +2425,14 @@ rx.vstack(
     spacing="3",
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.vstack(
 
@@ -2321,7 +2464,14 @@ rx.vstack(
     spacing="3",
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.text(
     "Conclusion",
@@ -2350,7 +2500,14 @@ rx.text(
     font_size="18px", color="black", margin_bottom="1em", max_width='80%', margin_x='20%'
 ),
 
-    rx.divider(margin_y="2em", max_width="67%", margin_x="auto"),
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
 
 rx.text(
     "References",
@@ -2416,6 +2573,7 @@ rx.vstack(
         global_footer(),
 
         bg="#f5f5f0",
+        color= "#000000",
         width="100%",
         padding_x={"base": "1em", "md": "2em"},
         padding_bottom="2em",

@@ -3,7 +3,7 @@
 import { Fragment, useEffect } from "react"
 import { Box as RadixThemesBox, Flex as RadixThemesFlex, Grid as RadixThemesGrid, Heading as RadixThemesHeading, Link as RadixThemesLink, Separator as RadixThemesSeparator, Text as RadixThemesText } from "@radix-ui/themes"
 import { Link as ReactRouterLink } from "react-router"
-import { Grid_268482431622448416758925360525883111880, Text_101293345110516020862261840462185915770 } from "$/utils/stateful_components"
+import { Grid_35281050167691710795432333708674827173, Text_101293345110516020862261840462185915770 } from "$/utils/stateful_components"
 import { jsx } from "@emotion/react"
 
 
@@ -20,7 +20,7 @@ Fragment,
 {},
 jsx(
 RadixThemesBox,
-{css:({ ["background"] : "#f5f5f0", ["width"] : "100%", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["paddingBottom"] : "2em" })},
+{css:({ ["background"] : "#f5f5f0", ["color"] : "#000000", ["width"] : "100%", ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["paddingBottom"] : "2em" })},
 jsx(
 RadixThemesBox,
 {},
@@ -83,11 +83,11 @@ RadixThemesText,
 RadixThemesText,
 {as:"p",css:({ ["fontSize"] : "0.8em", ["fontWeight"] : "bold", ["color"] : "red", ["letterSpacing"] : "wide", ["textAlign"] : "left", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginBottom"] : "1em" })},
 "PINNED"
-,),jsx(Grid_268482431622448416758925360525883111880,{},)
+,),jsx(Grid_35281050167691710795432333708674827173,{},)
 ,jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["width"] : "100%", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" }),direction:"column",gap:"3"},
-jsx(RadixThemesSeparator,{css:({ ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1280px" }),size:"4"},)
+jsx(RadixThemesSeparator,{css:({ ["height"] : "2px", ["backgroundColor"] : "#000000", ["opacity"] : "0.2", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginTop"] : "2em", ["marginBottom"] : "2em" }),size:"4"},)
 ,jsx(
 RadixThemesGrid,
 {columns:"3",css:({ ["padding_x"] : ({ ["base"] : "1em", ["md"] : "2em" }), ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "1366px" }),gap:"6"},

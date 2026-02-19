@@ -57,8 +57,14 @@ def navbar():
 
 def global_footer() -> rx.Component:
     return rx.vstack(
-        rx.divider(margin_x='auto', max_width='1280px'),
-
+rx.divider(
+    height="2px",
+    background_color="#000000",
+    opacity="0.2",
+    max_width="1280px",
+    margin_x="auto",
+    margin_y="2em",
+),
         rx.grid(
             # Column 1: Developer Info
             rx.box(

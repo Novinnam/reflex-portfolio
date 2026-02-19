@@ -20,7 +20,7 @@ Fragment,
 {},
 jsx(
 RadixThemesBox,
-{},
+{css:({ ["background"] : "#f5f5f0", ["color"] : "#000000", ["width"] : "100%", ["minHeight"] : "100vh" })},
 jsx(
 RadixThemesBox,
 {},
@@ -72,7 +72,7 @@ RadixThemesFlex,
 jsx(
 RadixThemesBox,
 {css:({ ["width"] : "100%", ["maxWidth"] : "36rem", ["marginBottom"] : "2rem" })},
-jsx(RadixThemesSeparator,{size:"4"},)
+jsx(RadixThemesSeparator,{css:({ ["height"] : "2px", ["backgroundColor"] : "#000000", ["opacity"] : "0.2", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginTop"] : "2em", ["marginBottom"] : "2em" }),size:"4"},)
 ,),jsx(
 RadixThemesHeading,
 {css:({ ["fontFamily"] : "Georgia, serif", ["--default-font-family"] : "Georgia, serif", ["fontSize"] : "50px", ["fontWeight"] : "normal", ["lineHeight"] : "1.3", ["textAlign"] : "left" })},
@@ -109,7 +109,7 @@ RadixThemesText,
 ,),),),),),jsx(
 RadixThemesBox,
 {css:({ ["width"] : "100%", ["maxWidth"] : "1280px", ["mx"] : "auto", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" })},
-jsx(RadixThemesSeparator,{size:"4"},)
+jsx(RadixThemesSeparator,{css:({ ["height"] : "2px", ["backgroundColor"] : "#000000", ["opacity"] : "0.2", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginTop"] : "2em", ["marginBottom"] : "2em" }),size:"4"},)
 ,),jsx(
 RadixThemesBox,
 {css:({ ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["padding"] : "2rem", ["borderTop"] : "1px solid #ccc" })},
@@ -152,7 +152,7 @@ ReactRouterLink,
 ,),),),),),),jsx(
 RadixThemesBox,
 {css:({ ["width"] : "100%", ["maxWidth"] : "1280px", ["mx"] : "auto", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto" })},
-jsx(RadixThemesSeparator,{size:"4"},)
+jsx(RadixThemesSeparator,{css:({ ["height"] : "2px", ["backgroundColor"] : "#000000", ["opacity"] : "0.2", ["maxWidth"] : "1280px", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["marginTop"] : "2em", ["marginBottom"] : "2em" }),size:"4"},)
 ,),jsx(
 RadixThemesGrid,
 {columns:"300px 300px 300px",css:({ ["justifyContent"] : "center", ["marginInlineStart"] : "auto", ["marginInlineEnd"] : "auto", ["maxWidth"] : "900px" }),gap:"8"},
