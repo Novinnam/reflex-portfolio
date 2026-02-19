@@ -48,7 +48,7 @@ RadixThemesColorModeProvider,
 {},
 jsx(
 RadixThemesTheme,
-{accentColor:"blue",css:{...theme.styles.global[':root'], ...theme.styles.global.body}},
+{css:{...theme.styles.global[':root'], ...theme.styles.global.body}},
 jsx(
 Fragment,
 {},

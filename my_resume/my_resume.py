@@ -216,7 +216,7 @@ def featured_projects() -> rx.Component:
 
 @rx.page(
     route="/",
-    title="Novin | Robotics Specialist",
+    title="Novin | Mechanical Engineer",
 )
 def index():
     return rx.box(
@@ -227,12 +227,14 @@ def index():
         global_footer(),
         padding_x={"base": "1em", "md": "2em"},
         bg="#f5f5f0",  # <<< SET HERE
-        color="text",
+        color="#000000",
         width="100%",
     )
 
 
-app = rx.App()
+app = rx.App(
+    theme=rx.theme(appearance="light")
+)
 
 # Register pages
 app.add_page(index)
