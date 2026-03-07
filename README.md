@@ -1,50 +1,16 @@
-# Reflex Portfolio
+# React + Vite
 
-Welcome to my personal portfolio website! This project showcases my professional journey, including my resume, projects, and skills, all beautifully crafted using Reflex.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **About Me**: Learn more about my background, experience, and interests.
-- **Projects**: Explore the projects I've worked on, highlighting my skills and creativity.
-- **Resume**: View my professional resume, detailing my qualifications and achievements.
-- **Responsive Design**: Optimized for seamless viewing across devices.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Technologies Used
+## React Compiler
 
-- **Reflex**: A powerful Python framework for building modern web applications.
-- **HTML/CSS**: For styling and layout.
-- **Python**: Backend logic and integration.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Installation
+## Expanding the ESLint configuration
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Novinnam/reflex-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd reflex-portfolio
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the application:
-   ```bash
-   reflex run
-   ```
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contact
-
-Feel free to reach out to me for collaboration or inquiries:
-- **Email**: [mnovinnam1997@gmail.com](mailto:mnovinnam1997@gmail.com)
-- **LinkedIn**: [https://www.linkedin.com/in/novinnnam/](https://www.linkedin.com/in/novinnnam/)
-- **GitHub**: [https://github.com/Novinnam](https://github.com/Novinnam)
-
----
-
-Thank you for visiting my portfolio!
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
