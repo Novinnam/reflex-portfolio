@@ -25,6 +25,12 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import university from "./company/universite-du-luxembourg-logo.svg";
+import paulwurth from "./company/paul-wurth-logo-vector.svg";
+import nebraspumps from "./company/nebraspumps-logo.png";
+import aimedic from "./company/aimedicco_logo.jpeg";
+import ramin_power_plant from "./company/ramin-powre-plant-logo.jpeg";
+import atlassarma from "./company/atlassarma-logo.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -59,4 +65,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  university,
+  paulwurth,
+  nebraspumps,
+  aimedic,
+  ramin_power_plant,
+  atlassarma,
 };
