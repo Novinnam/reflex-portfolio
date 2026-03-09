@@ -20,7 +20,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import autodesk_inventor from "./tech/autodesk_inventor_logo.png";
+import autodesk_inventor from "./tech/autodesk_inventor_logo.svg";
 import creo_parametrics from "./tech/creo-parametrics.svg";
 import dassault_catia from "./tech/dassault_catia.svg";
 import latex from "./tech/latex.svg";
@@ -30,6 +30,12 @@ import pandas from "./tech/pandas.svg";
 import solidWorks from "./tech/solidworks-logo.svg";
 import tensorflow from "./tech/tensorflow.svg";
 import python from "./tech/Python_logo.svg";
+import Ansys from "./tech/Ansys_logo.svg";
+import AutoCAD_logo from "./tech/AutoCAD-logo.png";
+import Fusion360 from "./tech/Fusion360_Logo.svg";
+import matlab from "./tech/Matlab_Logo.png";
+import scikit_learn from "./tech/Scikit_learn_logo.svg";
+
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -91,4 +97,9 @@ export {
   solidWorks,
   tensorflow,
   python,
+  Ansys,
+  AutoCAD_logo,
+  Fusion360,
+  matlab,
+  scikit_learn,
 };

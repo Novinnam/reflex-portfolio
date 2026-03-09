@@ -39,6 +39,11 @@ import {
   solidWorks,
   tensorflow,
   python,
+  Ansys,
+  AutoCAD_logo,
+  Fusion360,
+  matlab,
+  scikit_learn,
 } from "../assets";
 
 export const navLinks = [
@@ -127,6 +132,26 @@ const technologies = [
   {
     name: "Creo Parametrics",
     icon: creo_parametrics,
+  },
+  {
+    name: "Ansys",
+    icon: Ansys,
+  },
+  {
+    name: "AutoCAD",
+    icon: AutoCAD_logo,
+  },
+  {
+    name: "Fusion 360",
+    icon: Fusion360,
+  },
+  {
+    name: "Matlab",
+    icon: matlab,
+  },
+  {
+    name: "Scikit-learn",
+    icon: scikit_learn,
   },
 ];
 
