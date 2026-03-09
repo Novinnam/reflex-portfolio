@@ -20,6 +20,16 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import autodesk_inventor from "./tech/autodesk_inventor_logo.png";
+import creo_parametrics from "./tech/creo-parametrics.svg";
+import dassault_catia from "./tech/dassault_catia.svg";
+import latex from "./tech/latex.svg";
+import matplotlib from "./tech/matplotlib.svg";
+import numpy from "./tech/numpy.svg";
+import pandas from "./tech/pandas.svg";
+import solidWorks from "./tech/solidworks-logo.svg";
+import tensorflow from "./tech/tensorflow.svg";
+import python from "./tech/Python_logo.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -71,4 +81,14 @@ export {
   aimedic,
   ramin_power_plant,
   atlassarma,
+  autodesk_inventor,
+  creo_parametrics,
+  dassault_catia,
+  latex,
+  matplotlib,
+  numpy,
+  pandas,
+  solidWorks,
+  tensorflow,
+  python,
 };

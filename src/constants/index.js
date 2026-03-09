@@ -29,6 +29,16 @@ import {
   aimedic,
   ramin_power_plant,
   atlassarma,
+  autodesk_inventor,
+  creo_parametrics,
+  dassault_catia,
+  latex,
+  matplotlib,
+  numpy,
+  pandas,
+  solidWorks,
+  tensorflow,
+  python,
 } from "../assets";
 
 export const navLinks = [
@@ -48,75 +58,75 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Mechanical Design Engineer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "CAD & 3D Modeling Specialist",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "FEA & CFD Simulation Engineer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "HVAC and Thermal Systems Engineer",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Inventor",
+    icon: autodesk_inventor,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Catia",
+    icon: dassault_catia,
   },
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Python",
+    icon: python,
   },
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "SolidWorks",
+    icon: solidWorks,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Pandas",
+    icon: pandas,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Numpy",
+    icon: numpy,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Matplotlib",
+    icon: matplotlib,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "TensorFlow",
+    icon: tensorflow,
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Latex",
+    icon: latex,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Creo Parametrics",
+    icon: creo_parametrics,
   },
 ];
 
