@@ -35,6 +35,9 @@ import AutoCAD_logo from "./tech/AutoCAD-logo.png";
 import Fusion360 from "./tech/Fusion360_Logo.svg";
 import matlab from "./tech/Matlab_Logo.png";
 import scikit_learn from "./tech/Scikit_learn_logo.svg";
+import reflex from "./tech/reflex.svg";
+import opencv from "./tech/OpenCV.svg";
+import linux from "./tech/Linux.svg";
 
 
 import meta from "./company/meta.png";
@@ -102,4 +105,7 @@ export {
   Fusion360,
   matlab,
   scikit_learn,
+  reflex,
+  opencv,
+  linux,
 };

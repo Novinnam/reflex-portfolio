@@ -44,6 +44,9 @@ import {
   Fusion360,
   matlab,
   scikit_learn,
+  reflex,
+  opencv,
+  linux,
 } from "../assets";
 
 export const navLinks = [
@@ -86,24 +89,40 @@ const technologies = [
     icon: autodesk_inventor,
   },
   {
-    name: "Catia",
-    icon: dassault_catia,
+    name: "SolidWorks",
+    icon: solidWorks,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Catia",
+    icon: dassault_catia,
   },
   {
     name: "Python",
     icon: python,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "Ansys",
+    icon: Ansys,
   },
   {
-    name: "SolidWorks",
-    icon: solidWorks,
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "Latex",
+    icon: latex,
+  },
+  {
+    name: "Creo Parametrics",
+    icon: creo_parametrics,
+  },
+  {
+    name: "Fusion 360",
+    icon: Fusion360,
+  },
+  {
+    name: "Matlab",
+    icon: matlab,
   },
   {
     name: "Pandas",
@@ -122,36 +141,32 @@ const technologies = [
     icon: tensorflow,
   },
   {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "Latex",
-    icon: latex,
-  },
-  {
-    name: "Creo Parametrics",
-    icon: creo_parametrics,
-  },
-  {
-    name: "Ansys",
-    icon: Ansys,
+    name: "Linux",
+    icon: linux,
   },
   {
     name: "AutoCAD",
     icon: AutoCAD_logo,
   },
   {
-    name: "Fusion 360",
-    icon: Fusion360,
-  },
-  {
-    name: "Matlab",
-    icon: matlab,
-  },
-  {
     name: "Scikit-learn",
     icon: scikit_learn,
+  },
+  {
+    name: "OpenCV",
+    icon: opencv,
+  },
+  {
+    name: "Reflex",
+    icon: reflex,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
   },
 ];
 
